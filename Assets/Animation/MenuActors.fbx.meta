@@ -1,0 +1,983 @@
+fileFormatVersion: 2
+guid: 4f0bdd1a545262546a88cd46d13156f8
+ModelImporter:
+  serializedVersion: 22
+  fileIDToRecycleName:
+    100000: Car
+    100002: Car3:Car1Body
+    100004: Car3:Car1FrontWheels
+    100006: Car3:Car1RearWheels
+    100008: Car3:Car2Body
+    100010: Car3:Car2FrontWheels
+    100012: Car3:Car2RearWheels
+    100014: Car4
+    100016: Cat
+    100018: CatMesh
+    100020: Control_Head
+    100022: Control_LeftEar
+    100024: Control_LeftFoot
+    100026: Control_LeftLeg_Rotation
+    100028: Control_LeftLowerEyelid
+    100030: Control_LeftUpperEyelid
+    100032: Control_Neck
+    100034: Control_Pelvis
+    100036: Control_RightEar
+    100038: Control_RightFoot
+    100040: Control_RightLeg_Rotation
+    100042: Control_RightLowerEyelid
+    100044: Control_RightUpperEyelid
+    100046: Control_Spine1
+    100048: Control_Spine2
+    100050: Control_Tail1
+    100052: Control_Tail2
+    100054: Control_Tail3
+    100056: Control_UpperBody
+    100058: Controls
+    100060: Controls_LeftArmRotation
+    100062: Controls_LeftClavicle
+    100064: Controls_LeftWrist
+    100066: Controls_RightArmRotation
+    100068: Controls_RightClavicle
+    100070: Controls_RightWrist
+    100072: ControlsLeftEye
+    100074: ControlsLeftEyeAim
+    100076: ControlsMainEyesAim
+    100078: ControlsRightEye
+    100080: ControlsRightEyeAim
+    100082: Dog
+    100084: DogRun_Final:ControlRightHip
+    100086: DogRun_Final:Controls
+    100088: DogRun_Final:ControlsChest
+    100090: DogRun_Final:ControlsEyes
+    100092: DogRun_Final:ControlsHead
+    100094: DogRun_Final:ControlsHips
+    100096: DogRun_Final:ControlsLeftEar
+    100098: DogRun_Final:ControlsLeftHip
+    100100: DogRun_Final:ControlsLeftShoulder
+    100102: DogRun_Final:ControlsMouth
+    100104: DogRun_Final:ControlsNeck
+    100106: DogRun_Final:ControlsRightEar
+    100108: DogRun_Final:ControlsRightShoulder
+    100110: DogRun_Final:ControlsSpine
+    100112: DogRun_Final:ControlsTail1
+    100114: DogRun_Final:ControlsTail2
+    100116: DogRun_Final:ControlsTail3
+    100118: DogRun_Final:DogMesh
+    100120: DogRun_Final:EyeOrient
+    100122: DogRun_Final:Eyes
+    100124: DogRun_Final:Head
+    100126: DogRun_Final:HeadEnd
+    100128: DogRun_Final:ikHandleLeftArm
+    100130: DogRun_Final:ikHandleLeftFoot
+    100132: DogRun_Final:ikHandleLeftHand
+    100134: DogRun_Final:ikHandleLeftLeg
+    100136: DogRun_Final:ikHandleRightArm
+    100138: DogRun_Final:ikHandleRightFoot
+    100140: DogRun_Final:ikHandleRightHand
+    100142: DogRun_Final:ikHandleRightLeg
+    100144: DogRun_Final:LeftArm
+    100146: DogRun_Final:LeftArmPoleVector
+    100148: DogRun_Final:LeftEar
+    100150: DogRun_Final:LeftEarEnd
+    100152: DogRun_Final:LeftFoot
+    100154: DogRun_Final:LeftFootControls
+    100156: DogRun_Final:LeftFootEnd
+    100158: DogRun_Final:LeftFootHeelPeel
+    100160: DogRun_Final:LeftHand
+    100162: DogRun_Final:LeftHandControls
+    100164: DogRun_Final:LeftHandEnd
+    100166: DogRun_Final:LeftHandHeelPeel
+    100168: DogRun_Final:LeftHip
+    100170: DogRun_Final:LeftLeg1
+    100172: DogRun_Final:LeftLeg2
+    100174: DogRun_Final:LeftLeg3
+    100176: DogRun_Final:LeftLegPoleVector
+    100178: DogRun_Final:LeftShoulder
+    100180: DogRun_Final:LeftUpperArm
+    100182: DogRun_Final:Mesh
+    100184: DogRun_Final:Mouth
+    100186: DogRun_Final:MouthEnd
+    100188: DogRun_Final:Neck
+    100190: DogRun_Final:Pelvis
+    100192: DogRun_Final:RightArm
+    100194: DogRun_Final:RightArmPoleVector
+    100196: DogRun_Final:RightEar
+    100198: DogRun_Final:RightEarEnd
+    100200: DogRun_Final:RightFoot
+    100202: DogRun_Final:RightFootControls
+    100204: DogRun_Final:RightFootEnd
+    100206: DogRun_Final:RightFootHeelPeel
+    100208: DogRun_Final:RightHand
+    100210: DogRun_Final:RightHandControls
+    100212: DogRun_Final:RightHandEnd
+    100214: DogRun_Final:RightHandHeelPeel
+    100216: DogRun_Final:RightHip
+    100218: DogRun_Final:RightLeg1
+    100220: DogRun_Final:RightLeg2
+    100222: DogRun_Final:RightLeg3
+    100224: DogRun_Final:RightLegPoleVector
+    100226: DogRun_Final:RightShoulder
+    100228: DogRun_Final:RightUpperArm
+    100230: DogRun_Final:Skeleton
+    100232: DogRun_Final:Spine
+    100234: DogRun_Final:Tail1
+    100236: DogRun_Final:Tail2
+    100238: DogRun_Final:Tail3
+    100240: DogRun_Final:Tail3 1
+    100242: Head
+    100244: HeadEnd
+    100246: Hips
+    100248: ikHandleFoot
+    100250: ikHandleLeftArm
+    100252: ikHandleLeftLeg
+    100254: ikHandleRightArm
+    100256: ikHandleRightFoot
+    100258: ikHandleRightLeg
+    100260: ikHandleRightToe
+    100262: ikHandleToe
+    100264: Left_Ankle
+    100266: Left_HeelPeel
+    100268: Left_Sviwel
+    100270: Left_ToeTap
+    100272: Left_ToeTip
+    100274: LeftArm
+    100276: LeftEar
+    100278: LeftEarEnd
+    100280: LeftEye
+    100282: LeftFoot
+    100284: LeftForeArm
+    100286: LeftHand
+    100288: LeftHandEnd
+    100290: LeftLeg
+    100292: LeftLowerLid
+    100294: LeftLowerLidEnd
+    100296: LeftShoulder
+    100298: LeftToe
+    100300: LeftToeEnd
+    100302: LeftUpLeg
+    100304: LeftUpperLid
+    100306: LeftUpperLidEnd
+    100308: //RootNode
+    100310: Mesh
+    100312: Neck
+    100314: Rat
+    100316: Rat_OnPlaceRun_Final1:Controls
+    100318: Rat_OnPlaceRun_Final1:ControlsHead
+    100320: Rat_OnPlaceRun_Final1:ControlsHips
+    100322: Rat_OnPlaceRun_Final1:ControlsLeftArmPoleVector
+    100324: Rat_OnPlaceRun_Final1:ControlsLeftEar
+    100326: Rat_OnPlaceRun_Final1:ControlsLeftFoot
+    100328: Rat_OnPlaceRun_Final1:ControlsLeftHand
+    100330: Rat_OnPlaceRun_Final1:ControlsLeftLegPoleVector
+    100332: Rat_OnPlaceRun_Final1:ControlsLeftShoulder
+    100334: Rat_OnPlaceRun_Final1:ControlsNose
+    100336: Rat_OnPlaceRun_Final1:ControlsRightArmPoleVector
+    100338: Rat_OnPlaceRun_Final1:ControlsRightEar
+    100340: Rat_OnPlaceRun_Final1:ControlsRightFoot
+    100342: Rat_OnPlaceRun_Final1:ControlsRightHand
+    100344: Rat_OnPlaceRun_Final1:ControlsRightLegPoleVector
+    100346: Rat_OnPlaceRun_Final1:ControlsRightShoulder
+    100348: Rat_OnPlaceRun_Final1:ControlsSpine1
+    100350: Rat_OnPlaceRun_Final1:ControlsSpine2
+    100352: Rat_OnPlaceRun_Final1:ControlsTail1
+    100354: Rat_OnPlaceRun_Final1:ControlsTail2
+    100356: Rat_OnPlaceRun_Final1:ControlsTail3
+    100358: Rat_OnPlaceRun_Final1:ControlsUpperBody
+    100360: Rat_OnPlaceRun_Final1:Head
+    100362: Rat_OnPlaceRun_Final1:Hips
+    100364: Rat_OnPlaceRun_Final1:ikHandleLeftArm
+    100366: Rat_OnPlaceRun_Final1:ikHandleLeftFoot
+    100368: Rat_OnPlaceRun_Final1:ikHandleLeftLeg
+    100370: Rat_OnPlaceRun_Final1:ikHandleRightArm
+    100372: Rat_OnPlaceRun_Final1:ikHandleRightFoot
+    100374: Rat_OnPlaceRun_Final1:ikHandleRightLeg
+    100376: Rat_OnPlaceRun_Final1:LeftArm
+    100378: Rat_OnPlaceRun_Final1:LeftEar
+    100380: Rat_OnPlaceRun_Final1:LeftEarEnd
+    100382: Rat_OnPlaceRun_Final1:LeftFoot
+    100384: Rat_OnPlaceRun_Final1:LeftFootEnd
+    100386: Rat_OnPlaceRun_Final1:LeftForeArm
+    100388: Rat_OnPlaceRun_Final1:LeftHand
+    100390: Rat_OnPlaceRun_Final1:LeftHandEnd
+    100392: Rat_OnPlaceRun_Final1:LeftHeelPeel
+    100394: Rat_OnPlaceRun_Final1:LeftLeg
+    100396: Rat_OnPlaceRun_Final1:LeftLegMiddle
+    100398: Rat_OnPlaceRun_Final1:LeftShoulder
+    100400: Rat_OnPlaceRun_Final1:LeftUpLeg
+    100402: Rat_OnPlaceRun_Final1:Nose
+    100404: Rat_OnPlaceRun_Final1:NoseEnd
+    100406: Rat_OnPlaceRun_Final1:RatMesh
+    100408: Rat_OnPlaceRun_Final1:RightArm
+    100410: Rat_OnPlaceRun_Final1:RightEar
+    100412: Rat_OnPlaceRun_Final1:RightEarEnd
+    100414: Rat_OnPlaceRun_Final1:RightFoot
+    100416: Rat_OnPlaceRun_Final1:RightFootEnd
+    100418: Rat_OnPlaceRun_Final1:RightForeArm
+    100420: Rat_OnPlaceRun_Final1:RightHand
+    100422: Rat_OnPlaceRun_Final1:RightHandEnd
+    100424: Rat_OnPlaceRun_Final1:RightHeelPeel
+    100426: Rat_OnPlaceRun_Final1:RightLeg
+    100428: Rat_OnPlaceRun_Final1:RightLegMiddle
+    100430: Rat_OnPlaceRun_Final1:RightShoulder
+    100432: Rat_OnPlaceRun_Final1:RightUpLeg
+    100434: Rat_OnPlaceRun_Final1:Skeleton
+    100436: Rat_OnPlaceRun_Final1:Spine1
+    100438: Rat_OnPlaceRun_Final1:Spine2
+    100440: Rat_OnPlaceRun_Final1:Tail1
+    100442: Rat_OnPlaceRun_Final1:Tail2
+    100444: Rat_OnPlaceRun_Final1:Tail3
+    100446: Rat_OnPlaceRun_Final1:TailEnd
+    100448: Right_Ankle
+    100450: Right_HeelPeel
+    100452: Right_Sviwel
+    100454: Right_ToeTap
+    100456: Right_ToeTip
+    100458: RightArm
+    100460: RightEar
+    100462: RightEarEnd
+    100464: RightEye
+    100466: RightFoot
+    100468: RightForeArm
+    100470: RightHand
+    100472: RightHandEnd
+    100474: RightLeg
+    100476: RightLowerLid
+    100478: RightLowerLidEnd
+    100480: RightShoulder
+    100482: RightToe
+    100484: RightToeEnd
+    100486: RightUpLeg
+    100488: RightUpperLid
+    100490: RightUpperLidEnd
+    100492: Skeleton
+    100494: Spine1
+    100496: Spine2
+    100498: Tail1
+    100500: Tail2
+    100502: Tail3
+    100504: Tail4
+    400000: Car
+    400002: Car3:Car1Body
+    400004: Car3:Car1FrontWheels
+    400006: Car3:Car1RearWheels
+    400008: Car3:Car2Body
+    400010: Car3:Car2FrontWheels
+    400012: Car3:Car2RearWheels
+    400014: Car4
+    400016: Cat
+    400018: CatMesh
+    400020: Control_Head
+    400022: Control_LeftEar
+    400024: Control_LeftFoot
+    400026: Control_LeftLeg_Rotation
+    400028: Control_LeftLowerEyelid
+    400030: Control_LeftUpperEyelid
+    400032: Control_Neck
+    400034: Control_Pelvis
+    400036: Control_RightEar
+    400038: Control_RightFoot
+    400040: Control_RightLeg_Rotation
+    400042: Control_RightLowerEyelid
+    400044: Control_RightUpperEyelid
+    400046: Control_Spine1
+    400048: Control_Spine2
+    400050: Control_Tail1
+    400052: Control_Tail2
+    400054: Control_Tail3
+    400056: Control_UpperBody
+    400058: Controls
+    400060: Controls_LeftArmRotation
+    400062: Controls_LeftClavicle
+    400064: Controls_LeftWrist
+    400066: Controls_RightArmRotation
+    400068: Controls_RightClavicle
+    400070: Controls_RightWrist
+    400072: ControlsLeftEye
+    400074: ControlsLeftEyeAim
+    400076: ControlsMainEyesAim
+    400078: ControlsRightEye
+    400080: ControlsRightEyeAim
+    400082: Dog
+    400084: DogRun_Final:ControlRightHip
+    400086: DogRun_Final:Controls
+    400088: DogRun_Final:ControlsChest
+    400090: DogRun_Final:ControlsEyes
+    400092: DogRun_Final:ControlsHead
+    400094: DogRun_Final:ControlsHips
+    400096: DogRun_Final:ControlsLeftEar
+    400098: DogRun_Final:ControlsLeftHip
+    400100: DogRun_Final:ControlsLeftShoulder
+    400102: DogRun_Final:ControlsMouth
+    400104: DogRun_Final:ControlsNeck
+    400106: DogRun_Final:ControlsRightEar
+    400108: DogRun_Final:ControlsRightShoulder
+    400110: DogRun_Final:ControlsSpine
+    400112: DogRun_Final:ControlsTail1
+    400114: DogRun_Final:ControlsTail2
+    400116: DogRun_Final:ControlsTail3
+    400118: DogRun_Final:DogMesh
+    400120: DogRun_Final:EyeOrient
+    400122: DogRun_Final:Eyes
+    400124: DogRun_Final:Head
+    400126: DogRun_Final:HeadEnd
+    400128: DogRun_Final:ikHandleLeftArm
+    400130: DogRun_Final:ikHandleLeftFoot
+    400132: DogRun_Final:ikHandleLeftHand
+    400134: DogRun_Final:ikHandleLeftLeg
+    400136: DogRun_Final:ikHandleRightArm
+    400138: DogRun_Final:ikHandleRightFoot
+    400140: DogRun_Final:ikHandleRightHand
+    400142: DogRun_Final:ikHandleRightLeg
+    400144: DogRun_Final:LeftArm
+    400146: DogRun_Final:LeftArmPoleVector
+    400148: DogRun_Final:LeftEar
+    400150: DogRun_Final:LeftEarEnd
+    400152: DogRun_Final:LeftFoot
+    400154: DogRun_Final:LeftFootControls
+    400156: DogRun_Final:LeftFootEnd
+    400158: DogRun_Final:LeftFootHeelPeel
+    400160: DogRun_Final:LeftHand
+    400162: DogRun_Final:LeftHandControls
+    400164: DogRun_Final:LeftHandEnd
+    400166: DogRun_Final:LeftHandHeelPeel
+    400168: DogRun_Final:LeftHip
+    400170: DogRun_Final:LeftLeg1
+    400172: DogRun_Final:LeftLeg2
+    400174: DogRun_Final:LeftLeg3
+    400176: DogRun_Final:LeftLegPoleVector
+    400178: DogRun_Final:LeftShoulder
+    400180: DogRun_Final:LeftUpperArm
+    400182: DogRun_Final:Mesh
+    400184: DogRun_Final:Mouth
+    400186: DogRun_Final:MouthEnd
+    400188: DogRun_Final:Neck
+    400190: DogRun_Final:Pelvis
+    400192: DogRun_Final:RightArm
+    400194: DogRun_Final:RightArmPoleVector
+    400196: DogRun_Final:RightEar
+    400198: DogRun_Final:RightEarEnd
+    400200: DogRun_Final:RightFoot
+    400202: DogRun_Final:RightFootControls
+    400204: DogRun_Final:RightFootEnd
+    400206: DogRun_Final:RightFootHeelPeel
+    400208: DogRun_Final:RightHand
+    400210: DogRun_Final:RightHandControls
+    400212: DogRun_Final:RightHandEnd
+    400214: DogRun_Final:RightHandHeelPeel
+    400216: DogRun_Final:RightHip
+    400218: DogRun_Final:RightLeg1
+    400220: DogRun_Final:RightLeg2
+    400222: DogRun_Final:RightLeg3
+    400224: DogRun_Final:RightLegPoleVector
+    400226: DogRun_Final:RightShoulder
+    400228: DogRun_Final:RightUpperArm
+    400230: DogRun_Final:Skeleton
+    400232: DogRun_Final:Spine
+    400234: DogRun_Final:Tail1
+    400236: DogRun_Final:Tail2
+    400238: DogRun_Final:Tail3
+    400240: DogRun_Final:Tail3 1
+    400242: Head
+    400244: HeadEnd
+    400246: Hips
+    400248: ikHandleFoot
+    400250: ikHandleLeftArm
+    400252: ikHandleLeftLeg
+    400254: ikHandleRightArm
+    400256: ikHandleRightFoot
+    400258: ikHandleRightLeg
+    400260: ikHandleRightToe
+    400262: ikHandleToe
+    400264: Left_Ankle
+    400266: Left_HeelPeel
+    400268: Left_Sviwel
+    400270: Left_ToeTap
+    400272: Left_ToeTip
+    400274: LeftArm
+    400276: LeftEar
+    400278: LeftEarEnd
+    400280: LeftEye
+    400282: LeftFoot
+    400284: LeftForeArm
+    400286: LeftHand
+    400288: LeftHandEnd
+    400290: LeftLeg
+    400292: LeftLowerLid
+    400294: LeftLowerLidEnd
+    400296: LeftShoulder
+    400298: LeftToe
+    400300: LeftToeEnd
+    400302: LeftUpLeg
+    400304: LeftUpperLid
+    400306: LeftUpperLidEnd
+    400308: //RootNode
+    400310: Mesh
+    400312: Neck
+    400314: Rat
+    400316: Rat_OnPlaceRun_Final1:Controls
+    400318: Rat_OnPlaceRun_Final1:ControlsHead
+    400320: Rat_OnPlaceRun_Final1:ControlsHips
+    400322: Rat_OnPlaceRun_Final1:ControlsLeftArmPoleVector
+    400324: Rat_OnPlaceRun_Final1:ControlsLeftEar
+    400326: Rat_OnPlaceRun_Final1:ControlsLeftFoot
+    400328: Rat_OnPlaceRun_Final1:ControlsLeftHand
+    400330: Rat_OnPlaceRun_Final1:ControlsLeftLegPoleVector
+    400332: Rat_OnPlaceRun_Final1:ControlsLeftShoulder
+    400334: Rat_OnPlaceRun_Final1:ControlsNose
+    400336: Rat_OnPlaceRun_Final1:ControlsRightArmPoleVector
+    400338: Rat_OnPlaceRun_Final1:ControlsRightEar
+    400340: Rat_OnPlaceRun_Final1:ControlsRightFoot
+    400342: Rat_OnPlaceRun_Final1:ControlsRightHand
+    400344: Rat_OnPlaceRun_Final1:ControlsRightLegPoleVector
+    400346: Rat_OnPlaceRun_Final1:ControlsRightShoulder
+    400348: Rat_OnPlaceRun_Final1:ControlsSpine1
+    400350: Rat_OnPlaceRun_Final1:ControlsSpine2
+    400352: Rat_OnPlaceRun_Final1:ControlsTail1
+    400354: Rat_OnPlaceRun_Final1:ControlsTail2
+    400356: Rat_OnPlaceRun_Final1:ControlsTail3
+    400358: Rat_OnPlaceRun_Final1:ControlsUpperBody
+    400360: Rat_OnPlaceRun_Final1:Head
+    400362: Rat_OnPlaceRun_Final1:Hips
+    400364: Rat_OnPlaceRun_Final1:ikHandleLeftArm
+    400366: Rat_OnPlaceRun_Final1:ikHandleLeftFoot
+    400368: Rat_OnPlaceRun_Final1:ikHandleLeftLeg
+    400370: Rat_OnPlaceRun_Final1:ikHandleRightArm
+    400372: Rat_OnPlaceRun_Final1:ikHandleRightFoot
+    400374: Rat_OnPlaceRun_Final1:ikHandleRightLeg
+    400376: Rat_OnPlaceRun_Final1:LeftArm
+    400378: Rat_OnPlaceRun_Final1:LeftEar
+    400380: Rat_OnPlaceRun_Final1:LeftEarEnd
+    400382: Rat_OnPlaceRun_Final1:LeftFoot
+    400384: Rat_OnPlaceRun_Final1:LeftFootEnd
+    400386: Rat_OnPlaceRun_Final1:LeftForeArm
+    400388: Rat_OnPlaceRun_Final1:LeftHand
+    400390: Rat_OnPlaceRun_Final1:LeftHandEnd
+    400392: Rat_OnPlaceRun_Final1:LeftHeelPeel
+    400394: Rat_OnPlaceRun_Final1:LeftLeg
+    400396: Rat_OnPlaceRun_Final1:LeftLegMiddle
+    400398: Rat_OnPlaceRun_Final1:LeftShoulder
+    400400: Rat_OnPlaceRun_Final1:LeftUpLeg
+    400402: Rat_OnPlaceRun_Final1:Nose
+    400404: Rat_OnPlaceRun_Final1:NoseEnd
+    400406: Rat_OnPlaceRun_Final1:RatMesh
+    400408: Rat_OnPlaceRun_Final1:RightArm
+    400410: Rat_OnPlaceRun_Final1:RightEar
+    400412: Rat_OnPlaceRun_Final1:RightEarEnd
+    400414: Rat_OnPlaceRun_Final1:RightFoot
+    400416: Rat_OnPlaceRun_Final1:RightFootEnd
+    400418: Rat_OnPlaceRun_Final1:RightForeArm
+    400420: Rat_OnPlaceRun_Final1:RightHand
+    400422: Rat_OnPlaceRun_Final1:RightHandEnd
+    400424: Rat_OnPlaceRun_Final1:RightHeelPeel
+    400426: Rat_OnPlaceRun_Final1:RightLeg
+    400428: Rat_OnPlaceRun_Final1:RightLegMiddle
+    400430: Rat_OnPlaceRun_Final1:RightShoulder
+    400432: Rat_OnPlaceRun_Final1:RightUpLeg
+    400434: Rat_OnPlaceRun_Final1:Skeleton
+    400436: Rat_OnPlaceRun_Final1:Spine1
+    400438: Rat_OnPlaceRun_Final1:Spine2
+    400440: Rat_OnPlaceRun_Final1:Tail1
+    400442: Rat_OnPlaceRun_Final1:Tail2
+    400444: Rat_OnPlaceRun_Final1:Tail3
+    400446: Rat_OnPlaceRun_Final1:TailEnd
+    400448: Right_Ankle
+    400450: Right_HeelPeel
+    400452: Right_Sviwel
+    400454: Right_ToeTap
+    400456: Right_ToeTip
+    400458: RightArm
+    400460: RightEar
+    400462: RightEarEnd
+    400464: RightEye
+    400466: RightFoot
+    400468: RightForeArm
+    400470: RightHand
+    400472: RightHandEnd
+    400474: RightLeg
+    400476: RightLowerLid
+    400478: RightLowerLidEnd
+    400480: RightShoulder
+    400482: RightToe
+    400484: RightToeEnd
+    400486: RightUpLeg
+    400488: RightUpperLid
+    400490: RightUpperLidEnd
+    400492: Skeleton
+    400494: Spine1
+    400496: Spine2
+    400498: Tail1
+    400500: Tail2
+    400502: Tail3
+    400504: Tail4
+    2300000: Car3:Car1Body
+    2300002: Car3:Car1FrontWheels
+    2300004: Car3:Car1RearWheels
+    2300006: Car3:Car2Body
+    2300008: Car3:Car2FrontWheels
+    2300010: Car3:Car2RearWheels
+    2300012: ControlsLeftEye
+    2300014: ControlsRightEye
+    2300016: DogRun_Final:ControlRightHip
+    2300018: DogRun_Final:ControlsChest
+    2300020: DogRun_Final:ControlsEyes
+    2300022: DogRun_Final:ControlsHead
+    2300024: DogRun_Final:ControlsHips
+    2300026: DogRun_Final:ControlsLeftEar
+    2300028: DogRun_Final:ControlsLeftHip
+    2300030: DogRun_Final:ControlsLeftShoulder
+    2300032: DogRun_Final:ControlsMouth
+    2300034: DogRun_Final:ControlsNeck
+    2300036: DogRun_Final:ControlsRightEar
+    2300038: DogRun_Final:ControlsRightShoulder
+    2300040: DogRun_Final:ControlsSpine
+    2300042: DogRun_Final:ControlsTail1
+    2300044: DogRun_Final:ControlsTail2
+    2300046: DogRun_Final:ControlsTail3
+    2300048: DogRun_Final:LeftArmPoleVector
+    2300050: DogRun_Final:LeftLegPoleVector
+    2300052: DogRun_Final:RightArmPoleVector
+    2300054: DogRun_Final:RightLegPoleVector
+    2300056: Rat_OnPlaceRun_Final1:ControlsLeftArmPoleVector
+    2300058: Rat_OnPlaceRun_Final1:ControlsLeftLegPoleVector
+    2300060: Rat_OnPlaceRun_Final1:ControlsRightArmPoleVector
+    2300062: Rat_OnPlaceRun_Final1:ControlsRightLegPoleVector
+    3300000: Car3:Car1Body
+    3300002: Car3:Car1FrontWheels
+    3300004: Car3:Car1RearWheels
+    3300006: Car3:Car2Body
+    3300008: Car3:Car2FrontWheels
+    3300010: Car3:Car2RearWheels
+    3300012: ControlsLeftEye
+    3300014: ControlsRightEye
+    3300016: DogRun_Final:ControlRightHip
+    3300018: DogRun_Final:ControlsChest
+    3300020: DogRun_Final:ControlsEyes
+    3300022: DogRun_Final:ControlsHead
+    3300024: DogRun_Final:ControlsHips
+    3300026: DogRun_Final:ControlsLeftEar
+    3300028: DogRun_Final:ControlsLeftHip
+    3300030: DogRun_Final:ControlsLeftShoulder
+    3300032: DogRun_Final:ControlsMouth
+    3300034: DogRun_Final:ControlsNeck
+    3300036: DogRun_Final:ControlsRightEar
+    3300038: DogRun_Final:ControlsRightShoulder
+    3300040: DogRun_Final:ControlsSpine
+    3300042: DogRun_Final:ControlsTail1
+    3300044: DogRun_Final:ControlsTail2
+    3300046: DogRun_Final:ControlsTail3
+    3300048: DogRun_Final:LeftArmPoleVector
+    3300050: DogRun_Final:LeftLegPoleVector
+    3300052: DogRun_Final:RightArmPoleVector
+    3300054: DogRun_Final:RightLegPoleVector
+    3300056: Rat_OnPlaceRun_Final1:ControlsLeftArmPoleVector
+    3300058: Rat_OnPlaceRun_Final1:ControlsLeftLegPoleVector
+    3300060: Rat_OnPlaceRun_Final1:ControlsRightArmPoleVector
+    3300062: Rat_OnPlaceRun_Final1:ControlsRightLegPoleVector
+    4300000: Car3:Car1Body
+    4300002: Car3:Car1FrontWheels
+    4300004: Car3:Car1RearWheels
+    4300006: Car3:Car2FrontWheels
+    4300008: Car3:Car2RearWheels
+    4300010: Car3:Car2Body
+    4300012: DogRun_Final:DogMesh
+    4300014: DogRun_Final:ControlsChest
+    4300016: DogRun_Final:LeftArmPoleVector
+    4300018: DogRun_Final:LeftLegPoleVector
+    4300020: DogRun_Final:RightArmPoleVector
+    4300022: DogRun_Final:RightLegPoleVector
+    4300024: DogRun_Final:ControlsHips
+    4300026: DogRun_Final:ControlsLeftHip
+    4300028: DogRun_Final:ControlRightHip
+    4300030: DogRun_Final:ControlsTail1
+    4300032: DogRun_Final:ControlsTail2
+    4300034: DogRun_Final:ControlsTail3
+    4300036: DogRun_Final:ControlsSpine
+    4300038: DogRun_Final:ControlsRightShoulder
+    4300040: DogRun_Final:ControlsLeftShoulder
+    4300042: DogRun_Final:ControlsNeck
+    4300044: DogRun_Final:ControlsHead
+    4300046: DogRun_Final:ControlsMouth
+    4300048: DogRun_Final:ControlsLeftEar
+    4300050: DogRun_Final:ControlsRightEar
+    4300052: DogRun_Final:ControlsEyes
+    4300054: Rat_OnPlaceRun_Final1:RatMesh
+    4300056: Rat_OnPlaceRun_Final1:ControlsLeftLegPoleVector
+    4300058: Rat_OnPlaceRun_Final1:ControlsRightLegPoleVector
+    4300060: Rat_OnPlaceRun_Final1:ControlsLeftArmPoleVector
+    4300062: Rat_OnPlaceRun_Final1:ControlsRightArmPoleVector
+    4300064: CatMesh
+    4300066: ControlsRightEye
+    4300068: ControlsLeftEye
+    7400000: Menu_AnimationActors
+    9500000: //RootNode
+    13700000: CatMesh
+    13700002: DogRun_Final:DogMesh
+    13700004: Rat_OnPlaceRun_Final1:RatMesh
+    2186277476908879412: ImportLogs
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: CatOrange
+    second: {fileID: 2100000, guid: 71297c77242e18649b0af4273c1581df, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Default_Material
+    second: {fileID: 2100000, guid: 25e2210d7e3464d4ba0a975759d2c18b, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: DogRun_Final_Dog
+    second: {fileID: 2100000, guid: eb94c7e86b08f394c87a48c784d8ae70, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Rat_OnPlaceRun_Final1_Rat
+    second: {fileID: 2100000, guid: 3696958962c77354ebe1cfe69ca8db21, type: 2}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 0
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: Menu_AnimationActors
+      takeName: Take 001
+      firstFrame: 1
+      lastFrame: 1242
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Car
+        weight: 1
+      - path: Car/Car3:Car1Body
+        weight: 1
+      - path: Car/Car3:Car1FrontWheels
+        weight: 1
+      - path: Car/Car3:Car1RearWheels
+        weight: 1
+      - path: Car4
+        weight: 1
+      - path: Car4/Car3:Car2Body
+        weight: 1
+      - path: Car4/Car3:Car2FrontWheels
+        weight: 1
+      - path: Car4/Car3:Car2RearWheels
+        weight: 1
+      - path: Cat
+        weight: 1
+      - path: Cat/Mesh
+        weight: 1
+      - path: Cat/Mesh/CatMesh
+        weight: 1
+      - path: Cat/Skeleton
+        weight: 1
+      - path: Cat/Skeleton/Hips
+        weight: 1
+      - path: Cat/Skeleton/Hips/LeftUpLeg
+        weight: 1
+      - path: Cat/Skeleton/Hips/LeftUpLeg/LeftLeg
+        weight: 1
+      - path: Cat/Skeleton/Hips/LeftUpLeg/LeftLeg/LeftFoot
+        weight: 1
+      - path: Cat/Skeleton/Hips/LeftUpLeg/LeftLeg/LeftFoot/LeftToe
+        weight: 1
+      - path: Cat/Skeleton/Hips/LeftUpLeg/LeftLeg/LeftFoot/LeftToe/LeftToeEnd
+        weight: 1
+      - path: Cat/Skeleton/Hips/RightUpLeg
+        weight: 1
+      - path: Cat/Skeleton/Hips/RightUpLeg/RightLeg
+        weight: 1
+      - path: Cat/Skeleton/Hips/RightUpLeg/RightLeg/RightFoot
+        weight: 1
+      - path: Cat/Skeleton/Hips/RightUpLeg/RightLeg/RightFoot/RightToe
+        weight: 1
+      - path: Cat/Skeleton/Hips/RightUpLeg/RightLeg/RightFoot/RightToe/RightToeEnd
+        weight: 1
+      - path: Cat/Skeleton/Hips/Spine1
+        weight: 1
+      - path: Cat/Skeleton/Hips/Spine1/Spine2
+        weight: 1
+      - path: Cat/Skeleton/Hips/Spine1/Spine2/LeftShoulder
+        weight: 1
+      - path: Cat/Skeleton/Hips/Spine1/Spine2/LeftShoulder/LeftArm
+        weight: 1
+      - path: Cat/Skeleton/Hips/Spine1/Spine2/LeftShoulder/LeftArm/LeftForeArm
+        weight: 1
+      - path: Cat/Skeleton/Hips/Spine1/Spine2/LeftShoulder/LeftArm/LeftForeArm/LeftHand
+        weight: 1
+      - path: Cat/Skeleton/Hips/Spine1/Spine2/LeftShoulder/LeftArm/LeftForeArm/LeftHand/LeftHandEnd
+        weight: 1
+      - path: Cat/Skeleton/Hips/Spine1/Spine2/Neck
+        weight: 1
+      - path: Cat/Skeleton/Hips/Spine1/Spine2/Neck/Head
+        weight: 1
+      - path: Cat/Skeleton/Hips/Spine1/Spine2/Neck/Head/HeadEnd
+        weight: 1
+      - path: Cat/Skeleton/Hips/Spine1/Spine2/Neck/Head/LeftEar
+        weight: 1
+      - path: Cat/Skeleton/Hips/Spine1/Spine2/Neck/Head/LeftEar/LeftEarEnd
+        weight: 1
+      - path: Cat/Skeleton/Hips/Spine1/Spine2/Neck/Head/LeftEye
+        weight: 1
+      - path: Cat/Skeleton/Hips/Spine1/Spine2/Neck/Head/LeftLowerLid
+        weight: 1
+      - path: Cat/Skeleton/Hips/Spine1/Spine2/Neck/Head/LeftLowerLid/LeftLowerLidEnd
+        weight: 1
+      - path: Cat/Skeleton/Hips/Spine1/Spine2/Neck/Head/LeftUpperLid
+        weight: 1
+      - path: Cat/Skeleton/Hips/Spine1/Spine2/Neck/Head/LeftUpperLid/LeftUpperLidEnd
+        weight: 1
+      - path: Cat/Skeleton/Hips/Spine1/Spine2/Neck/Head/RightEar
+        weight: 1
+      - path: Cat/Skeleton/Hips/Spine1/Spine2/Neck/Head/RightEar/RightEarEnd
+        weight: 1
+      - path: Cat/Skeleton/Hips/Spine1/Spine2/Neck/Head/RightEye
+        weight: 1
+      - path: Cat/Skeleton/Hips/Spine1/Spine2/Neck/Head/RightLowerLid
+        weight: 1
+      - path: Cat/Skeleton/Hips/Spine1/Spine2/Neck/Head/RightLowerLid/RightLowerLidEnd
+        weight: 1
+      - path: Cat/Skeleton/Hips/Spine1/Spine2/Neck/Head/RightUpperLid
+        weight: 1
+      - path: Cat/Skeleton/Hips/Spine1/Spine2/Neck/Head/RightUpperLid/RightUpperLidEnd
+        weight: 1
+      - path: Cat/Skeleton/Hips/Spine1/Spine2/RightShoulder
+        weight: 1
+      - path: Cat/Skeleton/Hips/Spine1/Spine2/RightShoulder/RightArm
+        weight: 1
+      - path: Cat/Skeleton/Hips/Spine1/Spine2/RightShoulder/RightArm/RightForeArm
+        weight: 1
+      - path: Cat/Skeleton/Hips/Spine1/Spine2/RightShoulder/RightArm/RightForeArm/RightHand
+        weight: 1
+      - path: Cat/Skeleton/Hips/Spine1/Spine2/RightShoulder/RightArm/RightForeArm/RightHand/RightHandEnd
+        weight: 1
+      - path: Cat/Skeleton/Hips/Tail1
+        weight: 1
+      - path: Cat/Skeleton/Hips/Tail1/Tail2
+        weight: 1
+      - path: Cat/Skeleton/Hips/Tail1/Tail2/Tail3
+        weight: 1
+      - path: Cat/Skeleton/Hips/Tail1/Tail2/Tail3/Tail4
+        weight: 1
+      - path: Dog
+        weight: 1
+      - path: Dog/DogRun_Final:Mesh
+        weight: 1
+      - path: Dog/DogRun_Final:Mesh/DogRun_Final:DogMesh
+        weight: 1
+      - path: Dog/DogRun_Final:Skeleton
+        weight: 1
+      - path: Dog/DogRun_Final:Skeleton/DogRun_Final:Spine
+        weight: 1
+      - path: Dog/DogRun_Final:Skeleton/DogRun_Final:Spine/DogRun_Final:LeftShoulder
+        weight: 1
+      - path: Dog/DogRun_Final:Skeleton/DogRun_Final:Spine/DogRun_Final:LeftShoulder/DogRun_Final:LeftUpperArm
+        weight: 1
+      - path: Dog/DogRun_Final:Skeleton/DogRun_Final:Spine/DogRun_Final:LeftShoulder/DogRun_Final:LeftUpperArm/DogRun_Final:LeftArm
+        weight: 1
+      - path: Dog/DogRun_Final:Skeleton/DogRun_Final:Spine/DogRun_Final:LeftShoulder/DogRun_Final:LeftUpperArm/DogRun_Final:LeftArm/DogRun_Final:LeftHand
+        weight: 1
+      - path: Dog/DogRun_Final:Skeleton/DogRun_Final:Spine/DogRun_Final:Neck
+        weight: 1
+      - path: Dog/DogRun_Final:Skeleton/DogRun_Final:Spine/DogRun_Final:Neck/DogRun_Final:Head
+        weight: 1
+      - path: Dog/DogRun_Final:Skeleton/DogRun_Final:Spine/DogRun_Final:Neck/DogRun_Final:Head/DogRun_Final:Eyes
+        weight: 1
+      - path: Dog/DogRun_Final:Skeleton/DogRun_Final:Spine/DogRun_Final:Neck/DogRun_Final:Head/DogRun_Final:LeftEar
+        weight: 1
+      - path: Dog/DogRun_Final:Skeleton/DogRun_Final:Spine/DogRun_Final:Neck/DogRun_Final:Head/DogRun_Final:Mouth
+        weight: 1
+      - path: Dog/DogRun_Final:Skeleton/DogRun_Final:Spine/DogRun_Final:Neck/DogRun_Final:Head/DogRun_Final:RightEar
+        weight: 1
+      - path: Dog/DogRun_Final:Skeleton/DogRun_Final:Spine/DogRun_Final:Pelvis
+        weight: 1
+      - path: Dog/DogRun_Final:Skeleton/DogRun_Final:Spine/DogRun_Final:Pelvis/DogRun_Final:LeftHip
+        weight: 1
+      - path: Dog/DogRun_Final:Skeleton/DogRun_Final:Spine/DogRun_Final:Pelvis/DogRun_Final:LeftHip/DogRun_Final:LeftLeg1
+        weight: 1
+      - path: Dog/DogRun_Final:Skeleton/DogRun_Final:Spine/DogRun_Final:Pelvis/DogRun_Final:LeftHip/DogRun_Final:LeftLeg1/DogRun_Final:LeftLeg2
+        weight: 1
+      - path: Dog/DogRun_Final:Skeleton/DogRun_Final:Spine/DogRun_Final:Pelvis/DogRun_Final:LeftHip/DogRun_Final:LeftLeg1/DogRun_Final:LeftLeg2/DogRun_Final:LeftLeg3
+        weight: 1
+      - path: Dog/DogRun_Final:Skeleton/DogRun_Final:Spine/DogRun_Final:Pelvis/DogRun_Final:LeftHip/DogRun_Final:LeftLeg1/DogRun_Final:LeftLeg2/DogRun_Final:LeftLeg3/DogRun_Final:LeftFoot
+        weight: 1
+      - path: Dog/DogRun_Final:Skeleton/DogRun_Final:Spine/DogRun_Final:Pelvis/DogRun_Final:RightHip
+        weight: 1
+      - path: Dog/DogRun_Final:Skeleton/DogRun_Final:Spine/DogRun_Final:Pelvis/DogRun_Final:RightHip/DogRun_Final:RightLeg1
+        weight: 1
+      - path: Dog/DogRun_Final:Skeleton/DogRun_Final:Spine/DogRun_Final:Pelvis/DogRun_Final:RightHip/DogRun_Final:RightLeg1/DogRun_Final:RightLeg2
+        weight: 1
+      - path: Dog/DogRun_Final:Skeleton/DogRun_Final:Spine/DogRun_Final:Pelvis/DogRun_Final:RightHip/DogRun_Final:RightLeg1/DogRun_Final:RightLeg2/DogRun_Final:RightLeg3
+        weight: 1
+      - path: Dog/DogRun_Final:Skeleton/DogRun_Final:Spine/DogRun_Final:Pelvis/DogRun_Final:RightHip/DogRun_Final:RightLeg1/DogRun_Final:RightLeg2/DogRun_Final:RightLeg3/DogRun_Final:RightFoot
+        weight: 1
+      - path: Dog/DogRun_Final:Skeleton/DogRun_Final:Spine/DogRun_Final:Pelvis/DogRun_Final:Tail1
+        weight: 1
+      - path: Dog/DogRun_Final:Skeleton/DogRun_Final:Spine/DogRun_Final:Pelvis/DogRun_Final:Tail1/DogRun_Final:Tail2
+        weight: 1
+      - path: Dog/DogRun_Final:Skeleton/DogRun_Final:Spine/DogRun_Final:Pelvis/DogRun_Final:Tail1/DogRun_Final:Tail2/DogRun_Final:Tail3
+        weight: 1
+      - path: Dog/DogRun_Final:Skeleton/DogRun_Final:Spine/DogRun_Final:RightShoulder
+        weight: 1
+      - path: Dog/DogRun_Final:Skeleton/DogRun_Final:Spine/DogRun_Final:RightShoulder/DogRun_Final:RightUpperArm
+        weight: 1
+      - path: Dog/DogRun_Final:Skeleton/DogRun_Final:Spine/DogRun_Final:RightShoulder/DogRun_Final:RightUpperArm/DogRun_Final:RightArm
+        weight: 1
+      - path: Dog/DogRun_Final:Skeleton/DogRun_Final:Spine/DogRun_Final:RightShoulder/DogRun_Final:RightUpperArm/DogRun_Final:RightArm/DogRun_Final:RightHand
+        weight: 1
+      - path: Rat
+        weight: 1
+      - path: Rat/Rat_OnPlaceRun_Final1:RatMesh
+        weight: 1
+      - path: Rat/Rat_OnPlaceRun_Final1:Skeleton
+        weight: 1
+      - path: Rat/Rat_OnPlaceRun_Final1:Skeleton/Rat_OnPlaceRun_Final1:Hips
+        weight: 1
+      - path: Rat/Rat_OnPlaceRun_Final1:Skeleton/Rat_OnPlaceRun_Final1:Hips/Rat_OnPlaceRun_Final1:LeftUpLeg
+        weight: 1
+      - path: Rat/Rat_OnPlaceRun_Final1:Skeleton/Rat_OnPlaceRun_Final1:Hips/Rat_OnPlaceRun_Final1:LeftUpLeg/Rat_OnPlaceRun_Final1:LeftLegMiddle
+        weight: 1
+      - path: Rat/Rat_OnPlaceRun_Final1:Skeleton/Rat_OnPlaceRun_Final1:Hips/Rat_OnPlaceRun_Final1:LeftUpLeg/Rat_OnPlaceRun_Final1:LeftLegMiddle/Rat_OnPlaceRun_Final1:LeftLeg
+        weight: 1
+      - path: Rat/Rat_OnPlaceRun_Final1:Skeleton/Rat_OnPlaceRun_Final1:Hips/Rat_OnPlaceRun_Final1:LeftUpLeg/Rat_OnPlaceRun_Final1:LeftLegMiddle/Rat_OnPlaceRun_Final1:LeftLeg/Rat_OnPlaceRun_Final1:LeftFoot
+        weight: 1
+      - path: Rat/Rat_OnPlaceRun_Final1:Skeleton/Rat_OnPlaceRun_Final1:Hips/Rat_OnPlaceRun_Final1:RightUpLeg
+        weight: 1
+      - path: Rat/Rat_OnPlaceRun_Final1:Skeleton/Rat_OnPlaceRun_Final1:Hips/Rat_OnPlaceRun_Final1:RightUpLeg/Rat_OnPlaceRun_Final1:RightLegMiddle
+        weight: 1
+      - path: Rat/Rat_OnPlaceRun_Final1:Skeleton/Rat_OnPlaceRun_Final1:Hips/Rat_OnPlaceRun_Final1:RightUpLeg/Rat_OnPlaceRun_Final1:RightLegMiddle/Rat_OnPlaceRun_Final1:RightLeg
+        weight: 1
+      - path: Rat/Rat_OnPlaceRun_Final1:Skeleton/Rat_OnPlaceRun_Final1:Hips/Rat_OnPlaceRun_Final1:RightUpLeg/Rat_OnPlaceRun_Final1:RightLegMiddle/Rat_OnPlaceRun_Final1:RightLeg/Rat_OnPlaceRun_Final1:RightFoot
+        weight: 1
+      - path: Rat/Rat_OnPlaceRun_Final1:Skeleton/Rat_OnPlaceRun_Final1:Hips/Rat_OnPlaceRun_Final1:Spine1
+        weight: 1
+      - path: Rat/Rat_OnPlaceRun_Final1:Skeleton/Rat_OnPlaceRun_Final1:Hips/Rat_OnPlaceRun_Final1:Spine1/Rat_OnPlaceRun_Final1:Spine2
+        weight: 1
+      - path: Rat/Rat_OnPlaceRun_Final1:Skeleton/Rat_OnPlaceRun_Final1:Hips/Rat_OnPlaceRun_Final1:Spine1/Rat_OnPlaceRun_Final1:Spine2/Rat_OnPlaceRun_Final1:Head
+        weight: 1
+      - path: Rat/Rat_OnPlaceRun_Final1:Skeleton/Rat_OnPlaceRun_Final1:Hips/Rat_OnPlaceRun_Final1:Spine1/Rat_OnPlaceRun_Final1:Spine2/Rat_OnPlaceRun_Final1:Head/Rat_OnPlaceRun_Final1:LeftEar
+        weight: 1
+      - path: Rat/Rat_OnPlaceRun_Final1:Skeleton/Rat_OnPlaceRun_Final1:Hips/Rat_OnPlaceRun_Final1:Spine1/Rat_OnPlaceRun_Final1:Spine2/Rat_OnPlaceRun_Final1:Head/Rat_OnPlaceRun_Final1:Nose
+        weight: 1
+      - path: Rat/Rat_OnPlaceRun_Final1:Skeleton/Rat_OnPlaceRun_Final1:Hips/Rat_OnPlaceRun_Final1:Spine1/Rat_OnPlaceRun_Final1:Spine2/Rat_OnPlaceRun_Final1:Head/Rat_OnPlaceRun_Final1:RightEar
+        weight: 1
+      - path: Rat/Rat_OnPlaceRun_Final1:Skeleton/Rat_OnPlaceRun_Final1:Hips/Rat_OnPlaceRun_Final1:Spine1/Rat_OnPlaceRun_Final1:Spine2/Rat_OnPlaceRun_Final1:LeftShoulder
+        weight: 1
+      - path: Rat/Rat_OnPlaceRun_Final1:Skeleton/Rat_OnPlaceRun_Final1:Hips/Rat_OnPlaceRun_Final1:Spine1/Rat_OnPlaceRun_Final1:Spine2/Rat_OnPlaceRun_Final1:LeftShoulder/Rat_OnPlaceRun_Final1:LeftArm
+        weight: 1
+      - path: Rat/Rat_OnPlaceRun_Final1:Skeleton/Rat_OnPlaceRun_Final1:Hips/Rat_OnPlaceRun_Final1:Spine1/Rat_OnPlaceRun_Final1:Spine2/Rat_OnPlaceRun_Final1:LeftShoulder/Rat_OnPlaceRun_Final1:LeftArm/Rat_OnPlaceRun_Final1:LeftForeArm
+        weight: 1
+      - path: Rat/Rat_OnPlaceRun_Final1:Skeleton/Rat_OnPlaceRun_Final1:Hips/Rat_OnPlaceRun_Final1:Spine1/Rat_OnPlaceRun_Final1:Spine2/Rat_OnPlaceRun_Final1:LeftShoulder/Rat_OnPlaceRun_Final1:LeftArm/Rat_OnPlaceRun_Final1:LeftForeArm/Rat_OnPlaceRun_Final1:LeftHand
+        weight: 1
+      - path: Rat/Rat_OnPlaceRun_Final1:Skeleton/Rat_OnPlaceRun_Final1:Hips/Rat_OnPlaceRun_Final1:Spine1/Rat_OnPlaceRun_Final1:Spine2/Rat_OnPlaceRun_Final1:RightShoulder
+        weight: 1
+      - path: Rat/Rat_OnPlaceRun_Final1:Skeleton/Rat_OnPlaceRun_Final1:Hips/Rat_OnPlaceRun_Final1:Spine1/Rat_OnPlaceRun_Final1:Spine2/Rat_OnPlaceRun_Final1:RightShoulder/Rat_OnPlaceRun_Final1:RightArm
+        weight: 1
+      - path: Rat/Rat_OnPlaceRun_Final1:Skeleton/Rat_OnPlaceRun_Final1:Hips/Rat_OnPlaceRun_Final1:Spine1/Rat_OnPlaceRun_Final1:Spine2/Rat_OnPlaceRun_Final1:RightShoulder/Rat_OnPlaceRun_Final1:RightArm/Rat_OnPlaceRun_Final1:RightForeArm
+        weight: 1
+      - path: Rat/Rat_OnPlaceRun_Final1:Skeleton/Rat_OnPlaceRun_Final1:Hips/Rat_OnPlaceRun_Final1:Spine1/Rat_OnPlaceRun_Final1:Spine2/Rat_OnPlaceRun_Final1:RightShoulder/Rat_OnPlaceRun_Final1:RightArm/Rat_OnPlaceRun_Final1:RightForeArm/Rat_OnPlaceRun_Final1:RightHand
+        weight: 1
+      - path: Rat/Rat_OnPlaceRun_Final1:Skeleton/Rat_OnPlaceRun_Final1:Hips/Rat_OnPlaceRun_Final1:Tail1
+        weight: 1
+      - path: Rat/Rat_OnPlaceRun_Final1:Skeleton/Rat_OnPlaceRun_Final1:Hips/Rat_OnPlaceRun_Final1:Tail1/Rat_OnPlaceRun_Final1:Tail2
+        weight: 1
+      - path: Rat/Rat_OnPlaceRun_Final1:Skeleton/Rat_OnPlaceRun_Final1:Hips/Rat_OnPlaceRun_Final1:Tail1/Rat_OnPlaceRun_Final1:Tail2/Rat_OnPlaceRun_Final1:Tail3
+        weight: 1
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    isReadable: 0
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 0
+    importBlendShapes: 1
+    importCameras: 0
+    importLights: 0
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 0
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

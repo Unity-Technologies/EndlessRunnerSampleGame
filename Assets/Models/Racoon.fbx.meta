@@ -1,0 +1,189 @@
+fileFormatVersion: 2
+guid: 4aed8c63f75928c40a2709007cecbee8
+timeCreated: 1464703710
+licenseType: Pro
+ModelImporter:
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: ConstructionGearMesh
+    100002: Controls
+    100004: FezAndBowtieMesh
+    100006: Head
+    100008: HeadEnd
+    100010: Hips
+    100012: LeftArm
+    100014: LeftEar
+    100016: LeftEarEnd
+    100018: LeftEye
+    100020: LeftFoot
+    100022: LeftForeArm
+    100024: LeftHand
+    100026: LeftHandEnd
+    100028: LeftLeg
+    100030: LeftLowerLid
+    100032: LeftLowerLidEnd
+    100034: LeftShoulder
+    100036: LeftToe
+    100038: LeftToeEnd
+    100040: LeftUpLeg
+    100042: LeftUpperLid
+    100044: LeftUpperLidEnd
+    100046: Mesh
+    100048: Neck
+    100050: //RootNode
+    100052: RacoonMesh
+    100054: RightArm
+    100056: RightEar
+    100058: RightEarEnd
+    100060: RightEye
+    100062: RightFoot
+    100064: RightForeArm
+    100066: RightHand
+    100068: RightHandEnd
+    100070: RightLeg
+    100072: RightLowerLid
+    100074: RightLowerLidEnd
+    100076: RightShoulder
+    100078: RightToe
+    100080: RightToeEnd
+    100082: RightUpLeg
+    100084: RightUpperLid
+    100086: RightUpperLidEnd
+    100088: Skeleton
+    100090: Spine1
+    100092: Spine2
+    100094: Tail1
+    100096: Tail2
+    100098: Tail3
+    100100: Tail4
+    100102: PartHatandBowtie
+    400000: ConstructionGearMesh
+    400002: Controls
+    400004: FezAndBowtieMesh
+    400006: Head
+    400008: HeadEnd
+    400010: Hips
+    400012: LeftArm
+    400014: LeftEar
+    400016: LeftEarEnd
+    400018: LeftEye
+    400020: LeftFoot
+    400022: LeftForeArm
+    400024: LeftHand
+    400026: LeftHandEnd
+    400028: LeftLeg
+    400030: LeftLowerLid
+    400032: LeftLowerLidEnd
+    400034: LeftShoulder
+    400036: LeftToe
+    400038: LeftToeEnd
+    400040: LeftUpLeg
+    400042: LeftUpperLid
+    400044: LeftUpperLidEnd
+    400046: Mesh
+    400048: Neck
+    400050: //RootNode
+    400052: RacoonMesh
+    400054: RightArm
+    400056: RightEar
+    400058: RightEarEnd
+    400060: RightEye
+    400062: RightFoot
+    400064: RightForeArm
+    400066: RightHand
+    400068: RightHandEnd
+    400070: RightLeg
+    400072: RightLowerLid
+    400074: RightLowerLidEnd
+    400076: RightShoulder
+    400078: RightToe
+    400080: RightToeEnd
+    400082: RightUpLeg
+    400084: RightUpperLid
+    400086: RightUpperLidEnd
+    400088: Skeleton
+    400090: Spine1
+    400092: Spine2
+    400094: Tail1
+    400096: Tail2
+    400098: Tail3
+    400100: Tail4
+    400102: PartHatandBowtie
+    4300000: FezAndBowtieMesh
+    4300002: RacoonMesh
+    4300004: ConstructionGearMesh
+    4300006: PartHatandBowtie
+    7400000: Take 001
+    9500000: //RootNode
+    13700000: ConstructionGearMesh
+    13700002: FezAndBowtieMesh
+    13700004: RacoonMesh
+    13700006: PartHatandBowtie
+  materials:
+    importMaterials: 1
+    materialName: 1
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 1
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 0
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 0
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+  importAnimation: 0
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 0
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

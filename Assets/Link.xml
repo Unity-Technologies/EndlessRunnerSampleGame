@@ -1,0 +1,10 @@
+<linker>
+	<assembly fullname="UnityEngine">
+		<type fullname="UnityEngine.Animator" preserve="all" />
+		<type fullname="UnityEngine.MeshRenderer" preserve="all" />
+		<type fullname="UnityEngine.SkinnedMeshRenderer" preserve="all" />
+		<type fullname="UnityEngine.MeshFilter" preserve="all" />
+		<type fullname="UnityEngine.Advertisements" preserve="all" />
+		<type fullname="UnityEngine.SpriteRenderer" preserve="all" />
+	</assembly>
+</linker>

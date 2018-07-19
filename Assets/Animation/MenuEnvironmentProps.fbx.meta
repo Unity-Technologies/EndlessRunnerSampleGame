@@ -1,0 +1,363 @@
+fileFormatVersion: 2
+guid: 767e4364a0b09234298acaeb98f0ad13
+timeCreated: 1481037345
+licenseType: Pro
+ModelImporter:
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: BinBottom
+    100002: BinLid
+    100004: DumppsterLid
+    100006: DumpsterBottom
+    100008: Grass
+    100010: GrassClump
+    100012: GrassClump1
+    100014: GrassClump2
+    100016: GrassClump3
+    100018: GrassClump4
+    100020: GrassClump5
+    100022: GrassClump6
+    100024: GrassClump7
+    100026: GrassClump8
+    100028: GrassClump9
+    100030: //RootNode
+    100032: Tree
+    100034: TreeLeaves
+    100036: TreeLeaves1
+    100038: TreeLeaves10
+    100040: TreeLeaves11
+    100042: TreeLeaves12
+    100044: TreeLeaves13
+    100046: TreeLeaves14
+    100048: TreeLeaves15
+    100050: TreeLeaves16
+    100052: TreeLeaves17
+    100054: TreeLeaves2
+    100056: TreeLeaves3
+    100058: TreeLeaves4
+    100060: TreeLeaves5
+    100062: TreeLeaves6
+    100064: TreeLeaves7
+    100066: TreeLeaves8
+    100068: TreeLeaves9
+    100070: WheelyBinBottom
+    100072: WheelyBinTop
+    100074: GrassPlane
+    400000: BinBottom
+    400002: BinLid
+    400004: DumppsterLid
+    400006: DumpsterBottom
+    400008: Grass
+    400010: GrassClump
+    400012: GrassClump1
+    400014: GrassClump2
+    400016: GrassClump3
+    400018: GrassClump4
+    400020: GrassClump5
+    400022: GrassClump6
+    400024: GrassClump7
+    400026: GrassClump8
+    400028: GrassClump9
+    400030: //RootNode
+    400032: Tree
+    400034: TreeLeaves
+    400036: TreeLeaves1
+    400038: TreeLeaves10
+    400040: TreeLeaves11
+    400042: TreeLeaves12
+    400044: TreeLeaves13
+    400046: TreeLeaves14
+    400048: TreeLeaves15
+    400050: TreeLeaves16
+    400052: TreeLeaves17
+    400054: TreeLeaves2
+    400056: TreeLeaves3
+    400058: TreeLeaves4
+    400060: TreeLeaves5
+    400062: TreeLeaves6
+    400064: TreeLeaves7
+    400066: TreeLeaves8
+    400068: TreeLeaves9
+    400070: WheelyBinBottom
+    400072: WheelyBinTop
+    400074: GrassPlane
+    2300000: BinBottom
+    2300002: BinLid
+    2300004: DumppsterLid
+    2300006: DumpsterBottom
+    2300008: GrassClump
+    2300010: GrassClump1
+    2300012: GrassClump2
+    2300014: GrassClump3
+    2300016: GrassClump4
+    2300018: GrassClump5
+    2300020: GrassClump6
+    2300022: GrassClump7
+    2300024: GrassClump8
+    2300026: GrassClump9
+    2300028: Tree
+    2300030: TreeLeaves
+    2300032: TreeLeaves1
+    2300034: TreeLeaves10
+    2300036: TreeLeaves11
+    2300038: TreeLeaves12
+    2300040: TreeLeaves13
+    2300042: TreeLeaves14
+    2300044: TreeLeaves15
+    2300046: TreeLeaves16
+    2300048: TreeLeaves17
+    2300050: TreeLeaves2
+    2300052: TreeLeaves3
+    2300054: TreeLeaves4
+    2300056: TreeLeaves5
+    2300058: TreeLeaves6
+    2300060: TreeLeaves7
+    2300062: TreeLeaves8
+    2300064: TreeLeaves9
+    2300066: WheelyBinBottom
+    2300068: WheelyBinTop
+    2300070: GrassPlane
+    3300000: BinBottom
+    3300002: BinLid
+    3300004: DumppsterLid
+    3300006: DumpsterBottom
+    3300008: GrassClump
+    3300010: GrassClump1
+    3300012: GrassClump2
+    3300014: GrassClump3
+    3300016: GrassClump4
+    3300018: GrassClump5
+    3300020: GrassClump6
+    3300022: GrassClump7
+    3300024: GrassClump8
+    3300026: GrassClump9
+    3300028: Tree
+    3300030: TreeLeaves
+    3300032: TreeLeaves1
+    3300034: TreeLeaves10
+    3300036: TreeLeaves11
+    3300038: TreeLeaves12
+    3300040: TreeLeaves13
+    3300042: TreeLeaves14
+    3300044: TreeLeaves15
+    3300046: TreeLeaves16
+    3300048: TreeLeaves17
+    3300050: TreeLeaves2
+    3300052: TreeLeaves3
+    3300054: TreeLeaves4
+    3300056: TreeLeaves5
+    3300058: TreeLeaves6
+    3300060: TreeLeaves7
+    3300062: TreeLeaves8
+    3300064: TreeLeaves9
+    3300066: WheelyBinBottom
+    3300068: WheelyBinTop
+    3300070: GrassPlane
+    4300000: BinBottom
+    4300002: BinLid
+    4300004: GrassClump
+    4300006: GrassClump6
+    4300008: GrassClump7
+    4300010: GrassClump1
+    4300012: GrassClump2
+    4300014: GrassClump3
+    4300016: GrassClump9
+    4300018: GrassClump8
+    4300020: GrassClump5
+    4300022: GrassClump4
+    4300024: DumppsterLid
+    4300026: DumpsterBottom
+    4300028: WheelyBinBottom
+    4300030: WheelyBinTop
+    4300032: Tree
+    4300034: TreeLeaves
+    4300036: TreeLeaves1
+    4300038: TreeLeaves2
+    4300040: TreeLeaves3
+    4300042: TreeLeaves4
+    4300044: TreeLeaves5
+    4300046: TreeLeaves6
+    4300048: TreeLeaves7
+    4300050: TreeLeaves8
+    4300052: TreeLeaves9
+    4300054: TreeLeaves10
+    4300056: TreeLeaves11
+    4300058: TreeLeaves12
+    4300060: TreeLeaves13
+    4300062: TreeLeaves14
+    4300064: TreeLeaves15
+    4300066: TreeLeaves16
+    4300068: TreeLeaves17
+    4300070: GrassPlane
+    7400000: Menu_AnimationEnvironment
+    9500000: //RootNode
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: Menu_AnimationEnvironment
+      takeName: Take 001
+      firstFrame: 1
+      lastFrame: 1242
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: BinBottom
+        weight: 1
+      - path: BinLid
+        weight: 1
+      - path: DumppsterLid
+        weight: 1
+      - path: DumpsterBottom
+        weight: 1
+      - path: Grass
+        weight: 1
+      - path: Grass/GrassClump
+        weight: 1
+      - path: Grass/GrassClump1
+        weight: 1
+      - path: Grass/GrassClump2
+        weight: 1
+      - path: Grass/GrassClump3
+        weight: 1
+      - path: Grass/GrassClump4
+        weight: 1
+      - path: Grass/GrassClump5
+        weight: 1
+      - path: Grass/GrassClump6
+        weight: 1
+      - path: Grass/GrassClump7
+        weight: 1
+      - path: Grass/GrassClump8
+        weight: 1
+      - path: Grass/GrassClump9
+        weight: 1
+      - path: Tree
+        weight: 1
+      - path: Tree/TreeLeaves
+        weight: 1
+      - path: Tree/TreeLeaves1
+        weight: 1
+      - path: Tree/TreeLeaves2
+        weight: 1
+      - path: Tree/TreeLeaves3
+        weight: 1
+      - path: Tree/TreeLeaves4
+        weight: 1
+      - path: Tree/TreeLeaves5
+        weight: 1
+      - path: Tree/TreeLeaves6
+        weight: 1
+      - path: Tree/TreeLeaves7
+        weight: 1
+      - path: Tree/TreeLeaves8
+        weight: 1
+      - path: Tree/TreeLeaves9
+        weight: 1
+      - path: Tree/TreeLeaves10
+        weight: 1
+      - path: Tree/TreeLeaves11
+        weight: 1
+      - path: Tree/TreeLeaves12
+        weight: 1
+      - path: Tree/TreeLeaves13
+        weight: 1
+      - path: Tree/TreeLeaves14
+        weight: 1
+      - path: Tree/TreeLeaves15
+        weight: 1
+      - path: Tree/TreeLeaves16
+        weight: 1
+      - path: Tree/TreeLeaves17
+        weight: 1
+      - path: WheelyBinBottom
+        weight: 1
+      - path: WheelyBinTop
+        weight: 1
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    isReadable: 0
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

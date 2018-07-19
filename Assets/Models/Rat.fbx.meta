@@ -1,0 +1,158 @@
+fileFormatVersion: 2
+guid: 24b9245bce05384439fa7fcfc8f87224
+timeCreated: 1464780426
+licenseType: Pro
+ModelImporter:
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: //RootNode
+    100002: Controls
+    100004: Head
+    100006: Hips
+    100008: LeftArm
+    100010: LeftEar
+    100012: LeftEarEnd
+    100014: LeftFoot
+    100016: LeftFootEnd
+    100018: LeftForeArm
+    100020: LeftHand
+    100022: LeftHandEnd
+    100024: LeftLeg
+    100026: LeftLegMiddle
+    100028: LeftShoulder
+    100030: LeftUpLeg
+    100032: Nose
+    100034: NoseEnd
+    100036: RatMesh
+    100038: RightArm
+    100040: RightEar
+    100042: RightEarEnd
+    100044: RightFoot
+    100046: RightFootEnd
+    100048: RightForeArm
+    100050: RightHand
+    100052: RightHandEnd
+    100054: RightLeg
+    100056: RightLegMiddle
+    100058: RightShoulder
+    100060: RightUpLeg
+    100062: Skeleton
+    100064: Spine1
+    100066: Spine2
+    100068: Tail1
+    100070: Tail2
+    100072: Tail3
+    100074: TailEnd
+    400000: //RootNode
+    400002: Controls
+    400004: Head
+    400006: Hips
+    400008: LeftArm
+    400010: LeftEar
+    400012: LeftEarEnd
+    400014: LeftFoot
+    400016: LeftFootEnd
+    400018: LeftForeArm
+    400020: LeftHand
+    400022: LeftHandEnd
+    400024: LeftLeg
+    400026: LeftLegMiddle
+    400028: LeftShoulder
+    400030: LeftUpLeg
+    400032: Nose
+    400034: NoseEnd
+    400036: RatMesh
+    400038: RightArm
+    400040: RightEar
+    400042: RightEarEnd
+    400044: RightFoot
+    400046: RightFootEnd
+    400048: RightForeArm
+    400050: RightHand
+    400052: RightHandEnd
+    400054: RightLeg
+    400056: RightLegMiddle
+    400058: RightShoulder
+    400060: RightUpLeg
+    400062: Skeleton
+    400064: Spine1
+    400066: Spine2
+    400068: Tail1
+    400070: Tail2
+    400072: Tail3
+    400074: TailEnd
+    2300000: //RootNode
+    2300002: RatMesh
+    3300000: //RootNode
+    3300002: RatMesh
+    4300000: RatMesh
+    9500000: //RootNode
+    13700000: RatMesh
+  materials:
+    importMaterials: 1
+    materialName: 1
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 1
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 3
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 0
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 0
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+  importAnimation: 0
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 0
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

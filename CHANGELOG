@@ -1,0 +1,17 @@
+## CHANGELOG
+
+# [1.1]
+
+- Updated to 18.2
+- Now use Addressable System
+- Now use Lightweight Rendering Pipeline
+- Added a Tutorial on first launch
+- Fixed typos
+- Jump can now be canceled to start sliding
+- Application now pause on lost of focus (e.g. Mobile notification menu opened)
+- Coin & Premium are credited as soon as grabbed so even if quit game mid run, keep what was gatehred
+- Some define fixed that were breaking compilation on iOS. 
+
+# [1.0.1]
+
+- Updated to 2018.1

@@ -1,0 +1,254 @@
+fileFormatVersion: 2
+guid: 1fa0d134c763a194ea3daba8ff85489a
+timeCreated: 1465305114
+licenseType: Pro
+ModelImporter:
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: Controls
+    100002: Head
+    100004: Hips
+    100006: LeftArm
+    100008: LeftEar
+    100010: LeftEarEnd
+    100012: LeftFoot
+    100014: LeftFootEnd
+    100016: LeftForeArm
+    100018: LeftHand
+    100020: LeftHandEnd
+    100022: LeftLeg
+    100024: LeftLegMiddle
+    100026: LeftShoulder
+    100028: LeftUpLeg
+    100030: Nose
+    100032: NoseEnd
+    100034: //RootNode
+    100036: RightArm
+    100038: RightEar
+    100040: RightEarEnd
+    100042: RightFoot
+    100044: RightFootEnd
+    100046: RightForeArm
+    100048: RightHand
+    100050: RightHandEnd
+    100052: RightLeg
+    100054: RightLegMiddle
+    100056: RightShoulder
+    100058: RightUpLeg
+    100060: Skeleton
+    100062: Spine1
+    100064: Spine2
+    100066: Tail1
+    100068: Tail2
+    100070: Tail3
+    100072: TailEnd
+    400000: Controls
+    400002: Head
+    400004: Hips
+    400006: LeftArm
+    400008: LeftEar
+    400010: LeftEarEnd
+    400012: LeftFoot
+    400014: LeftFootEnd
+    400016: LeftForeArm
+    400018: LeftHand
+    400020: LeftHandEnd
+    400022: LeftLeg
+    400024: LeftLegMiddle
+    400026: LeftShoulder
+    400028: LeftUpLeg
+    400030: Nose
+    400032: NoseEnd
+    400034: //RootNode
+    400036: RightArm
+    400038: RightEar
+    400040: RightEarEnd
+    400042: RightFoot
+    400044: RightFootEnd
+    400046: RightForeArm
+    400048: RightHand
+    400050: RightHandEnd
+    400052: RightLeg
+    400054: RightLegMiddle
+    400056: RightShoulder
+    400058: RightUpLeg
+    400060: Skeleton
+    400062: Spine1
+    400064: Spine2
+    400066: Tail1
+    400068: Tail2
+    400070: Tail3
+    400072: TailEnd
+    7400000: Rat_Run
+    9500000: //RootNode
+    11100000: //RootNode
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: Rat_Run
+      takeName: Take 001
+      firstFrame: 0
+      lastFrame: 74
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Controls
+        weight: 1
+      - path: Skeleton
+        weight: 1
+      - path: Skeleton/Hips
+        weight: 1
+      - path: Skeleton/Hips/LeftUpLeg
+        weight: 1
+      - path: Skeleton/Hips/LeftUpLeg/LeftLegMiddle
+        weight: 1
+      - path: Skeleton/Hips/LeftUpLeg/LeftLegMiddle/LeftLeg
+        weight: 1
+      - path: Skeleton/Hips/LeftUpLeg/LeftLegMiddle/LeftLeg/LeftFoot
+        weight: 1
+      - path: Skeleton/Hips/LeftUpLeg/LeftLegMiddle/LeftLeg/LeftFoot/LeftFootEnd
+        weight: 1
+      - path: Skeleton/Hips/RightUpLeg
+        weight: 1
+      - path: Skeleton/Hips/RightUpLeg/RightLegMiddle
+        weight: 1
+      - path: Skeleton/Hips/RightUpLeg/RightLegMiddle/RightLeg
+        weight: 1
+      - path: Skeleton/Hips/RightUpLeg/RightLegMiddle/RightLeg/RightFoot
+        weight: 1
+      - path: Skeleton/Hips/RightUpLeg/RightLegMiddle/RightLeg/RightFoot/RightFootEnd
+        weight: 1
+      - path: Skeleton/Hips/Spine1
+        weight: 1
+      - path: Skeleton/Hips/Spine1/Spine2
+        weight: 1
+      - path: Skeleton/Hips/Spine1/Spine2/Head
+        weight: 1
+      - path: Skeleton/Hips/Spine1/Spine2/Head/LeftEar
+        weight: 1
+      - path: Skeleton/Hips/Spine1/Spine2/Head/LeftEar/LeftEarEnd
+        weight: 1
+      - path: Skeleton/Hips/Spine1/Spine2/Head/Nose
+        weight: 1
+      - path: Skeleton/Hips/Spine1/Spine2/Head/Nose/NoseEnd
+        weight: 1
+      - path: Skeleton/Hips/Spine1/Spine2/Head/RightEar
+        weight: 1
+      - path: Skeleton/Hips/Spine1/Spine2/Head/RightEar/RightEarEnd
+        weight: 1
+      - path: Skeleton/Hips/Spine1/Spine2/LeftShoulder
+        weight: 1
+      - path: Skeleton/Hips/Spine1/Spine2/LeftShoulder/LeftArm
+        weight: 1
+      - path: Skeleton/Hips/Spine1/Spine2/LeftShoulder/LeftArm/LeftForeArm
+        weight: 1
+      - path: Skeleton/Hips/Spine1/Spine2/LeftShoulder/LeftArm/LeftForeArm/LeftHand
+        weight: 1
+      - path: Skeleton/Hips/Spine1/Spine2/LeftShoulder/LeftArm/LeftForeArm/LeftHand/LeftHandEnd
+        weight: 1
+      - path: Skeleton/Hips/Spine1/Spine2/RightShoulder
+        weight: 1
+      - path: Skeleton/Hips/Spine1/Spine2/RightShoulder/RightArm
+        weight: 1
+      - path: Skeleton/Hips/Spine1/Spine2/RightShoulder/RightArm/RightForeArm
+        weight: 1
+      - path: Skeleton/Hips/Spine1/Spine2/RightShoulder/RightArm/RightForeArm/RightHand
+        weight: 1
+      - path: Skeleton/Hips/Spine1/Spine2/RightShoulder/RightArm/RightForeArm/RightHand/RightHandEnd
+        weight: 1
+      - path: Skeleton/Hips/Tail1
+        weight: 1
+      - path: Skeleton/Hips/Tail1/Tail2
+        weight: 1
+      - path: Skeleton/Hips/Tail1/Tail2/Tail3
+        weight: 1
+      - path: Skeleton/Hips/Tail1/Tail2/Tail3/TailEnd
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    isReadable: 0
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 0
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

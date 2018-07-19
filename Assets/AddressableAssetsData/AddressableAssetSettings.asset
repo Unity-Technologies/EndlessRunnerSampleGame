@@ -1,0 +1,108 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 468a46d0ae32c3544b7d98094e6448a9, type: 3}
+  m_Name: AddressableAssetSettings
+  m_EditorClassIdentifier: 
+  pathForAsset: Assets/AddressableAssetsData/AddressableAssetSettings.asset
+  m_groups:
+  - name: Built In Data
+    guid: 290fc3afeca9f7e4d92c9b2a28a48049
+    m_serializeEntries:
+    - m_guid: Resources
+      m_address: Resources
+      m_readOnly: 1
+      m_serializedLabels: []
+    - m_guid: EditorSceneList
+      m_address: EditorSceneList
+      m_readOnly: 1
+      m_serializedLabels: []
+    processor: {fileID: 11400000, guid: 290fc3afeca9f7e4d92c9b2a28a48049, type: 2}
+    isDefault: 0
+    readOnly: 1
+  - name: Default Local Group
+    guid: fe50129f935c7ff4398c353a44406253
+    m_serializeEntries:
+    - m_guid: 2ae64d0eaec8d6f4f9436fce6117048d
+      m_address: cat
+      m_readOnly: 0
+      m_serializedLabels:
+      - character
+    - m_guid: 473ffa016efe3724cad08daa78e3d12a
+      m_address: raccoon
+      m_readOnly: 0
+      m_serializedLabels:
+      - character
+    - m_guid: 0d80a5ee0a199154784a904ed88da003
+      m_address: dayTheme
+      m_readOnly: 0
+      m_serializedLabels:
+      - themeData
+    - m_guid: ca6db81f67984284191d6a142204de55
+      m_address: nightTheme
+      m_readOnly: 0
+      m_serializedLabels:
+      - themeData
+    processor: {fileID: 11400000, guid: fe50129f935c7ff4398c353a44406253, type: 2}
+    isDefault: 1
+    readOnly: 0
+  m_buildSettings:
+    m_compression:
+      compression: 3
+      level: 5
+      blockSize: 131072
+    m_compileScriptsInVirtualMode: 0
+    m_bundleBuildPath: Temp/AddressableAssetsBundles
+  m_profileSettings:
+    m_profiles:
+    - m_inheritedParent: 
+      m_id: 81f4f54636b09a94fb76478d30eaeb1e
+      m_profileName: Default
+      m_values:
+      - m_id: bd81bc449922b5147ababf2f6b6612ee
+        m_value: 1
+      - m_id: 9c5024f76ae1ae64b9303d216d71e974
+        m_value: '[UnityEditor.EditorUserBuildSettings.activeBuildTarget]'
+      - m_id: ee173bb07aaf2614cb12fb11c6c7a76b
+        m_value: Assets/StreamingAssets
+      - m_id: ca72daeb8fb09b54a893934025eb719f
+        m_value: file://{UnityEngine.Application.streamingAssetsPath}
+      - m_id: 3f4857b04f259934ab805ff72be330b0
+        m_value: ServerData/[UnityEditor.EditorUserBuildSettings.activeBuildTarget]
+      - m_id: d6416c83bbb63ff4f8e4bd8eaf0cbad0
+        m_value: http://localhost/[UnityEditor.EditorUserBuildSettings.activeBuildTarget]
+    m_profileEntryNames:
+    - id: 69cf8f249dc598b45a5cb839b6f5dd50
+      name: <custom>
+      inlineUsage: 0
+    - id: bd81bc449922b5147ababf2f6b6612ee
+      name: ContentVersion
+      inlineUsage: 0
+    - id: 9c5024f76ae1ae64b9303d216d71e974
+      name: BuildTarget
+      inlineUsage: 0
+    - id: ee173bb07aaf2614cb12fb11c6c7a76b
+      name: LocalBuildPath
+      inlineUsage: 0
+    - id: ca72daeb8fb09b54a893934025eb719f
+      name: LocalLoadPrefix
+      inlineUsage: 0
+    - id: 3f4857b04f259934ab805ff72be330b0
+      name: RemoteBuildPath
+      inlineUsage: 0
+    - id: d6416c83bbb63ff4f8e4bd8eaf0cbad0
+      name: RemoteLoadPrefix
+      inlineUsage: 0
+  m_labelTable:
+    m_labelNames:
+    - default
+    - character
+    - themeData
+  m_activeProfileId: 81f4f54636b09a94fb76478d30eaeb1e
