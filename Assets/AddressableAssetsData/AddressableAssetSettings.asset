@@ -11,25 +11,55 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 468a46d0ae32c3544b7d98094e6448a9, type: 3}
   m_Name: AddressableAssetSettings
   m_EditorClassIdentifier: 
-  pathForAsset: Assets/AddressableAssetsData/AddressableAssetSettings.asset
+  m_defaultGroup: 
   m_groups:
-  - name: Built In Data
-    guid: 290fc3afeca9f7e4d92c9b2a28a48049
+  - m_name: Built In Data
+    m_data:
+      m_serializedData: []
+    m_guid: 1e35fd86d24d42748ad799938a3406e5
+    m_processorAssembly: Unity.Addressables.Editor, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+    m_processorClass: UnityEditor.AddressableAssets.PlayerDataAssetGroupProcessor
     m_serializeEntries:
-    - m_guid: Resources
-      m_address: Resources
-      m_readOnly: 1
-      m_serializedLabels: []
     - m_guid: EditorSceneList
       m_address: EditorSceneList
       m_readOnly: 1
       m_serializedLabels: []
-    processor: {fileID: 11400000, guid: 290fc3afeca9f7e4d92c9b2a28a48049, type: 2}
-    isDefault: 0
-    readOnly: 1
-  - name: Default Local Group
-    guid: fe50129f935c7ff4398c353a44406253
+    - m_guid: Resources
+      m_address: Resources
+      m_readOnly: 1
+      m_serializedLabels: []
+    m_readOnly: 1
+  - m_name: Default Local Group
+    m_data:
+      m_serializedData:
+      - m_assemblyName: mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+        m_className: System.String
+        m_data: b7d09199f35cd0442ae4d53e1ad32b82
+        m_key: BuildPath
+      - m_assemblyName: mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+        m_className: System.String
+        m_data: 294c65ea2154a7e4faf644f3cad51c14
+        m_key: LoadPath
+      - m_assemblyName: Unity.Addressables.Editor, Version=0.0.0.0, Culture=neutral,
+          PublicKeyToken=null
+        m_className: UnityEditor.AddressableAssets.BundledAssetGroupProcessor+BundleMode
+        m_data: PackTogether
+        m_key: BundleMode
+      - m_assemblyName: mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+        m_className: System.Int32
+        m_data: 0
+        m_key: Priority
+    m_guid: 5173ae74c534a5740bee07bbe2566e21
+    m_processorAssembly: Unity.Addressables.Editor, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+    m_processorClass: UnityEditor.AddressableAssets.BundledAssetGroupProcessor
     m_serializeEntries:
+    - m_guid: 0d80a5ee0a199154784a904ed88da003
+      m_address: dayTheme
+      m_readOnly: 0
+      m_serializedLabels:
+      - themeData
     - m_guid: 2ae64d0eaec8d6f4f9436fce6117048d
       m_address: cat
       m_readOnly: 0
@@ -40,19 +70,12 @@ MonoBehaviour:
       m_readOnly: 0
       m_serializedLabels:
       - character
-    - m_guid: 0d80a5ee0a199154784a904ed88da003
-      m_address: dayTheme
-      m_readOnly: 0
-      m_serializedLabels:
-      - themeData
     - m_guid: ca6db81f67984284191d6a142204de55
       m_address: nightTheme
       m_readOnly: 0
       m_serializedLabels:
       - themeData
-    processor: {fileID: 11400000, guid: fe50129f935c7ff4398c353a44406253, type: 2}
-    isDefault: 1
-    readOnly: 0
+    m_readOnly: 0
   m_buildSettings:
     m_compression:
       compression: 3
@@ -63,46 +86,46 @@ MonoBehaviour:
   m_profileSettings:
     m_profiles:
     - m_inheritedParent: 
-      m_id: 81f4f54636b09a94fb76478d30eaeb1e
+      m_id: a85ebd8876b0806449c2ef9167f39caf
       m_profileName: Default
       m_values:
-      - m_id: bd81bc449922b5147ababf2f6b6612ee
+      - m_id: 770317ecf7b82184ab87b2bf0098aa29
         m_value: 1
-      - m_id: 9c5024f76ae1ae64b9303d216d71e974
+      - m_id: 68b74e31c86835a409c5926adce07191
         m_value: '[UnityEditor.EditorUserBuildSettings.activeBuildTarget]'
-      - m_id: ee173bb07aaf2614cb12fb11c6c7a76b
-        m_value: Assets/StreamingAssets
-      - m_id: ca72daeb8fb09b54a893934025eb719f
-        m_value: file://{UnityEngine.Application.streamingAssetsPath}
-      - m_id: 3f4857b04f259934ab805ff72be330b0
-        m_value: ServerData/[UnityEditor.EditorUserBuildSettings.activeBuildTarget]
-      - m_id: d6416c83bbb63ff4f8e4bd8eaf0cbad0
-        m_value: http://localhost/[UnityEditor.EditorUserBuildSettings.activeBuildTarget]
+      - m_id: b7d09199f35cd0442ae4d53e1ad32b82
+        m_value: Assets/StreamingAssets/com.unity.addressables/[BuildTarget]
+      - m_id: 294c65ea2154a7e4faf644f3cad51c14
+        m_value: '{UnityEngine.AddressableAssets.Addressables.RuntimePath}/[BuildTarget]'
+      - m_id: b90e6d64493f44d498ec37e980f873a0
+        m_value: ServerData/[BuildTarget]
+      - m_id: 3e75c5a8f690d7542ac05bbc757b016e
+        m_value: http://localhost/[BuildTarget]
     m_profileEntryNames:
-    - id: 69cf8f249dc598b45a5cb839b6f5dd50
-      name: <custom>
-      inlineUsage: 0
-    - id: bd81bc449922b5147ababf2f6b6612ee
-      name: ContentVersion
-      inlineUsage: 0
-    - id: 9c5024f76ae1ae64b9303d216d71e974
-      name: BuildTarget
-      inlineUsage: 0
-    - id: ee173bb07aaf2614cb12fb11c6c7a76b
-      name: LocalBuildPath
-      inlineUsage: 0
-    - id: ca72daeb8fb09b54a893934025eb719f
-      name: LocalLoadPrefix
-      inlineUsage: 0
-    - id: 3f4857b04f259934ab805ff72be330b0
-      name: RemoteBuildPath
-      inlineUsage: 0
-    - id: d6416c83bbb63ff4f8e4bd8eaf0cbad0
-      name: RemoteLoadPrefix
-      inlineUsage: 0
+    - m_id: 776c1d9665666a949888ecdae86a5e89
+      m_name: <custom>
+      m_inlineUsage: 1
+    - m_id: 770317ecf7b82184ab87b2bf0098aa29
+      m_name: ContentVersion
+      m_inlineUsage: 0
+    - m_id: 68b74e31c86835a409c5926adce07191
+      m_name: BuildTarget
+      m_inlineUsage: 0
+    - m_id: b7d09199f35cd0442ae4d53e1ad32b82
+      m_name: LocalBuildPath
+      m_inlineUsage: 0
+    - m_id: 294c65ea2154a7e4faf644f3cad51c14
+      m_name: LocalLoadPath
+      m_inlineUsage: 0
+    - m_id: b90e6d64493f44d498ec37e980f873a0
+      m_name: RemoteBuildPath
+      m_inlineUsage: 0
+    - m_id: 3e75c5a8f690d7542ac05bbc757b016e
+      m_name: RemoteLoadPath
+      m_inlineUsage: 0
   m_labelTable:
     m_labelNames:
     - default
     - character
     - themeData
-  m_activeProfileId: 81f4f54636b09a94fb76478d30eaeb1e
+  m_activeProfileId: a85ebd8876b0806449c2ef9167f39caf

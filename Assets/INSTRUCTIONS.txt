@@ -5,26 +5,17 @@ This document isn't intended as a tutorial, but as global indications on how the
 code is organised.
 
 
-AssetBundle Testing
--------------------
-
-To easily test in editor, set the AssetBundle manager into simulation mode
-To do this, go to the menu Assets > AssetBundles > Simulation Mode
-
 Building
 --------
 
-To build the game, you will first need to build the asset bundles. They can be built
-throughout the Assets>Assets Bundles>Build Assets Bundles menu. It will create
-a folder next to your Assets folders. Copy this folder (will be of the form
-AssetsBundles/<platform>/...) into the StreamingAssets folder in your project
-inside Unity (so you have StreamingAssets/AssetBundles/...).
-You can then build to your chosen platform.
+Building should just require to hit the build button in the build windows. The
+Addressable assets system will take care of building the bundles and embed them
+into the build.
 
 Services
 --------
 
-By default all the services are disabled. When you enable all services, switch to a mobile 
+By default all the services are disabled. When you enable all services, switch to a mobile
 platform as some services (e.g. Ads) only works on mobile platforms.
 
 There is a special case for Unity In App Purchase : once you enable in app purchase
@@ -71,29 +62,14 @@ another technique, it uses additive scene loading.
 The store is a separate scene with no camera and only UI. This allows us to load
 that scene additively over any state (Loadout or Gameover) and unload when exit.
 
-AssetBundles
-------------
+Addressable
+-----------
 
-Theme and Characters are AssetBundles. Those would allow to potentially add new
-themes or characters in the future without the need to rebuild the whole app.
-When the game starts, a database of theme & characters is built throughout
-the bundles manifests. Other parts of the game (loadout, store...) query the
-database with the name of what they want to grab.
-*NOTE*: The AssetBundles manager right now only handle AssetBundles shipped with
-the game (i.e. placed in the StreamingAssets folder). This is for simplicity, but
-another product could also check a local cache for extensibility
-without the need to update the application.
-To do this:
-- At launch, application contact a server and ask the available bundles on there
-(with potentially a version number per package)
-- It then checks that list against the list of packages in a cache folder
-- All missing packages are downloaded to that cache package.
-- When loading the database, the game checks for both the streaming folder & the
-cache folder (and if a bundle with same name exists in both, take the max version)
-Assets Bundle are defined in the editor, check in the Bundles folder. Note that
-only the themeData asset is tagged as part of the bundle, but as it resolve
-dependency, everything needed will be pulled in the package (this allow to cull
-all unused assets).
+Theme and Characters are in AssetBundles, defined through the Addressable Assets
+system. That mean that to add a new character, just make the prefab addressable
+and don't forget to add the label "character" to it. You can then place it in
+any Addressable Group, even a remote one, and the application will fetch it from
+the server on startup.
 
 Save File
 ---------
