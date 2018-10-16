@@ -14,8 +14,7 @@ Now you git clone should get the LFS files properly. For support of LFS in Git G
 This project is a "endless runner" type mobile game made in Unity
 
 You can download the game to play it on mobile device:
-
-[Google Play](https://play.google.com/store/apps/details?id=com.unity.trashdash)  
+  
 [iOS AppStore](https://itunes.apple.com/us/app/trash-dash/id1198634425?mt=8)
 
 You can find [the project on the Unity asset store](https://assetstore.unity.com/packages/essentials/tutorial-projects/endless-runner-sample-game-87901)
