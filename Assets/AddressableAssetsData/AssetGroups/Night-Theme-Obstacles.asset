@@ -1,0 +1,54 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_GeneratorAsset: {fileID: 0}
+  m_Script: {fileID: 11500000, guid: bbb281ee3bf0b054c82ac2347e9e782c, type: 3}
+  m_Name: Night-Theme-Obstacles
+  m_EditorClassIdentifier: 
+  m_GroupName: Night-Theme-Obstacles
+  m_Data:
+    m_SerializedData: []
+  m_GUID: ecca703ac90113346a3923a505db5daa
+  m_SerializeEntries:
+  - m_GUID: 35231d694d6c0ae4da2714b8969719cd
+    m_Address: ObstacleRat
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 39c9e0746ca1a4b4995befba3266d4f6
+    m_Address: ObstacleRoadworksCone
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 61bb777a99260874f88fe72c93801af9
+    m_Address: ObstacleHighBarrier
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 6789d11662a4a2d4b86aac2f6082e0a0
+    m_Address: ObstacleWheelyBin
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 9be026198609a494aae8cec4aba2c813
+    m_Address: ObstacleRoadworksBarrier
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: a9b51c81c20d09b49a078e5821bb9d58
+    m_Address: ObstacleLowBarrier
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: e4530c9317086c24e956c8e653d7cfc1
+    m_Address: ObstacleBin
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  m_ReadOnly: 0
+  m_Settings: {fileID: 11400000, guid: 735e874f947d0e143a6b4e83f8a7283a, type: 2}
+  m_SchemaSet:
+    m_Schemas:
+    - {fileID: 11400000, guid: f5c335391d8517148b980dfe0fe71ea6, type: 2}
+    - {fileID: 11400000, guid: 7d63c35d7e6b1074bbb50e55baf660e6, type: 2}
