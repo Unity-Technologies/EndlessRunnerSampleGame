@@ -47,7 +47,7 @@ public class GameState : AState
     public Text premiumCurrencyOwned;
 
     [Header("Prefabs")]
-    public AssetReference PowerupIconPrefab;
+    public GameObject PowerupIconPrefab;
 
     [Header("Tutorial")]
     public Text tutorialValidatedObstacles;
@@ -84,7 +84,7 @@ public class GameState : AState
     protected int m_CurrentSegmentObstacleIndex = 0;
     protected TrackSegment m_NextValidSegment = null;
     protected int k_ObstacleToClear = 3;
-    protected bool m_InitBegun = false;
+
     public override void Enter(AState from)
     {
         m_CountdownRectTransform = countdownText.GetComponent<RectTransform>();
@@ -207,11 +207,6 @@ public class GameState : AState
             return;
         }
 
-        StartCoroutine(Initialize());
-    }
-
-    IEnumerator Initialize()
-    {
         if (trackManager.isLoaded)
         {
             CharacterInputController chrCtrl = trackManager.characterController;
@@ -252,9 +247,7 @@ public class GameState : AState
                 else if (icon == null)
                 {
                     // If there's no icon for the active consumable, create it!
-                    IAsyncOperation op = PowerupIconPrefab.Instantiate();
-                    yield return op;
-                    GameObject o = op.Result as GameObject;
+                    GameObject o = Instantiate(PowerupIconPrefab);
 
                     icon = o.GetComponent<PowerupIcon>();
 
