@@ -45,7 +45,7 @@ public class PlayerData
     public List<HighscoreEntry> highscores = new List<HighscoreEntry>();
     public List<MissionBase> missions = new List<MissionBase>();
 
-	public string previousName = "Trash Cat";
+	public string previousName = "Cat";
 
     public bool licenceAccepted;
     public bool tutorialDone;
@@ -244,7 +244,7 @@ public class PlayerData
         m_Instance.coins = 0;
         m_Instance.premium = 0;
 
-		m_Instance.characters.Add("Trash Cat");
+		m_Instance.characters.Add("Cat");
 		m_Instance.themes.Add("Day");
 
         m_Instance.ftueLevel = 0;
@@ -470,7 +470,7 @@ public class PlayerDataEditor : Editor
     static public void ClearSave()
     {
         File.Delete(Application.persistentDataPath + "/save.bin");
-    }
+    } 
 
     [MenuItem("Trash Dash Debug/Give 1000000 fishbones and 1000 premium")]
     static public void GiveCoins()

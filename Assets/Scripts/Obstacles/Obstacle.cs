@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System.Collections;
+using UnityEngine;
 
 /// <summary>
 /// This script is the base class for implemented obstacles.
@@ -9,7 +10,7 @@ public abstract class Obstacle : MonoBehaviour
 {
 	public AudioClip impactedSound;
 
-    public abstract void Spawn(TrackSegment segment, float t);
+    public abstract IEnumerator Spawn(TrackSegment segment, float t);
 
 	public virtual void Impacted()
 	{

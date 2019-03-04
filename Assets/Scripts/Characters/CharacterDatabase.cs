@@ -30,7 +30,7 @@ public class CharacterDatabase
         {
             m_CharactersDict = new Dictionary<string, Character>();
 
-            yield return Addressables.LoadAssets<GameObject>("character", op =>
+            yield return Addressables.LoadAssets<GameObject>("characters", op =>
             {
                 Character c = op.Result.GetComponent<Character>();
                 if (c != null)

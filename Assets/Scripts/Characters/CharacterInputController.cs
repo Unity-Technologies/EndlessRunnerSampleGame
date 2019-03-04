@@ -421,6 +421,6 @@ public class CharacterInputController : MonoBehaviour
         c.gameObject.SetActive(false);
 
         m_ActiveConsumables.Add(c);
-        c.Started(this);
+        StartCoroutine(c.Started(this));
     }
 }

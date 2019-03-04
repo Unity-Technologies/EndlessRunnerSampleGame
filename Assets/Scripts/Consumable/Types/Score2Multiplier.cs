@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System;
+using System.Collections;
 
 public class Score2Multiplier : Consumable
 {
@@ -23,9 +24,9 @@ public class Score2Multiplier : Consumable
 		return 0;
 	}
 
-	public override void Started(CharacterInputController c)
+	public override IEnumerator Started(CharacterInputController c)
     {
-        base.Started(c);
+        yield return base.Started(c);
 
         m_SinceStart = 0;
 

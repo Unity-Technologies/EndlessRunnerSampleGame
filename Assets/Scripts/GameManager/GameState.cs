@@ -166,11 +166,10 @@ public class GameState : AState
             };
         }
 
-        trackManager.Begin();
-
         m_Finished = false;
-
         m_PowerupIcons.Clear();
+
+        StartCoroutine(trackManager.Begin());
     }
 
     public override string GetName()
@@ -205,72 +204,75 @@ public class GameState : AState
             return;
         }
 
-        CharacterInputController chrCtrl = trackManager.characterController;
-
-        m_TimeSinceStart += Time.deltaTime;
-
-        if (chrCtrl.currentLife <= 0)
+        if (trackManager.isLoaded)
         {
-			pauseButton.gameObject.SetActive(false);
-            chrCtrl.CleanConsumable();
-            chrCtrl.character.animator.SetBool(s_DeadHash, true);
-			chrCtrl.characterCollider.koParticle.gameObject.SetActive(true);
-			StartCoroutine(WaitForGameOver());
-        }
+            CharacterInputController chrCtrl = trackManager.characterController;
 
-        // Consumable ticking & lifetime management
-        List<Consumable> toRemove = new List<Consumable>();
-        List<PowerupIcon> toRemoveIcon = new List<PowerupIcon>();
+            m_TimeSinceStart += Time.deltaTime;
 
-        for (int i = 0; i < chrCtrl.consumables.Count; ++i)
-        {
-            PowerupIcon icon = null;
-            for (int j = 0; j < m_PowerupIcons.Count; ++j)
+            if (chrCtrl.currentLife <= 0)
             {
-                if(m_PowerupIcons[j].linkedConsumable == chrCtrl.consumables[i])
+                pauseButton.gameObject.SetActive(false);
+                chrCtrl.CleanConsumable();
+                chrCtrl.character.animator.SetBool(s_DeadHash, true);
+                chrCtrl.characterCollider.koParticle.gameObject.SetActive(true);
+                StartCoroutine(WaitForGameOver());
+            }
+
+            // Consumable ticking & lifetime management
+            List<Consumable> toRemove = new List<Consumable>();
+            List<PowerupIcon> toRemoveIcon = new List<PowerupIcon>();
+
+            for (int i = 0; i < chrCtrl.consumables.Count; ++i)
+            {
+                PowerupIcon icon = null;
+                for (int j = 0; j < m_PowerupIcons.Count; ++j)
                 {
-                    icon = m_PowerupIcons[j];
-                    break;
+                    if (m_PowerupIcons[j].linkedConsumable == chrCtrl.consumables[i])
+                    {
+                        icon = m_PowerupIcons[j];
+                        break;
+                    }
+                }
+
+                chrCtrl.consumables[i].Tick(chrCtrl);
+                if (!chrCtrl.consumables[i].active)
+                {
+                    toRemove.Add(chrCtrl.consumables[i]);
+                    toRemoveIcon.Add(icon);
+                }
+                else if (icon == null)
+                {
+                    // If there's no icon for the active consumable, create it!
+                    GameObject o = Instantiate(PowerupIconPrefab);
+                    icon = o.GetComponent<PowerupIcon>();
+
+                    icon.linkedConsumable = chrCtrl.consumables[i];
+                    icon.transform.SetParent(powerupZone, false);
+
+                    m_PowerupIcons.Add(icon);
                 }
             }
 
-            chrCtrl.consumables[i].Tick(chrCtrl);
-            if (!chrCtrl.consumables[i].active)
+            for (int i = 0; i < toRemove.Count; ++i)
             {
-                toRemove.Add(chrCtrl.consumables[i]);
-                toRemoveIcon.Add(icon);
+                toRemove[i].Ended(trackManager.characterController);
+
+                Destroy(toRemove[i].gameObject);
+                if (toRemoveIcon[i] != null)
+                    Destroy(toRemoveIcon[i].gameObject);
+
+                chrCtrl.consumables.Remove(toRemove[i]);
+                m_PowerupIcons.Remove(toRemoveIcon[i]);
             }
-            else if(icon == null)
-            {
-				// If there's no icon for the active consumable, create it!
-                GameObject o = Instantiate(PowerupIconPrefab);
-                icon = o.GetComponent<PowerupIcon>();
 
-                icon.linkedConsumable = chrCtrl.consumables[i];
-                icon.transform.SetParent(powerupZone, false);
+            if (m_IsTutorial)
+                TutorialCheckObstacleClear();
 
-                m_PowerupIcons.Add(icon);
-            }
+            UpdateUI();
+
+            currentModifier.OnRunTick(this);
         }
-
-        for (int i = 0; i < toRemove.Count; ++i)
-        {
-            toRemove[i].Ended(trackManager.characterController);
-
-            Destroy(toRemove[i].gameObject);
-            if(toRemoveIcon[i] != null)
-                Destroy(toRemoveIcon[i].gameObject);
-
-            chrCtrl.consumables.Remove(toRemove[i]);
-            m_PowerupIcons.Remove(toRemoveIcon[i]);
-        }
-
-        if(m_IsTutorial)
-            TutorialCheckObstacleClear();
-
-        UpdateUI();
-
-		currentModifier.OnRunTick(this);
     }
 
 	void OnApplicationPause(bool pauseStatus)

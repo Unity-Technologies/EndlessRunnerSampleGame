@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.AddressableAssets;
 
 /// <summary>
 /// Defines a consumable (called "power up" in game). Each consumable is derived from this and implements its functions.
@@ -20,7 +21,8 @@ public abstract class Consumable : MonoBehaviour
 
     public Sprite icon;
 	public AudioClip activatedSound;
-    public ParticleSystem activatedParticle;
+    //public ParticleSystem activatedParticle;
+    public AssetReference ActivatedParticleReference;
     public bool canBeSpawned = true;
 
     public bool active {  get { return m_Active; } }
@@ -49,7 +51,7 @@ public abstract class Consumable : MonoBehaviour
         return true;
     }
 
-    public virtual void Started(CharacterInputController c)
+    public virtual IEnumerator Started(CharacterInputController c)
     {
         m_SinceStart = 0;
 
@@ -59,14 +61,17 @@ public abstract class Consumable : MonoBehaviour
 			c.powerupSource.Play();
 		}
 
-        if(activatedParticle != null)
+        if(ActivatedParticleReference != null)
         {
-            m_ParticleSpawned = Instantiate(activatedParticle);
+            //Addressables 1.0.1-preview
+            var op = ActivatedParticleReference.Instantiate();
+            yield return op;
+            m_ParticleSpawned = op.Result.GetComponent<ParticleSystem>();
             if (!m_ParticleSpawned.main.loop)
                 Destroy(m_ParticleSpawned.gameObject, m_ParticleSpawned.main.duration);
 
             m_ParticleSpawned.transform.SetParent(c.characterCollider.transform);
-            m_ParticleSpawned.transform.localPosition = activatedParticle.transform.position;
+            m_ParticleSpawned.transform.localPosition = op.Result.transform.position;
         }
 	}
 
@@ -85,8 +90,8 @@ public abstract class Consumable : MonoBehaviour
     {
         if (m_ParticleSpawned != null)
         {
-            if (activatedParticle.main.loop)
-                Destroy(m_ParticleSpawned.gameObject);
+            if (m_ParticleSpawned.main.loop)
+                Addressables.ReleaseInstance(m_ParticleSpawned.gameObject);
         }
 
         if (activatedSound != null && c.powerupSource.clip == activatedSound)

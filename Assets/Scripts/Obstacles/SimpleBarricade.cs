@@ -1,4 +1,7 @@
-﻿using UnityEngine;
+﻿using System.Collections;
+using UnityEngine;
+using UnityEngine.AddressableAssets;
+using UnityEngine.ResourceManagement.AsyncOperations;
 
 public class SimpleBarricade : Obstacle
 {
@@ -7,7 +10,7 @@ public class SimpleBarricade : Obstacle
     protected const int k_LeftMostLaneIndex = -1;
     protected const int k_RightMostLaneIndex = 1;
     
-    public override void Spawn(TrackSegment segment, float t)
+    public override IEnumerator Spawn(TrackSegment segment, float t)
     {
         //the tutorial very firts barricade need to be center and alone, so player can swipe safely in bother direction to avoid it
         bool isTutorialFirst = TrackManager.instance.isTutorial && TrackManager.instance.segments.Count == 0;
@@ -24,15 +27,23 @@ public class SimpleBarricade : Obstacle
             int lane = startLane + i;
             lane = lane > k_RightMostLaneIndex ? k_LeftMostLaneIndex : lane;
 
-            GameObject obj = Instantiate(gameObject, position, rotation);
-            obj.transform.position += obj.transform.right * lane * segment.manager.laneOffset;
+            IAsyncOperation op = Addressables.Instantiate(gameObject.name, position, rotation);
+            yield return op;
+            GameObject obj = op.Result as GameObject;
 
-            obj.transform.SetParent(segment.objectRoot, true);
+            if (obj == null)
+                Debug.Log(gameObject.name);
+            else
+            {
+                obj.transform.position += obj.transform.right * lane * segment.manager.laneOffset;
 
-            //TODO : remove that hack related to #issue7
-            Vector3 oldPos = obj.transform.position;
-            obj.transform.position += Vector3.back;
-            obj.transform.position = oldPos;
+                obj.transform.SetParent(segment.objectRoot, true);
+
+                //TODO : remove that hack related to #issue7
+                Vector3 oldPos = obj.transform.position;
+                obj.transform.position += Vector3.back;
+                obj.transform.position = oldPos;
+            }
         }
     }
 }

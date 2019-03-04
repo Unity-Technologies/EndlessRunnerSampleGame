@@ -1,4 +1,7 @@
-﻿using UnityEngine;
+﻿using System.Collections;
+using UnityEngine;
+using UnityEngine.AddressableAssets;
+using UnityEngine.ResourceManagement.AsyncOperations;
 
 /// <summary>
 /// Obstacle that starts moving forward in its lane when the player is close enough.
@@ -25,7 +28,7 @@ public class Missile : Obstacle
 		m_Audio = GetComponent<AudioSource>();
 	}
 
-	public override void Spawn(TrackSegment segment, float t)
+	public override IEnumerator Spawn(TrackSegment segment, float t)
 	{
         int lane = Random.Range(k_LeftMostLaneIndex, k_RightMostLaneIndex + 1);
 
@@ -33,19 +36,28 @@ public class Missile : Obstacle
 		Quaternion rotation;
 		segment.GetPointAt(t, out position, out rotation);
 
-		GameObject obj = Instantiate(gameObject, position, rotation);
-		obj.transform.SetParent(segment.objectRoot, true);
-		obj.transform.position += obj.transform.right * lane * segment.manager.laneOffset;
+	    IAsyncOperation op = Addressables.Instantiate(gameObject.name, position, rotation);
+	    yield return op;
+	    GameObject obj = op.Result as GameObject;
 
-		obj.transform.forward = -obj.transform.forward;
+	    if (obj == null)
+            Debug.Log(gameObject.name);
+	    else
+	    {
 
-		obj.GetComponent<Missile>().m_OwnSegement = segment;
+	        obj.transform.SetParent(segment.objectRoot, true);
+	        obj.transform.position += obj.transform.right * lane * segment.manager.laneOffset;
 
-	    //TODO : remove that hack related to #issue7
-	    Vector3 oldPos = obj.transform.position;
-	    obj.transform.position += Vector3.back;
-	    obj.transform.position = oldPos;
-    }
+	        obj.transform.forward = -obj.transform.forward;
+
+	        obj.GetComponent<Missile>().m_OwnSegement = segment;
+
+	        //TODO : remove that hack related to #issue7
+	        Vector3 oldPos = obj.transform.position;
+	        obj.transform.position += Vector3.back;
+	        obj.transform.position = oldPos;
+	    }
+	}
 
 	public override void Impacted()
 	{
