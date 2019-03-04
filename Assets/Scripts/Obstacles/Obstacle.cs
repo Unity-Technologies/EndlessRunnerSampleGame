@@ -10,6 +10,8 @@ public abstract class Obstacle : MonoBehaviour
 {
 	public AudioClip impactedSound;
 
+    public virtual void Setup() {}
+
     public abstract IEnumerator Spawn(TrackSegment segment, float t);
 
 	public virtual void Impacted()

@@ -1,0 +1,62 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_GeneratorAsset: {fileID: 0}
+  m_Script: {fileID: 11500000, guid: bbb281ee3bf0b054c82ac2347e9e782c, type: 3}
+  m_Name: Particles
+  m_EditorClassIdentifier: 
+  m_GroupName: Particles
+  m_Data:
+    m_SerializedData: []
+  m_GUID: d5b757e4f3f1d324089b3212762f79c6
+  m_SerializeEntries:
+  - m_GUID: 1c7ad47898d087f4d844c9fd695e576c
+    m_Address: CoinMagnetCollectParticles
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 1caba3d1275fd0547ae29c5a0ec03214
+    m_Address: MultiplyerCollectParticles
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 1ed06baf38958d4499069ab23fb82419
+    m_Address: FishBoneCollectParticles
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 8cede34fb26a722408198e0d27628ae9
+    m_Address: MagnetParticles
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 9191a4fd2eab74e4693e1a72e5ee97dc
+    m_Address: InvincibilityCollectParticles
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 9e2b957157514af40870bf65c60ae63f
+    m_Address: ExtraLifeParticles
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: ba9ada52ec59a9a419f39eb32bf9a3b0
+    m_Address: InvincibilityParticles
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: cb8a481413e1e1d43aac95d00d81eea7
+    m_Address: MultiplierParticles
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: e954637ad8cb2bc4397fd0e433e62701
+    m_Address: CrashParticle
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  m_ReadOnly: 0
+  m_Settings: {fileID: 11400000, guid: 735e874f947d0e143a6b4e83f8a7283a, type: 2}
+  m_SchemaSet:
+    m_Schemas:
+    - {fileID: 11400000, guid: 398dfe012f75ed9459c9b73e6340452e, type: 2}
+    - {fileID: 11400000, guid: bcf2e3926b76d4541990e53c88f8337f, type: 2}

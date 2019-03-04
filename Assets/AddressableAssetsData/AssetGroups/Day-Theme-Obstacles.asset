@@ -1,0 +1,54 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_GeneratorAsset: {fileID: 0}
+  m_Script: {fileID: 11500000, guid: bbb281ee3bf0b054c82ac2347e9e782c, type: 3}
+  m_Name: Day-Theme-Obstacles
+  m_EditorClassIdentifier: 
+  m_GroupName: Day-Theme-Obstacles
+  m_Data:
+    m_SerializedData: []
+  m_GUID: 95a3c2cd5e0a1b745a3fd1ce16c01ff9
+  m_SerializeEntries:
+  - m_GUID: 22facfbe232a90b45b681c638f2e490d
+    m_Address: ObstacleBin
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 82eb370d70e50344cb6eeb919a1429b8
+    m_Address: ObstacleRoadworksBarrier
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: b19a0bd8ede69fe4683dff84150a047b
+    m_Address: ObstacleHighBarrier
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: d68ac797bf384f84bbca159dc2a6e4d7
+    m_Address: ObstacleLowBarrier
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: d9056217b765e1b4893238b9e7ebddbc
+    m_Address: ObstacleWheelyBin
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: ec0335ae7fd65b74898920e51d042abd
+    m_Address: ObstacleRat
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: f0070c0f7d7cdcb4eb7176be4a87caa9
+    m_Address: ObstacleRoadworksCone
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  m_ReadOnly: 0
+  m_Settings: {fileID: 11400000, guid: 735e874f947d0e143a6b4e83f8a7283a, type: 2}
+  m_SchemaSet:
+    m_Schemas:
+    - {fileID: 11400000, guid: 1489f7063a4ead94e9ca07302dd2f11e, type: 2}
+    - {fileID: 11400000, guid: f568aa2337d236a449922de6d961fbea, type: 2}

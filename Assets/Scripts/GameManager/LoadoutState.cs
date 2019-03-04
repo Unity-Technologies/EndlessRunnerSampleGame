@@ -2,6 +2,9 @@
 using UnityEngine.UI;
 using System.Collections;
 using System.Collections.Generic;
+using UnityEngine.AddressableAssets;
+using UnityEngine.ResourceManagement.AsyncOperations;
+
 #if UNITY_ANALYTICS
 using UnityEngine.Analytics;
 #endif
@@ -272,7 +275,9 @@ public class LoadoutState : AState
 
                     accessoriesSelector.gameObject.SetActive(m_OwnedAccesories.Count > 0);
 
-                    newChar = Instantiate(c.gameObject);
+                    IAsyncOperation op = Addressables.Instantiate(c.characterName);
+                    yield return op;
+                    newChar = op.Result as GameObject;
                     Helpers.SetRendererLayerRecursive(newChar, k_UILayer);
 					newChar.transform.SetParent(charPosition, false);
                     newChar.transform.rotation = k_FlippedYAxisRotation;

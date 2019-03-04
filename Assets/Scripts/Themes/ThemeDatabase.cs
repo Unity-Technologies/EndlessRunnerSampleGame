@@ -33,7 +33,8 @@ public class ThemeDatabase
             {
                 if (op.Result != null)
                 {
-                    themeDataList.Add(op.Result.themeName, op.Result);
+                    if(!themeDataList.ContainsKey(op.Result.themeName))
+                        themeDataList.Add(op.Result.themeName, op.Result);
                 }
             });
 

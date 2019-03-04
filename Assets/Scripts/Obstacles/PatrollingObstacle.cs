@@ -24,7 +24,7 @@ public class PatrollingObstacle : Obstacle
 	protected float m_CurrentPos;
 
 	protected AudioSource m_Audio;
-	protected bool m_Moving = true;
+    private bool m_isMoving = false;
 
     protected const float k_LaneOffsetToFullWidth = 2f;
 
@@ -37,22 +37,20 @@ public class PatrollingObstacle : Obstacle
 	    yield return op;
 	    GameObject obj = op.Result as GameObject;
 
-	    if (obj == null)
-	        Debug.Log(gameObject.name);
-	    else
-	    {
-	        obj.transform.SetParent(segment.objectRoot, true);
+        obj.transform.SetParent(segment.objectRoot, true);
 
-	        obj.GetComponent<PatrollingObstacle>().m_Segement = segment;
+        PatrollingObstacle po = obj.GetComponent<PatrollingObstacle>();
+        po.m_Segement = segment;
 
-	        //TODO : remove that hack related to #issue7
-	        Vector3 oldPos = obj.transform.position;
-	        obj.transform.position += Vector3.back;
-	        obj.transform.position = oldPos;
-	    }
-	}
+        //TODO : remove that hack related to #issue7
+        Vector3 oldPos = obj.transform.position;
+        obj.transform.position += Vector3.back;
+        obj.transform.position = oldPos;
 
-	void Start()
+        po.Setup();
+    }
+
+    public override void Setup()
 	{
 		m_Audio = GetComponent<AudioSource>();
 		if(m_Audio != null && patrollingSound != null && patrollingSound.Length > 0)
@@ -63,7 +61,6 @@ public class PatrollingObstacle : Obstacle
 		}
 
 		m_OriginalPosition = transform.localPosition + transform.right * m_Segement.manager.laneOffset;
-
 		transform.localPosition = m_OriginalPosition;
 
 		float actualTime = Random.Range(minTime, maxTime);
@@ -76,11 +73,13 @@ public class PatrollingObstacle : Obstacle
 			AnimationClip clip = animator.GetCurrentAnimatorClipInfo(0)[0].clip;
             animator.SetFloat(s_SpeedRatioHash, clip.length / actualTime);
 		}
-    }
+
+	    m_isMoving = true;
+	}
 
 	public override void Impacted()
 	{
-		m_Moving = false;
+	    m_isMoving = false;
 		base.Impacted();
 
 		if (animator != null)
@@ -91,7 +90,7 @@ public class PatrollingObstacle : Obstacle
 
 	void Update()
 	{
-		if (!m_Moving)
+		if (!m_isMoving)
 			return;
 
 		m_CurrentPos += Time.deltaTime * m_MaxSpeed;

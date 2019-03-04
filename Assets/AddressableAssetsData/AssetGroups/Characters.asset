@@ -1,0 +1,36 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_GeneratorAsset: {fileID: 0}
+  m_Script: {fileID: 11500000, guid: bbb281ee3bf0b054c82ac2347e9e782c, type: 3}
+  m_Name: Characters
+  m_EditorClassIdentifier: 
+  m_GroupName: Characters
+  m_Data:
+    m_SerializedData: []
+  m_GUID: 0ee8914add8bf184eb2669a5f9b6f538
+  m_SerializeEntries:
+  - m_GUID: 2ae64d0eaec8d6f4f9436fce6117048d
+    m_Address: Trash Cat
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - characters
+  - m_GUID: 473ffa016efe3724cad08daa78e3d12a
+    m_Address: Rubbish Raccoon
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - characters
+  m_ReadOnly: 0
+  m_Settings: {fileID: 11400000, guid: 735e874f947d0e143a6b4e83f8a7283a, type: 2}
+  m_SchemaSet:
+    m_Schemas:
+    - {fileID: 11400000, guid: e804a7effdc04f24b992534d7b3594d8, type: 2}
+    - {fileID: 11400000, guid: b2fc035de78f1ea43abe0261a378f9fc, type: 2}

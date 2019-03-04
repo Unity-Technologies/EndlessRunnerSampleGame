@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using UnityEngine;
 using UnityEngine.AddressableAssets;
+using UnityEngine.ResourceManagement;
 using UnityEngine.ResourceManagement.AsyncOperations;
 
 /// <summary>
@@ -16,6 +17,7 @@ public class Missile : Obstacle
 
 	protected TrackSegment m_OwnSegement;
 
+    protected bool m_Ready { get; set; }
 	protected bool m_IsMoving;
 	protected AudioSource m_Audio;
 
@@ -38,28 +40,29 @@ public class Missile : Obstacle
 
 	    IAsyncOperation op = Addressables.Instantiate(gameObject.name, position, rotation);
 	    yield return op;
-	    GameObject obj = op.Result as GameObject;
+        GameObject obj = op.Result as GameObject;
 
-	    if (obj == null)
-            Debug.Log(gameObject.name);
-	    else
-	    {
+        obj.transform.SetParent(segment.objectRoot, true);
+        obj.transform.position += obj.transform.right * lane * segment.manager.laneOffset;
 
-	        obj.transform.SetParent(segment.objectRoot, true);
-	        obj.transform.position += obj.transform.right * lane * segment.manager.laneOffset;
+        obj.transform.forward = -obj.transform.forward;
+	    Missile missile = obj.GetComponent<Missile>();
+	    missile.m_OwnSegement = segment;
 
-	        obj.transform.forward = -obj.transform.forward;
+        //TODO : remove that hack related to #issue7
+        Vector3 oldPos = obj.transform.position;
+        obj.transform.position += Vector3.back;
+        obj.transform.position = oldPos;
 
-	        obj.GetComponent<Missile>().m_OwnSegement = segment;
+        missile.Setup();
+    }
 
-	        //TODO : remove that hack related to #issue7
-	        Vector3 oldPos = obj.transform.position;
-	        obj.transform.position += Vector3.back;
-	        obj.transform.position = oldPos;
-	    }
-	}
+    public override void Setup()
+    {
+        m_Ready = true;
+    }
 
-	public override void Impacted()
+    public override void Impacted()
 	{
 		base.Impacted();
 
@@ -71,7 +74,7 @@ public class Missile : Obstacle
 
 	public void Update()
 	{
-		if (m_OwnSegement.manager.isMoving)
+		if (m_Ready && m_OwnSegement.manager.isMoving)
 		{
 			if (m_IsMoving)
 			{
