@@ -40,8 +40,8 @@ GameObject:
   - component: {fileID: 111000013449658098}
   - component: {fileID: 114000012751075388}
   - component: {fileID: 65000012973518938}
-  - component: {fileID: 82000013299231772}
-  - component: {fileID: 114273411631195936}
+  - component: {fileID: 82000011322008754}
+  - component: {fileID: 114866312919401242}
   m_Layer: 9
   m_Name: ObstacleBin
   m_TagString: Untagged
@@ -183,7 +183,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 2100000, guid: f032c1b912f07aa499bc86208c214db8, type: 2}
+  - {fileID: 2100000, guid: 3dc78b81a4d12bd42bd2c32e62d95511, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -215,7 +215,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 2100000, guid: f032c1b912f07aa499bc86208c214db8, type: 2}
+  - {fileID: 2100000, guid: 3dc78b81a4d12bd42bd2c32e62d95511, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -281,7 +281,7 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1.6750975, z: 0.9589204}
   m_Center: {x: 0, y: 0.85786104, z: 0}
---- !u!82 &82000013299231772
+--- !u!82 &82000011322008754
 AudioSource:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -388,7 +388,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   impactedSound: {fileID: 8300000, guid: 6707d904747d31c4eb049fc7a139eeb6, type: 3}
---- !u!114 &114273411631195936
+--- !u!114 &114866312919401242
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}

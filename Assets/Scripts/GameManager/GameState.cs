@@ -262,9 +262,9 @@ public class GameState : AState
             {
                 toRemove[i].Ended(trackManager.characterController);
 
-                Destroy(toRemove[i].gameObject);
+                Addressables.ReleaseInstance(toRemove[i].gameObject);
                 if (toRemoveIcon[i] != null)
-                    Destroy(toRemoveIcon[i].gameObject);
+                    Addressables.ReleaseInstance(toRemoveIcon[i].gameObject);
 
                 chrCtrl.consumables.Remove(toRemove[i]);
                 m_PowerupIcons.Remove(toRemoveIcon[i]);

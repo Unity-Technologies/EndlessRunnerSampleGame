@@ -114,7 +114,7 @@ public class LoadoutState : AState
         missionPopup.gameObject.SetActive(false);
         inventoryCanvas.gameObject.SetActive(false);
 
-        if (m_Character != null) Destroy(m_Character);
+        if (m_Character != null) Addressables.ReleaseInstance(m_Character);
 
         GameState gs = to as GameState;
 
@@ -283,7 +283,7 @@ public class LoadoutState : AState
                     newChar.transform.rotation = k_FlippedYAxisRotation;
 
                     if (m_Character != null)
-                        Destroy(m_Character);
+                        Addressables.ReleaseInstance(m_Character);
 
                     m_Character = newChar;
                     charNameDisplay.text = c.characterName;

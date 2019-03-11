@@ -1,0 +1,38 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_GeneratorAsset: {fileID: 0}
+  m_Script: {fileID: 11500000, guid: bbb281ee3bf0b054c82ac2347e9e782c, type: 3}
+  m_Name: Default-Sky
+  m_EditorClassIdentifier: 
+  m_GroupName: Default-Sky
+  m_Data:
+    m_SerializedData: []
+  m_GUID: 34963f7c1bf93e54f9196484126a6d7f
+  m_SerializeEntries:
+  - m_GUID: 1225524528f67794ead226c3401f6bd6
+    m_Address: DefaultCloud01
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 480053abe3ba0aa4883a1b63c0deee9d
+    m_Address: DefaultCloud03
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: e4217d014d522f94bb0a059a38e2cb14
+    m_Address: DefaultCloud02
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  m_ReadOnly: 0
+  m_Settings: {fileID: 11400000, guid: 735e874f947d0e143a6b4e83f8a7283a, type: 2}
+  m_SchemaSet:
+    m_Schemas:
+    - {fileID: 11400000, guid: ea1abb9d94e3909498d283a058f0c6e0, type: 2}
+    - {fileID: 11400000, guid: 5547cd13b730def47b62a2430358df71, type: 2}

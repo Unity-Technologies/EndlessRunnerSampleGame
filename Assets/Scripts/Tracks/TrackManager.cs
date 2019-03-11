@@ -250,12 +250,13 @@ public class TrackManager : MonoBehaviour
     {
         foreach (TrackSegment seg in m_Segments)
         {
-            Destroy(seg.gameObject);
+            Addressables.ReleaseInstance(seg.gameObject);
+            _spawnedSegments--;
         }
 
         for (int i = 0; i < m_PastSegments.Count; ++i)
         {
-            Destroy(m_PastSegments[i].gameObject);
+            Addressables.ReleaseInstance(m_PastSegments[i].gameObject);
         }
 
         m_Segments.Clear();
@@ -264,7 +265,7 @@ public class TrackManager : MonoBehaviour
         characterController.End();
 
         gameObject.SetActive(false);
-        Destroy(characterController.character.gameObject);
+        Addressables.ReleaseInstance(characterController.character.gameObject);
         characterController.character = null;
 
         Camera.main.transform.SetParent(null);
@@ -273,7 +274,8 @@ public class TrackManager : MonoBehaviour
 
         for (int i = 0; i < parallaxRoot.childCount; ++i)
         {
-            Destroy(parallaxRoot.GetChild(i).gameObject);
+            _parallaxRootChildren--;
+            Addressables.ReleaseInstance(parallaxRoot.GetChild(i).gameObject);
         }
 
         //if our consumable wasn't used, we put it back in our inventory
@@ -285,33 +287,42 @@ public class TrackManager : MonoBehaviour
     }
 
 
+    private int _parallaxRootChildren = 0;
+    private int _spawnedSegments = 0;
     void Update()
     {
-        while (m_Segments.Count < k_DesiredSegmentCount)
+        while (_spawnedSegments < k_DesiredSegmentCount)
         {
-            SpawnNewSegment();
+            StartCoroutine(SpawnNewSegment());
+            _spawnedSegments++;
         }
 
         if (parallaxRoot != null && currentTheme.cloudPrefabs.Length > 0)
         {
-            while (parallaxRoot.childCount < currentTheme.cloudNumber)
+            while (_parallaxRootChildren < currentTheme.cloudNumber)
             {
                 float lastZ = parallaxRoot.childCount == 0 ? 0 : parallaxRoot.GetChild(parallaxRoot.childCount - 1).position.z + currentTheme.cloudMinimumDistance.z;
 
-                GameObject obj =
-                    Instantiate(currentTheme.cloudPrefabs[Random.Range(0, currentTheme.cloudPrefabs.Length)]);
-                obj.transform.SetParent(parallaxRoot, false);
+                string assetName = currentTheme.cloudPrefabs[Random.Range(0, currentTheme.cloudPrefabs.Length)].name;
+                if (!string.IsNullOrEmpty(assetName))
+                {
+                    Addressables.Instantiate(assetName).Completed += (op) =>
+                    {
+                        GameObject obj = op.Result;
+                        obj.transform.SetParent(parallaxRoot, false);
 
-                obj.transform.localPosition =
-                    Vector3.up * (currentTheme.cloudMinimumDistance.y +
-                                  (Random.value - 0.5f) * currentTheme.cloudSpread.y)
-                    + Vector3.forward * (lastZ + (Random.value - 0.5f) * currentTheme.cloudSpread.z)
-                    + Vector3.right * (currentTheme.cloudMinimumDistance.x +
-                                       (Random.value - 0.5f) * currentTheme.cloudSpread.x);
+                        obj.transform.localPosition =
+                            Vector3.up * (currentTheme.cloudMinimumDistance.y +
+                                          (Random.value - 0.5f) * currentTheme.cloudSpread.y)
+                            + Vector3.forward * (lastZ + (Random.value - 0.5f) * currentTheme.cloudSpread.z)
+                            + Vector3.right * (currentTheme.cloudMinimumDistance.x +
+                                               (Random.value - 0.5f) * currentTheme.cloudSpread.x);
 
-                obj.transform.localScale = obj.transform.localScale * (1.0f + (Random.value - 0.5f) * 0.5f);
-                obj.transform.localRotation = Quaternion.AngleAxis(Random.value * 360.0f, Vector3.up);
-
+                        obj.transform.localScale = obj.transform.localScale * (1.0f + (Random.value - 0.5f) * 0.5f);
+                        obj.transform.localRotation = Quaternion.AngleAxis(Random.value * 360.0f, Vector3.up);
+                    };
+                    _parallaxRootChildren++;
+                }
             }
         }
 
@@ -337,6 +348,7 @@ public class TrackManager : MonoBehaviour
             // but they aren't part of the game anymore 
             m_PastSegments.Add(m_Segments[0]);
             m_Segments.RemoveAt(0);
+            _spawnedSegments--;
 
             if (currentSegementChanged != null) currentSegementChanged.Invoke(m_Segments[0]);
         }
@@ -393,7 +405,10 @@ public class TrackManager : MonoBehaviour
 
                 // Destroy unneeded clouds
                 if ((child.localPosition - currentPos).z < -50)
+                {
+                    _parallaxRootChildren--;
                     Destroy(child.gameObject);
+                }
             }
         }
 
@@ -463,7 +478,8 @@ public class TrackManager : MonoBehaviour
         m_CurrentZoneDistance = 0;
     }
 
-    public void SpawnNewSegment()
+    private readonly Vector3 _offScreenSpawnPos = new Vector3(-100f, -100f, -100f);
+    public IEnumerator SpawnNewSegment()
     {
         if (!m_IsTutorial)
         {
@@ -474,8 +490,9 @@ public class TrackManager : MonoBehaviour
         int segmentUse = Random.Range(0, m_CurrentThemeData.zones[m_CurrentZone].prefabList.Length);
         if (segmentUse == m_PreviousSegment) segmentUse = (segmentUse + 1) % m_CurrentThemeData.zones[m_CurrentZone].prefabList.Length;
 
-        TrackSegment segmentToUse = m_CurrentThemeData.zones[m_CurrentZone].prefabList[segmentUse];
-        TrackSegment newSegment = Instantiate(segmentToUse, Vector3.zero, Quaternion.identity);
+        IAsyncOperation segmentToUseOp = m_CurrentThemeData.zones[m_CurrentZone].prefabList[segmentUse].Instantiate(_offScreenSpawnPos, Quaternion.identity);
+        yield return segmentToUseOp;
+        TrackSegment newSegment = (segmentToUseOp.Result as GameObject).GetComponent<TrackSegment>();
 
         Vector3 currentExitPoint;
         Quaternion currentExitRotation;

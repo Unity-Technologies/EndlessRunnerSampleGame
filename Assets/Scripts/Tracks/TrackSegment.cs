@@ -91,7 +91,7 @@ public class TrackSegment : MonoBehaviour
             Coin.coinPool.Free(t.gameObject);
 		}
 
-		Destroy(gameObject);
+	    Addressables.ReleaseInstance(gameObject);
 	}
 
 #if UNITY_EDITOR
