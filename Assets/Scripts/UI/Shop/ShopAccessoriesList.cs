@@ -1,18 +1,20 @@
 ﻿using UnityEngine;
 using System.Collections.Generic;
+using UnityEngine.AddressableAssets;
+
 #if UNITY_ANALYTICS
 using UnityEngine.Analytics;
 #endif
 
 public class ShopAccessoriesList : ShopList
 {
-    public GameObject headerPrefab;
+    public AssetReference headerPrefab;
 
     public override void Populate()
     {
 		m_RefreshCallback = null;
 
-		foreach (Transform t in listRoot)
+        foreach (Transform t in listRoot)
         {
             Destroy(t.gameObject);
         }
@@ -22,41 +24,51 @@ public class ShopAccessoriesList : ShopList
             Character c = pair.Value;
             if (c != null && c.accessories !=null && c.accessories.Length > 0)
             {
-                GameObject header = Instantiate(headerPrefab);
-                header.transform.SetParent(listRoot, false);
-                ShopItemListItem itmHeader = header.GetComponent<ShopItemListItem>();
-                itmHeader.nameText.text = c.characterName;
 
-                for (int i = 0; i < c.accessories.Length; ++i)
+                headerPrefab.Instantiate().Completed += (op) =>
                 {
-                    CharacterAccessories accessory = c.accessories[i];
-                    GameObject newEntry = Instantiate(prefabItem);
-                    newEntry.transform.SetParent(listRoot, false);
+                    GameObject header = op.Result;
+                    header.transform.SetParent(listRoot, false);
+                    ShopItemListItem itmHeader = header.GetComponent<ShopItemListItem>();
+                    itmHeader.nameText.text = c.characterName;
 
-                    ShopItemListItem itm = newEntry.GetComponent<ShopItemListItem>();
+                    for (int i = 0; i < c.accessories.Length; ++i)
+                    {
+                        CharacterAccessories accessory = c.accessories[i];
+                        prefabItem.Instantiate().Completed += (innerOp) =>
+                        {
+                            GameObject newEntry = innerOp.Result;
+                            newEntry.transform.SetParent(listRoot, false);
 
-                    string compoundName = c.characterName + ":" + accessory.accessoryName;
+                            ShopItemListItem itm = newEntry.GetComponent<ShopItemListItem>();
 
-					itm.nameText.text = accessory.accessoryName;
-					itm.pricetext.text = accessory.cost.ToString();
-					itm.icon.sprite = accessory.accessoryIcon;
-					itm.buyButton.image.sprite = itm.buyButtonSprite;
+                            string compoundName = c.characterName + ":" + accessory.accessoryName;
 
-					if (accessory.premiumCost > 0)
-					{
-						itm.premiumText.transform.parent.gameObject.SetActive(true);
-						itm.premiumText.text = accessory.premiumCost.ToString();
-					}
-					else
-					{
-						itm.premiumText.transform.parent.gameObject.SetActive(false);
-					}
+                            itm.nameText.text = accessory.accessoryName;
+                            itm.pricetext.text = accessory.cost.ToString();
+                            itm.icon.sprite = accessory.accessoryIcon;
+                            itm.buyButton.image.sprite = itm.buyButtonSprite;
 
-                    itm.buyButton.onClick.AddListener(delegate () { Buy(compoundName, accessory.cost, accessory.premiumCost); });
+                            if (accessory.premiumCost > 0)
+                            {
+                                itm.premiumText.transform.parent.gameObject.SetActive(true);
+                                itm.premiumText.text = accessory.premiumCost.ToString();
+                            }
+                            else
+                            {
+                                itm.premiumText.transform.parent.gameObject.SetActive(false);
+                            }
 
-					m_RefreshCallback += delegate () { RefreshButton(itm, accessory, compoundName); };
-					RefreshButton(itm, accessory, compoundName);
-				}
+                            itm.buyButton.onClick.AddListener(delegate()
+                            {
+                                Buy(compoundName, accessory.cost, accessory.premiumCost);
+                            });
+
+                            m_RefreshCallback += delegate() { RefreshButton(itm, accessory, compoundName); };
+                            RefreshButton(itm, accessory, compoundName);
+                        };
+                    }
+                };
             }
         }
     }

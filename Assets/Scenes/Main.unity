@@ -1294,6 +1294,28 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: -4
       objectReference: {fileID: 0}
+    - target: {fileID: 114000011972273750, guid: a53fe2875371488408daf0df7d69a981,
+        type: 3}
+      propertyPath: missionEntryPrefab.m_AssetGUID
+      value: 71514012df4dcd146957cb145cec8287
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000011972273750, guid: a53fe2875371488408daf0df7d69a981,
+        type: 3}
+      propertyPath: missionEntryPrefab.m_CachedAsset
+      value: 
+      objectReference: {fileID: 1000011950310036, guid: 71514012df4dcd146957cb145cec8287,
+        type: 3}
+    - target: {fileID: 114000011972273750, guid: a53fe2875371488408daf0df7d69a981,
+        type: 3}
+      propertyPath: addMissionButtonPrefab.m_AssetGUID
+      value: 1c8b4e674120cad47a3fc249308e5af3
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000011972273750, guid: a53fe2875371488408daf0df7d69a981,
+        type: 3}
+      propertyPath: addMissionButtonPrefab.m_CachedAsset
+      value: 
+      objectReference: {fileID: 1000012580447506, guid: 1c8b4e674120cad47a3fc249308e5af3,
+        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a53fe2875371488408daf0df7d69a981, type: 3}
 --- !u!224 &80306027 stripped
@@ -3411,7 +3433,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 137514649}
-        m_MethodName: Open
+        m_MethodName: CallOpen
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -18328,7 +18350,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
-  m_AnchoredPosition: {x: -250, y: 112.29999}
+  m_AnchoredPosition: {x: -250, y: 112.299805}
   m_SizeDelta: {x: 125, y: 74.6}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1470943697
@@ -20402,7 +20424,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 80306028}
-        m_MethodName: Open
+        m_MethodName: CallOpen
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -23520,6 +23542,28 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.x
       value: 0.01171875
       objectReference: {fileID: 0}
+    - target: {fileID: 114000011972273750, guid: a53fe2875371488408daf0df7d69a981,
+        type: 3}
+      propertyPath: missionEntryPrefab.m_AssetGUID
+      value: 71514012df4dcd146957cb145cec8287
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000011972273750, guid: a53fe2875371488408daf0df7d69a981,
+        type: 3}
+      propertyPath: missionEntryPrefab.m_CachedAsset
+      value: 
+      objectReference: {fileID: 1000011950310036, guid: 71514012df4dcd146957cb145cec8287,
+        type: 3}
+    - target: {fileID: 114000011972273750, guid: a53fe2875371488408daf0df7d69a981,
+        type: 3}
+      propertyPath: addMissionButtonPrefab.m_AssetGUID
+      value: 1c8b4e674120cad47a3fc249308e5af3
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000011972273750, guid: a53fe2875371488408daf0df7d69a981,
+        type: 3}
+      propertyPath: addMissionButtonPrefab.m_CachedAsset
+      value: 
+      objectReference: {fileID: 1000012580447506, guid: 1c8b4e674120cad47a3fc249308e5af3,
+        type: 3}
     - target: {fileID: 224000014071012506, guid: a53fe2875371488408daf0df7d69a981,
         type: 3}
       propertyPath: m_SizeDelta.x

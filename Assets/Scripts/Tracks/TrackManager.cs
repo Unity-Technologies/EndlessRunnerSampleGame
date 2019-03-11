@@ -407,7 +407,7 @@ public class TrackManager : MonoBehaviour
                 if ((child.localPosition - currentPos).z < -50)
                 {
                     _parallaxRootChildren--;
-                    Destroy(child.gameObject);
+                    Addressables.ReleaseInstance(child.gameObject);
                 }
             }
         }

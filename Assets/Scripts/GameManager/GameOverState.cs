@@ -31,7 +31,7 @@ public class GameOverState : AState
 		miniLeaderboard.Populate();
 
         if (PlayerData.instance.AnyMissionComplete())
-            missionPopup.Open();
+            StartCoroutine(missionPopup.Open());
         else
             missionPopup.gameObject.SetActive(false);
 

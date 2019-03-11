@@ -109,6 +109,6 @@ public class AdsForMission : MonoBehaviour
     {
         PlayerData.instance.AddMission();
         PlayerData.instance.Save();
-        missionUI.Open();
+        StartCoroutine(missionUI.Open());
     }
 }

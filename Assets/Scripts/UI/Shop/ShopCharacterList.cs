@@ -1,5 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections.Generic;
+using UnityEngine.AddressableAssets;
+
 #if UNITY_ANALYTICS
 using UnityEngine.Analytics;
 #endif
@@ -19,31 +21,34 @@ public class ShopCharacterList : ShopList
             Character c = pair.Value;
             if (c != null)
             {
-                GameObject newEntry = Instantiate(prefabItem);
-                newEntry.transform.SetParent(listRoot, false);
+                prefabItem.Instantiate().Completed += (op) =>
+                {
+                    GameObject newEntry = op.Result;
+                    newEntry.transform.SetParent(listRoot, false);
 
-                ShopItemListItem itm = newEntry.GetComponent<ShopItemListItem>();
+                    ShopItemListItem itm = newEntry.GetComponent<ShopItemListItem>();
 
-				itm.icon.sprite = c.icon;
-                itm.nameText.text = c.characterName;
-				itm.pricetext.text = c.cost.ToString();
+                    itm.icon.sprite = c.icon;
+                    itm.nameText.text = c.characterName;
+                    itm.pricetext.text = c.cost.ToString();
 
-				itm.buyButton.image.sprite = itm.buyButtonSprite;
+                    itm.buyButton.image.sprite = itm.buyButtonSprite;
 
-				if (c.premiumCost > 0)
-				{
-					itm.premiumText.transform.parent.gameObject.SetActive(true);
-					itm.premiumText.text = c.premiumCost.ToString();
-				}
-				else
-				{
-					itm.premiumText.transform.parent.gameObject.SetActive(false);
-				}
+                    if (c.premiumCost > 0)
+                    {
+                        itm.premiumText.transform.parent.gameObject.SetActive(true);
+                        itm.premiumText.text = c.premiumCost.ToString();
+                    }
+                    else
+                    {
+                        itm.premiumText.transform.parent.gameObject.SetActive(false);
+                    }
 
-				itm.buyButton.onClick.AddListener(delegate () { Buy(c); });
+                    itm.buyButton.onClick.AddListener(delegate() { Buy(c); });
 
-				m_RefreshCallback += delegate() { RefreshButton(itm, c); };
-				RefreshButton(itm, c);
+                    m_RefreshCallback += delegate() { RefreshButton(itm, c); };
+                    RefreshButton(itm, c);
+                };
             }
         }
     }

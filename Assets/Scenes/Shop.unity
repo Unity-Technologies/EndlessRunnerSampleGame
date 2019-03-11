@@ -1048,7 +1048,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e839d7999cfdf7343803bfdeca2e17f1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  prefabItem: {fileID: 126320, guid: abafe3707f9235b4ab7cdfd1333295c3, type: 3}
+  prefabItem:
+    m_AssetGUID: abafe3707f9235b4ab7cdfd1333295c3
+    m_CachedAsset: {fileID: 126320, guid: abafe3707f9235b4ab7cdfd1333295c3, type: 3}
   listRoot: {fileID: 368158652}
 --- !u!114 &415189874
 MonoBehaviour:
@@ -1274,7 +1276,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6501d06aab944a44aa6be626d63c7d01, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  prefabItem: {fileID: 126320, guid: abafe3707f9235b4ab7cdfd1333295c3, type: 3}
+  prefabItem:
+    m_AssetGUID: abafe3707f9235b4ab7cdfd1333295c3
+    m_CachedAsset: {fileID: 126320, guid: abafe3707f9235b4ab7cdfd1333295c3, type: 3}
   listRoot: {fileID: 901507990}
 --- !u!1 &452959160
 GameObject:
@@ -1727,10 +1731,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 49f26a9c9db4ce9489119cab283e7a46, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  prefabItem: {fileID: 126320, guid: abafe3707f9235b4ab7cdfd1333295c3, type: 3}
+  prefabItem:
+    m_AssetGUID: abafe3707f9235b4ab7cdfd1333295c3
+    m_CachedAsset: {fileID: 126320, guid: abafe3707f9235b4ab7cdfd1333295c3, type: 3}
   listRoot: {fileID: 1703640690}
-  headerPrefab: {fileID: 1000010466823248, guid: 2bfa18892388236498842bbfe7a3ff83,
-    type: 3}
+  headerPrefab:
+    m_AssetGUID: 2bfa18892388236498842bbfe7a3ff83
+    m_CachedAsset: {fileID: 1000010466823248, guid: 2bfa18892388236498842bbfe7a3ff83,
+      type: 3}
 --- !u!114 &540240815
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4002,7 +4010,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b55d497bcd828a649b9223fe6938a5e8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  prefabItem: {fileID: 126320, guid: abafe3707f9235b4ab7cdfd1333295c3, type: 3}
+  prefabItem:
+    m_AssetGUID: abafe3707f9235b4ab7cdfd1333295c3
+    m_CachedAsset: {fileID: 126320, guid: abafe3707f9235b4ab7cdfd1333295c3, type: 3}
   listRoot: {fileID: 1017149563}
 --- !u!114 &1374068295
 MonoBehaviour:

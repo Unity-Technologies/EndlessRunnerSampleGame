@@ -1,5 +1,7 @@
 ﻿using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.AddressableAssets;
+
 #if UNITY_ANALYTICS
 using UnityEngine.Analytics;
 #endif
@@ -21,34 +23,37 @@ public class ShopItemList : ShopList
             Consumable c = ConsumableDatabase.GetConsumbale(s_ConsumablesTypes[i]);
             if(c != null)
             {
-                GameObject newEntry = Instantiate(prefabItem);
-                newEntry.transform.SetParent(listRoot, false);
+                prefabItem.Instantiate().Completed += (op) =>
+                {
+                    GameObject newEntry = op.Result;
+                    newEntry.transform.SetParent(listRoot, false);
 
-                ShopItemListItem itm = newEntry.GetComponent<ShopItemListItem>();
+                    ShopItemListItem itm = newEntry.GetComponent<ShopItemListItem>();
 
-				itm.buyButton.image.sprite = itm.buyButtonSprite;
+                    itm.buyButton.image.sprite = itm.buyButtonSprite;
 
-				itm.nameText.text = c.GetConsumableName();
-				itm.pricetext.text = c.GetPrice().ToString();
+                    itm.nameText.text = c.GetConsumableName();
+                    itm.pricetext.text = c.GetPrice().ToString();
 
-				if (c.GetPremiumCost() > 0)
-				{
-					itm.premiumText.transform.parent.gameObject.SetActive(true);
-					itm.premiumText.text = c.GetPremiumCost().ToString();
-				}
-				else
-				{
-					itm.premiumText.transform.parent.gameObject.SetActive(false);
-				}
+                    if (c.GetPremiumCost() > 0)
+                    {
+                        itm.premiumText.transform.parent.gameObject.SetActive(true);
+                        itm.premiumText.text = c.GetPremiumCost().ToString();
+                    }
+                    else
+                    {
+                        itm.premiumText.transform.parent.gameObject.SetActive(false);
+                    }
 
-				itm.icon.sprite = c.icon;
+                    itm.icon.sprite = c.icon;
 
-				itm.countText.gameObject.SetActive(true);
+                    itm.countText.gameObject.SetActive(true);
 
-                itm.buyButton.onClick.AddListener(delegate () { Buy(c); });
-				m_RefreshCallback += delegate () { RefreshButton(itm, c); };
-				RefreshButton(itm, c);
-			}
+                    itm.buyButton.onClick.AddListener(delegate() { Buy(c); });
+                    m_RefreshCallback += delegate() { RefreshButton(itm, c); };
+                    RefreshButton(itm, c);
+                };
+            }
         }
     }
 
