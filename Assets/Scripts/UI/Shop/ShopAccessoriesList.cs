@@ -27,6 +27,11 @@ public class ShopAccessoriesList : ShopList
 
                 headerPrefab.Instantiate().Completed += (op) =>
                 {
+                    if (op.Result == null || !(op.Result is GameObject))
+                    {
+                        Debug.LogWarning(string.Format("Unable to load header {0}.", headerPrefab.Asset.name));
+                        return;
+                    }
                     GameObject header = op.Result;
                     header.transform.SetParent(listRoot, false);
                     ShopItemListItem itmHeader = header.GetComponent<ShopItemListItem>();
@@ -37,6 +42,11 @@ public class ShopAccessoriesList : ShopList
                         CharacterAccessories accessory = c.accessories[i];
                         prefabItem.Instantiate().Completed += (innerOp) =>
                         {
+                            if (op.Result == null || !(op.Result is GameObject))
+                            {
+                                Debug.LogWarning(string.Format("Unable to load shop accessory list {0}.", prefabItem.Asset.name));
+                                return;
+                            }
                             GameObject newEntry = innerOp.Result;
                             newEntry.transform.SetParent(listRoot, false);
 

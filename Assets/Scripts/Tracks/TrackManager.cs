@@ -189,7 +189,11 @@ public class TrackManager : MonoBehaviour
                 Vector3.zero,
                 Quaternion.identity);
             yield return op;
-
+            if (op.Result == null || !(op.Result is GameObject))
+            {
+                Debug.LogWarning(string.Format("Unable to load character {0}.", PlayerData.instance.characters[PlayerData.instance.usedCharacter]));
+                yield break;
+            }
             Character player = op.Result.GetComponent<Character>();
 
             //Instantiate(CharacterDatabase.GetCharacter(PlayerData.instance.characters[PlayerData.instance.usedCharacter]), Vector3.zero, Quaternion.identity);
@@ -303,24 +307,21 @@ public class TrackManager : MonoBehaviour
             {
                 float lastZ = parallaxRoot.childCount == 0 ? 0 : parallaxRoot.GetChild(parallaxRoot.childCount - 1).position.z + currentTheme.cloudMinimumDistance.z;
 
-                string assetName = currentTheme.cloudPrefabs[Random.Range(0, currentTheme.cloudPrefabs.Length)].name;
-                if (!string.IsNullOrEmpty(assetName))
+                GameObject cloud = currentTheme.cloudPrefabs[Random.Range(0, currentTheme.cloudPrefabs.Length)];
+                if (cloud != null)
                 {
-                    Addressables.Instantiate(assetName).Completed += (op) =>
-                    {
-                        GameObject obj = op.Result;
-                        obj.transform.SetParent(parallaxRoot, false);
+                    GameObject obj = Instantiate(cloud);
+                    obj.transform.SetParent(parallaxRoot, false);
 
-                        obj.transform.localPosition =
-                            Vector3.up * (currentTheme.cloudMinimumDistance.y +
-                                          (Random.value - 0.5f) * currentTheme.cloudSpread.y)
-                            + Vector3.forward * (lastZ + (Random.value - 0.5f) * currentTheme.cloudSpread.z)
-                            + Vector3.right * (currentTheme.cloudMinimumDistance.x +
-                                               (Random.value - 0.5f) * currentTheme.cloudSpread.x);
+                    obj.transform.localPosition =
+                        Vector3.up * (currentTheme.cloudMinimumDistance.y +
+                                      (Random.value - 0.5f) * currentTheme.cloudSpread.y)
+                        + Vector3.forward * (lastZ + (Random.value - 0.5f) * currentTheme.cloudSpread.z)
+                        + Vector3.right * (currentTheme.cloudMinimumDistance.x +
+                                           (Random.value - 0.5f) * currentTheme.cloudSpread.x);
 
-                        obj.transform.localScale = obj.transform.localScale * (1.0f + (Random.value - 0.5f) * 0.5f);
-                        obj.transform.localRotation = Quaternion.AngleAxis(Random.value * 360.0f, Vector3.up);
-                    };
+                    obj.transform.localScale = obj.transform.localScale * (1.0f + (Random.value - 0.5f) * 0.5f);
+                    obj.transform.localRotation = Quaternion.AngleAxis(Random.value * 360.0f, Vector3.up);
                     _parallaxRootChildren++;
                 }
             }
@@ -492,6 +493,11 @@ public class TrackManager : MonoBehaviour
 
         IAsyncOperation segmentToUseOp = m_CurrentThemeData.zones[m_CurrentZone].prefabList[segmentUse].Instantiate(_offScreenSpawnPos, Quaternion.identity);
         yield return segmentToUseOp;
+        if (segmentToUseOp.Result == null || !(segmentToUseOp.Result is GameObject))
+        {
+            Debug.LogWarning(string.Format("Unable to load segment {0}.", m_CurrentThemeData.zones[m_CurrentZone].prefabList[segmentUse].Asset.name));
+            yield break;
+        }
         TrackSegment newSegment = (segmentToUseOp.Result as GameObject).GetComponent<TrackSegment>();
 
         Vector3 currentExitPoint;
@@ -612,6 +618,11 @@ public class TrackManager : MonoBehaviour
 
                             IAsyncOperation op = Addressables.Instantiate(consumableDatabase.consumbales[picked].gameObject.name, pos, rot);
                             yield return op;
+                            if (op.Result == null || !(op.Result is GameObject))
+                            {
+                                Debug.LogWarning(string.Format("Unable to load consumable {0}.", consumableDatabase.consumbales[picked].gameObject.name));
+                                yield break;
+                            }
                             toUse = op.Result as GameObject;
                             toUse.transform.SetParent(segment.transform, true);
                         }
@@ -623,6 +634,11 @@ public class TrackManager : MonoBehaviour
 
                         IAsyncOperation op = Addressables.Instantiate(currentTheme.premiumCollectible.name, pos, rot);
                         yield return op;
+                        if (op.Result == null || !(op.Result is GameObject))
+                        {
+                            Debug.LogWarning(string.Format("Unable to load collectable {0}.", currentTheme.premiumCollectible.name));
+                            yield break;
+                        }
                         toUse = op.Result as GameObject;
                         toUse.transform.SetParent(segment.transform, true);
                     }

@@ -40,6 +40,11 @@ public class Missile : Obstacle
 
 	    IAsyncOperation op = Addressables.Instantiate(gameObject.name, position, rotation);
 	    yield return op;
+	    if (op.Result == null || !(op.Result is GameObject))
+	    {
+	        Debug.LogWarning(string.Format("Unable to load obstacle {0}.", gameObject.name));
+	        yield break;
+	    }
         GameObject obj = op.Result as GameObject;
 
         obj.transform.SetParent(segment.objectRoot, true);

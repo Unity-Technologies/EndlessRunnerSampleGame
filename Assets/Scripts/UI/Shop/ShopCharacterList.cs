@@ -23,6 +23,11 @@ public class ShopCharacterList : ShopList
             {
                 prefabItem.Instantiate().Completed += (op) =>
                 {
+                    if (op.Result == null || !(op.Result is GameObject))
+                    {
+                        Debug.LogWarning(string.Format("Unable to load character shop list {0}.", prefabItem.Asset.name));
+                        return;
+                    }
                     GameObject newEntry = op.Result;
                     newEntry.transform.SetParent(listRoot, false);
 

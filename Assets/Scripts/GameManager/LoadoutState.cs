@@ -277,6 +277,11 @@ public class LoadoutState : AState
 
                     IAsyncOperation op = Addressables.Instantiate(c.characterName);
                     yield return op;
+                    if (op.Result == null || !(op.Result is GameObject))
+                    {
+                        Debug.LogWarning(string.Format("Unable to load character {0}.", c.characterName));
+                        yield break;
+                    }
                     newChar = op.Result as GameObject;
                     Helpers.SetRendererLayerRecursive(newChar, k_UILayer);
 					newChar.transform.SetParent(charPosition, false);
