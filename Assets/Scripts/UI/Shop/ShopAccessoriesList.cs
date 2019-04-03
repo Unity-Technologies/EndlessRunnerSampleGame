@@ -24,7 +24,6 @@ public class ShopAccessoriesList : ShopList
             Character c = pair.Value;
             if (c != null && c.accessories !=null && c.accessories.Length > 0)
             {
-
                 headerPrefab.Instantiate().Completed += (op) =>
                 {
                     if (op.Result == null || !(op.Result is GameObject))
