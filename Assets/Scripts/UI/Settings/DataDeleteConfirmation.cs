@@ -18,6 +18,7 @@ public class DataDeleteConfirmation : MonoBehaviour
     public void Confirm()
     {
         PlayerData.NewSave();
+        m_LoadoutState.UnequipPowerup();
         m_LoadoutState.Refresh();
         Close();
     }

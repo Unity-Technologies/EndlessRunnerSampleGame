@@ -380,6 +380,12 @@ public class LoadoutState : AState
 		PopulatePowerup();
 	}
 
+	public void UnequipPowerup()
+	{
+		m_PowerupToUse = Consumable.ConsumableType.NONE;
+	}
+	
+
 	public void SetModifier(Modifier modifier)
 	{
 		m_CurrentModifier = modifier;
