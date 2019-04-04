@@ -113,7 +113,9 @@ public class TrackManager : MonoBehaviour
     protected bool m_Rerun;     // This lets us know if we are entering a game over (ads) state or starting a new game (see GameState)
 
     protected bool m_IsTutorial; //Tutorial is a special run that don't chance section until the tutorial step is "validated" by the TutorialState.
-
+    
+    Vector3 m_CameraOriginalPos = Vector3.zero;
+    
     const float k_FloatingOriginThreshold = 10000f;
 
     protected const float k_CountdownToStartLength = 5f;
@@ -172,6 +174,9 @@ public class TrackManager : MonoBehaviour
     {
         if (!m_Rerun)
         {
+
+            m_CameraOriginalPos = Camera.main.transform.position;
+            
             if (m_TrackSeed != -1)
                 Random.InitState(m_TrackSeed);
             else
@@ -196,11 +201,6 @@ public class TrackManager : MonoBehaviour
             }
             Character player = op.Result.GetComponent<Character>();
 
-            //Instantiate(CharacterDatabase.GetCharacter(PlayerData.instance.characters[PlayerData.instance.usedCharacter]), Vector3.zero, Quaternion.identity);
-            player.transform.SetParent(characterController.characterCollider.transform, false);
-            Camera.main.transform.SetParent(characterController.transform, true);
-
-
             player.SetupAccesory(PlayerData.instance.usedAccessory);
 
             characterController.character = player;
@@ -208,6 +208,10 @@ public class TrackManager : MonoBehaviour
 
             characterController.Init();
             characterController.CheatInvincible(invincible);
+            
+            //Instantiate(CharacterDatabase.GetCharacter(PlayerData.instance.characters[PlayerData.instance.usedCharacter]), Vector3.zero, Quaternion.identity);
+            player.transform.SetParent(characterController.characterCollider.transform, false);
+            Camera.main.transform.SetParent(characterController.transform, true);
 
             if (m_IsTutorial)
                 m_CurrentThemeData = tutorialThemeData;
@@ -273,6 +277,7 @@ public class TrackManager : MonoBehaviour
         characterController.character = null;
 
         Camera.main.transform.SetParent(null);
+        Camera.main.transform.position = m_CameraOriginalPos;
 
         characterController.gameObject.SetActive(false);
 
