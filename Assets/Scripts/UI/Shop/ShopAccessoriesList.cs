@@ -30,13 +30,13 @@ public class ShopAccessoriesList : ShopList
                 m_CharacterList.Add(c);
         }
 
-        headerPrefab.Instantiate().Completed += (op) =>
+        headerPrefab.InstantiateAsync().Completed += (op) =>
         {
             LoadedCharacter(op, 0);
         };
     }
 
-    void LoadedCharacter(IAsyncOperation<GameObject> op, int currentIndex)
+    void LoadedCharacter(AsyncOperationHandle<GameObject> op, int currentIndex)
     {
         if (op.Result == null || !(op.Result is GameObject))
         {
@@ -51,14 +51,14 @@ public class ShopAccessoriesList : ShopList
             ShopItemListItem itmHeader = header.GetComponent<ShopItemListItem>();
             itmHeader.nameText.text = c.characterName;
 
-            prefabItem.Instantiate().Completed += (innerOp) =>
+            prefabItem.InstantiateAsync().Completed += (innerOp) =>
             {
 	            LoadedAccessory(innerOp, currentIndex, 0);
             };
         }
     }
 
-    void LoadedAccessory(IAsyncOperation<GameObject> op, int characterIndex, int accessoryIndex)
+    void LoadedAccessory(AsyncOperationHandle<GameObject> op, int characterIndex, int accessoryIndex)
     {
 	    Character c = m_CharacterList[characterIndex];
 	    if (op.Result == null || !(op.Result is GameObject))
@@ -108,7 +108,7 @@ public class ShopAccessoriesList : ShopList
 		    characterIndex++;
 		    if (characterIndex < m_CharacterList.Count)
 		    {
-			    headerPrefab.Instantiate().Completed += (innerOp) =>
+			    headerPrefab.InstantiateAsync().Completed += (innerOp) =>
 			    {
 				    LoadedCharacter(innerOp, characterIndex);
 			    };
@@ -116,7 +116,7 @@ public class ShopAccessoriesList : ShopList
 	    }
 	    else
 	    {
-		    prefabItem.Instantiate().Completed += (innerOp) =>
+		    prefabItem.InstantiateAsync().Completed += (innerOp) =>
 		    {
 			    LoadedAccessory(innerOp, characterIndex, accessoryIndex);
 		    };

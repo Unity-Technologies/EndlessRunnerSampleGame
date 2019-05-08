@@ -33,7 +33,7 @@ public class PatrollingObstacle : Obstacle
 		Vector3 position;
 		Quaternion rotation;
 		segment.GetPointAt(t, out position, out rotation);
-	    IAsyncOperation op = Addressables.Instantiate(gameObject.name, position, rotation);
+	    AsyncOperationHandle op = Addressables.InstantiateAsync(gameObject.name, position, rotation);
 	    yield return op;
 	    if (op.Result == null || !(op.Result is GameObject))
 	    {

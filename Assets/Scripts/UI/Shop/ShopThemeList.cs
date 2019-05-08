@@ -21,7 +21,7 @@ public class ShopThemeList : ShopList
             ThemeData theme = pair.Value;
             if (theme != null)
             {
-                prefabItem.Instantiate().Completed += (op) =>
+                prefabItem.InstantiateAsync().Completed += (op) =>
                 {
                     if (op.Result == null || !(op.Result is GameObject))
                     {

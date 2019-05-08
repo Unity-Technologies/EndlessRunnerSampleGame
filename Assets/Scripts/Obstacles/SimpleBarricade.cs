@@ -28,7 +28,7 @@ public class SimpleBarricade : Obstacle
             int lane = startLane + i;
             lane = lane > k_RightMostLaneIndex ? k_LeftMostLaneIndex : lane;
 
-            IAsyncOperation op = Addressables.Instantiate(gameObject.name, position, rotation);
+            AsyncOperationHandle op = Addressables.InstantiateAsync(gameObject.name, position, rotation);
             yield return op;
             if (op.Result == null || !(op.Result is GameObject))
             {

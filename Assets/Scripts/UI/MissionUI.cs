@@ -20,7 +20,7 @@ public class MissionUI : MonoBehaviour
         {
             if (PlayerData.instance.missions.Count > i)
             {
-                IAsyncOperation op = missionEntryPrefab.Instantiate();
+                AsyncOperationHandle op = missionEntryPrefab.InstantiateAsync();
                 yield return op;
                 if (op.Result == null || !(op.Result is GameObject))
                 {
@@ -33,7 +33,7 @@ public class MissionUI : MonoBehaviour
             }
             else
             {
-                IAsyncOperation op = addMissionButtonPrefab.Instantiate();
+                AsyncOperationHandle op = addMissionButtonPrefab.InstantiateAsync();
                 yield return op;
                 if (op.Result == null || !(op.Result is GameObject))
                 {

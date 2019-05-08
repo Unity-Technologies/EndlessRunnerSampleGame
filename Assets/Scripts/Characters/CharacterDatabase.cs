@@ -30,9 +30,9 @@ public class CharacterDatabase
         {
             m_CharactersDict = new Dictionary<string, Character>();
 
-            yield return Addressables.LoadAssets<GameObject>("characters", op =>
+            yield return Addressables.LoadAssetsAsync<GameObject>("characters", op =>
             {
-                Character c = op.Result.GetComponent<Character>();
+                Character c = op.GetComponent<Character>();
                 if (c != null)
                 {
                     m_CharactersDict.Add(c.characterName, c);

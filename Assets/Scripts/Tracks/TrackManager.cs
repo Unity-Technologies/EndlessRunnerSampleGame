@@ -190,7 +190,7 @@ public class TrackManager : MonoBehaviour
 
             //Addressables 1.0.1-preview
             // Spawn the player
-            var op = Addressables.Instantiate(PlayerData.instance.characters[PlayerData.instance.usedCharacter],
+            var op = Addressables.InstantiateAsync(PlayerData.instance.characters[PlayerData.instance.usedCharacter],
                 Vector3.zero,
                 Quaternion.identity);
             yield return op;
@@ -413,7 +413,7 @@ public class TrackManager : MonoBehaviour
                 if ((child.localPosition - currentPos).z < -50)
                 {
                     _parallaxRootChildren--;
-                    Addressables.ReleaseInstance(child.gameObject);
+                    Destroy(child.gameObject);
                 }
             }
         }
@@ -496,7 +496,7 @@ public class TrackManager : MonoBehaviour
         int segmentUse = Random.Range(0, m_CurrentThemeData.zones[m_CurrentZone].prefabList.Length);
         if (segmentUse == m_PreviousSegment) segmentUse = (segmentUse + 1) % m_CurrentThemeData.zones[m_CurrentZone].prefabList.Length;
 
-        IAsyncOperation segmentToUseOp = m_CurrentThemeData.zones[m_CurrentZone].prefabList[segmentUse].Instantiate(_offScreenSpawnPos, Quaternion.identity);
+        AsyncOperationHandle segmentToUseOp = m_CurrentThemeData.zones[m_CurrentZone].prefabList[segmentUse].InstantiateAsync(_offScreenSpawnPos, Quaternion.identity);
         yield return segmentToUseOp;
         if (segmentToUseOp.Result == null || !(segmentToUseOp.Result is GameObject))
         {
@@ -560,7 +560,7 @@ public class TrackManager : MonoBehaviour
 
     private IEnumerator SpawnFromAssetReference(AssetReference reference, TrackSegment segment, int posIndex)
     {
-        IAsyncOperation op = reference.LoadAsset<GameObject>();
+        AsyncOperationHandle op = reference.LoadAssetAsync<GameObject>();
         yield return op; 
         GameObject obj = op.Result as GameObject;
         if (obj != null)
@@ -621,7 +621,7 @@ public class TrackManager : MonoBehaviour
                             m_TimeSincePowerup = 0.0f;
                             powerupChance = 0.0f;
 
-                            IAsyncOperation op = Addressables.Instantiate(consumableDatabase.consumbales[picked].gameObject.name, pos, rot);
+                            AsyncOperationHandle op = Addressables.InstantiateAsync(consumableDatabase.consumbales[picked].gameObject.name, pos, rot);
                             yield return op;
                             if (op.Result == null || !(op.Result is GameObject))
                             {
@@ -637,7 +637,7 @@ public class TrackManager : MonoBehaviour
                         m_TimeSinceLastPremium = 0.0f;
                         premiumChance = 0.0f;
 
-                        IAsyncOperation op = Addressables.Instantiate(currentTheme.premiumCollectible.name, pos, rot);
+                        AsyncOperationHandle op = Addressables.InstantiateAsync(currentTheme.premiumCollectible.name, pos, rot);
                         yield return op;
                         if (op.Result == null || !(op.Result is GameObject))
                         {

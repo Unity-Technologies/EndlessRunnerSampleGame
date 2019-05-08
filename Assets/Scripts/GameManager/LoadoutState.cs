@@ -275,7 +275,7 @@ public class LoadoutState : AState
 
                     accessoriesSelector.gameObject.SetActive(m_OwnedAccesories.Count > 0);
 
-                    IAsyncOperation op = Addressables.Instantiate(c.characterName);
+                    AsyncOperationHandle op = Addressables.InstantiateAsync(c.characterName);
                     yield return op;
                     if (op.Result == null || !(op.Result is GameObject))
                     {

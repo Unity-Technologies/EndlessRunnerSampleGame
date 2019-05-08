@@ -21,7 +21,7 @@ public class ShopCharacterList : ShopList
             Character c = pair.Value;
             if (c != null)
             {
-                prefabItem.Instantiate().Completed += (op) =>
+                prefabItem.InstantiateAsync().Completed += (op) =>
                 {
                     if (op.Result == null || !(op.Result is GameObject))
                     {

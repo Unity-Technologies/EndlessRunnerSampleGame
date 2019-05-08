@@ -89,7 +89,11 @@ MonoBehaviour:
     - m_AssemblyName: Unity.Addressables.Editor, Version=0.0.0.0, Culture=neutral,
         PublicKeyToken=null
       m_ClassName: UnityEditor.AddressableAssets.Settings.GroupSchemas.ContentUpdateGroupSchema
+  m_GroupTemplateObjects: []
   m_InitializationObjects: []
+  m_CertificateHandlerType:
+    m_AssemblyName: 
+    m_ClassName: 
   m_ActivePlayerDataBuilderIndex: 3
   m_ActivePlayModeDataBuilderIndex: 1
   m_DataBuilders:

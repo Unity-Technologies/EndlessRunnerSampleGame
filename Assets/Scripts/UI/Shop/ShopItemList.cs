@@ -23,7 +23,7 @@ public class ShopItemList : ShopList
             Consumable c = ConsumableDatabase.GetConsumbale(s_ConsumablesTypes[i]);
             if(c != null)
             {
-                prefabItem.Instantiate().Completed += (op) =>
+                prefabItem.InstantiateAsync().Completed += (op) =>
                 {
                     if (op.Result == null || !(op.Result is GameObject))
                     {
