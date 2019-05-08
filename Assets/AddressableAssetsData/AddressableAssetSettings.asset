@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 468a46d0ae32c3544b7d98094e6448a9, type: 3}
   m_Name: AddressableAssetSettings
   m_EditorClassIdentifier: 
-  m_DefaultGroup: 1fe38e9c980a3ac4fadbc3ac950cbcf8
+  m_DefaultGroup: 0ee8914add8bf184eb2669a5f9b6f538
   m_BuildRemoteCatalog: 1
   m_RemoteCatalogBuildPath:
     m_Id: e2a85240a48a2184b9fe1ffd5c4ef06e
@@ -25,7 +25,6 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 76221483d69bd3b4aac4488c3097199d, type: 2}
   - {fileID: 11400000, guid: d99611ab52ff789479179f6e24dde79d, type: 2}
   - {fileID: 11400000, guid: e6d74b33b2bb73b498a49b9344482f4b, type: 2}
-  - {fileID: 11400000, guid: 071019c7a516a7748a2dc1448a67242b, type: 2}
   - {fileID: 11400000, guid: 509be79408e794b4eb1614a087f12f42, type: 2}
   - {fileID: 11400000, guid: c4bc7133680d0814388173d245e6e7c2, type: 2}
   - {fileID: 11400000, guid: 10ae8408a953cd14e95d879ea1e28ec9, type: 2}
