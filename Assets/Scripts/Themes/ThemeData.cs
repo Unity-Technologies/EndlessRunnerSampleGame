@@ -1,10 +1,11 @@
 ﻿using UnityEngine;
+using UnityEngine.AddressableAssets;
 
 [System.Serializable]
 public struct ThemeZone
 {
 	public int length;
-	public TrackSegment[] prefabList;
+    public AssetReference[] prefabList;
 }
 
 /// <summary>

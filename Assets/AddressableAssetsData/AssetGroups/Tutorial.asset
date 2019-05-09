@@ -1,0 +1,61 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbb281ee3bf0b054c82ac2347e9e782c, type: 3}
+  m_Name: Tutorial
+  m_EditorClassIdentifier: 
+  m_GroupName: Tutorial
+  m_Data:
+    m_SerializedData: []
+  m_GUID: ecc31cf11925dff4aa3d8130ac62b218
+  m_SerializeEntries:
+  - m_GUID: 19a9ea291ba68194c8cac8f13a84fe83
+    m_Address: Tutorial Left Right 2
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 2337a0b8ee44c884ea9a30757fe06a71
+    m_Address: Tutorial Up 3
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 68a52f3ad60bf6e4d8165784f5dffd9e
+    m_Address: Tutorial Left Right
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 8515fe4be5c88bc4594fa0b2c4165a95
+    m_Address: Tutorial Down 2
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: e4a6e14a3028d0745b6de33d884bf62a
+    m_Address: Tutorial Down
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: e64ce49b27bab6e49a4fcec2c01f3602
+    m_Address: Tutorial Left Right 3
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: f1fdce3067b0cf842a46d3d44dd9e841
+    m_Address: Tutorial Down 3
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: f249b9db828e0cf488639f91ddce9646
+    m_Address: Tutorial Up
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: f6e9d5bba1674a148b19274e4b74ccf2
+    m_Address: Tutorial Up 2
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  m_ReadOnly: 0
+  m_Settings: {fileID: 11400000, guid: 735e874f947d0e143a6b4e83f8a7283a, type: 2}
+  m_SchemaSet:
+    m_Schemas:
+    - {fileID: 11400000, guid: d00b3dd125fb3e142b299a6e92bb2d0c, type: 2}
+    - {fileID: 11400000, guid: 15f267499226fec4796769c20387e637, type: 2}

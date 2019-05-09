@@ -1,4 +1,8 @@
-﻿using UnityEngine;
+﻿using System.Collections;
+using UnityEngine;
+using UnityEngine.AddressableAssets;
+using UnityEngine.ResourceManagement;
+using UnityEngine.ResourceManagement.AsyncOperations;
 
 /// <summary>
 /// Obstacle that starts moving forward in its lane when the player is close enough.
@@ -13,6 +17,7 @@ public class Missile : Obstacle
 
 	protected TrackSegment m_OwnSegement;
 
+    protected bool m_Ready { get; set; }
 	protected bool m_IsMoving;
 	protected AudioSource m_Audio;
 
@@ -25,7 +30,7 @@ public class Missile : Obstacle
 		m_Audio = GetComponent<AudioSource>();
 	}
 
-	public override void Spawn(TrackSegment segment, float t)
+	public override IEnumerator Spawn(TrackSegment segment, float t)
 	{
         int lane = Random.Range(k_LeftMostLaneIndex, k_RightMostLaneIndex + 1);
 
@@ -33,21 +38,36 @@ public class Missile : Obstacle
 		Quaternion rotation;
 		segment.GetPointAt(t, out position, out rotation);
 
-		GameObject obj = Instantiate(gameObject, position, rotation);
-		obj.transform.SetParent(segment.objectRoot, true);
-		obj.transform.position += obj.transform.right * lane * segment.manager.laneOffset;
+	    AsyncOperationHandle op = Addressables.InstantiateAsync(gameObject.name, position, rotation);
+	    yield return op;
+	    if (op.Result == null || !(op.Result is GameObject))
+	    {
+	        Debug.LogWarning(string.Format("Unable to load obstacle {0}.", gameObject.name));
+	        yield break;
+	    }
+        GameObject obj = op.Result as GameObject;
 
-		obj.transform.forward = -obj.transform.forward;
+        obj.transform.SetParent(segment.objectRoot, true);
+        obj.transform.position += obj.transform.right * lane * segment.manager.laneOffset;
 
-		obj.GetComponent<Missile>().m_OwnSegement = segment;
+        obj.transform.forward = -obj.transform.forward;
+	    Missile missile = obj.GetComponent<Missile>();
+	    missile.m_OwnSegement = segment;
 
-	    //TODO : remove that hack related to #issue7
-	    Vector3 oldPos = obj.transform.position;
-	    obj.transform.position += Vector3.back;
-	    obj.transform.position = oldPos;
+        //TODO : remove that hack related to #issue7
+        Vector3 oldPos = obj.transform.position;
+        obj.transform.position += Vector3.back;
+        obj.transform.position = oldPos;
+
+        missile.Setup();
     }
 
-	public override void Impacted()
+    public override void Setup()
+    {
+        m_Ready = true;
+    }
+
+    public override void Impacted()
 	{
 		base.Impacted();
 
@@ -59,7 +79,7 @@ public class Missile : Obstacle
 
 	public void Update()
 	{
-		if (m_OwnSegement.manager.isMoving)
+		if (m_Ready && m_OwnSegement.manager.isMoving)
 		{
 			if (m_IsMoving)
 			{

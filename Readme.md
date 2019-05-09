@@ -1,6 +1,6 @@
 # Endless Runner Sample game
 
-_Current Used Unity Version : 2018.3 beta_
+_Current Used Unity Version : 2019.1_
 
 This repository use tags for versioning. Look in the [Releases](https://github.com/Unity-Technologies/EndlessRunnerSampleGame/releases)
 section to download the source for specific other Unity version, or use git
@@ -21,12 +21,9 @@ GUI client, please refer to their respective documentation
 
 This project is a "endless runner" type mobile game made in Unity
 
-You can download the game to play it on mobile device:
-
-[Google Play](https://play.google.com/store/apps/details?id=com.unity.trashdash)  
-[iOS AppStore](https://itunes.apple.com/us/app/trash-dash/id1198634425?mt=8)
-
 You can find [the project on the Unity asset store](https://assetstore.unity.com/packages/essentials/tutorial-projects/endless-runner-sample-game-87901)
+(Note that this is the old version not using Lightweight rendering pipeline & addressable, see note at the end of this file.
+Assets stor version will be updated when Addressable is out of preview)
 
 A INSTRUCTION.txt text file is inside the Asset folder to highlight diverse
 important points of the project
@@ -39,8 +36,7 @@ for more in depth details on the projects, how to build it and modify it.
 
 ## Note for this Github version
 
-This version include feature not in the released game in the app stores
-or asset store :
+This version include feature not in the released game in the asset store version:
 
 - A basic tutorial when the game is played the first time
 - The use of the new Lightweight Rendering pipeline

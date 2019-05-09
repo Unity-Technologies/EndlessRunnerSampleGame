@@ -1,0 +1,37 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbb281ee3bf0b054c82ac2347e9e782c, type: 3}
+  m_Name: Night-Sky
+  m_EditorClassIdentifier: 
+  m_GroupName: Night-Sky
+  m_Data:
+    m_SerializedData: []
+  m_GUID: 3c83d1a158a080f4cb8a94a271bbfb92
+  m_SerializeEntries:
+  - m_GUID: 07a627dbf273e1d45bcb01af87c57cbb
+    m_Address: NightCloud02
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 8dc97c4ee68c61247bc0dcfb3fa8237e
+    m_Address: NightCloud03
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: f788e812c45a0754a9e0342be76a1750
+    m_Address: NightCloud01
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  m_ReadOnly: 0
+  m_Settings: {fileID: 11400000, guid: 735e874f947d0e143a6b4e83f8a7283a, type: 2}
+  m_SchemaSet:
+    m_Schemas:
+    - {fileID: 11400000, guid: 0325b8952f2adf44083235b565a47d8d, type: 2}
+    - {fileID: 11400000, guid: d0ada88e3df8cd745abb86063ce21e49, type: 2}

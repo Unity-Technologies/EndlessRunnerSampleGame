@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections.Generic;
+using UnityEngine.AddressableAssets;
 
 /// <summary>
 /// Handle everything related to controlling the character. Interact with both the Character (visual, animation) and CharacterCollider
@@ -136,7 +137,7 @@ public class CharacterInputController : MonoBehaviour
         for (int i = 0; i < m_ActiveConsumables.Count; ++i)
         {
             m_ActiveConsumables[i].Ended(this);
-            Destroy(m_ActiveConsumables[i].gameObject);
+            Addressables.ReleaseInstance(m_ActiveConsumables[i].gameObject);
         }
 
         m_ActiveConsumables.Clear();
@@ -171,7 +172,7 @@ public class CharacterInputController : MonoBehaviour
     {
         tutorialWaitingForValidation = currentTutorialLevel != tutorialLevel;
 
-        return (!TrackManager.instance.isTutorial || currentTutorialLevel == tutorialLevel);
+        return (!TrackManager.instance.isTutorial || currentTutorialLevel >= tutorialLevel);
     }
 
 	protected void Update ()
@@ -411,7 +412,7 @@ public class CharacterInputController : MonoBehaviour
             {
 				// If we already have an active consumable of that type, we just reset the time
                 m_ActiveConsumables[i].ResetTime();
-                Destroy(c.gameObject);
+                Addressables.ReleaseInstance(c.gameObject);
                 return;
             }
         }
@@ -421,6 +422,6 @@ public class CharacterInputController : MonoBehaviour
         c.gameObject.SetActive(false);
 
         m_ActiveConsumables.Add(c);
-        c.Started(this);
+        StartCoroutine(c.Started(this));
     }
 }

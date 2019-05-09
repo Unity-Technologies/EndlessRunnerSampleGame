@@ -1,0 +1,456 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbb281ee3bf0b054c82ac2347e9e782c, type: 3}
+  m_Name: Duplicate Asset Isolation
+  m_EditorClassIdentifier: 
+  m_GroupName: Duplicate Asset Isolation
+  m_Data:
+    m_SerializedData: []
+  m_GUID: a8fe4e1fa1fea394a996ab4b4963537b
+  m_SerializeEntries:
+  - m_GUID: 0c4cead7e53929f448c0443a1c2b53a9
+    m_Address: Assets/Materials/Dumpster.mat
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 0d2b18ab5b0d98e4e96bce5fbaea35f7
+    m_Address: Assets/Animation/ObstacleBin.fbx
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 0d9e50755a43a614a8233233466a4e80
+    m_Address: Assets/Sounds/SFX/TrafficCone.ogg
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 10e8db89de774a84c9cfd9eb0e469ae0
+    m_Address: Assets/Materials/Rubbish.mat
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 115b0e1702f619f4eb691e43745e8ca4
+    m_Address: Assets/Sounds/SFX/WheelieBin.ogg
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 11a0d3ec49f92f54996214abdc26076e
+    m_Address: Assets/Materials/CloudMaterial.mat
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 11fc4e2b6b0a871489e3f9166321d8d5
+    m_Address: Assets/Textures/Graffiti/Graffiti13.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 1359dd6aa47776244b81e26522160310
+    m_Address: Assets/Models/Daytime/Warehouse03.fbx
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 1f6f8aef6ad2c6441a3fe10ca76836c2
+    m_Address: Assets/Models/Daytime/BinBagOpen.fbx
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 1fa0d134c763a194ea3daba8ff85489a
+    m_Address: Assets/Animation/Rat_Run.fbx
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 24a05966196c7fc4380001ad323f651e
+    m_Address: Assets/Models/Daytime/WheelyBinBlue.fbx
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 24b9245bce05384439fa7fcfc8f87224
+    m_Address: Assets/Models/Rat.fbx
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 25293e058eb614f489870528ad08d334
+    m_Address: Assets/Textures/RatAlbedo.tif
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 2b522e171171f3c4ca45046c30055569
+    m_Address: Assets/Models/Daytime/FarBackBuilding02.fbx
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 2b755775ae966024fab169f5ae2e95d6
+    m_Address: Assets/Models/Cat.fbx
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 2b75d09c3bf9ba64cbccca5ff894cbfa
+    m_Address: Assets/Models/Daytime/Pipes.fbx
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 30ef3480996caf140bcd7afeae88ea89
+    m_Address: Assets/Models/Daytime/RoadWorksBarrier01.fbx
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 3940fade9e1ac7e44b7df894133991ea
+    m_Address: Assets/Models/Daytime/House.fbx
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 3b7e99a6684bf49fa9bad5f4bb585fab
+    m_Address: Assets/Sounds/Mixers/MainMix.mixer
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 3b9892fba65295a4b839fa96a5b7b0f8
+    m_Address: Assets/Models/Daytime/Cloud02.fbx
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 3bbb4725b7e107143a0d7eeaa52be855
+    m_Address: Assets/Animation/ObstacleRoadWorksBarrier_Death.fbx
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 3dc78b81a4d12bd42bd2c32e62d95511
+    m_Address: Assets/Materials/Bin.mat
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 46384fcfaae550648892113bcd7e8d4a
+    m_Address: Assets/Models/Daytime/TelegraphPole02.fbx
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 4aed8c63f75928c40a2709007cecbee8
+    m_Address: Assets/Models/Racoon.fbx
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 4ef825b7e75d84e499fbfcad0eaaecb2
+    m_Address: Assets/Textures/Graffiti/Graffiti06.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 513ad1869b4ea054fa6f8045db0b4ff8
+    m_Address: Assets/Materials/WashingLineClothes.mat
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 52c4c3602ceb4884e8b33d664fd6e678
+    m_Address: Assets/Textures/PlasterAlbedo.tif
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 540c9cb7b5d464f44b60de14713427a3
+    m_Address: Assets/Materials/Plaster.mat
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 58219e8eced12ce4c9723796d507d515
+    m_Address: Assets/Animation/ObstacleWorkCone_Death.fbx
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 5dc9820c76494354e9e924a6c791efa7
+    m_Address: Assets/Models/Daytime/Road02.fbx
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 61242e7b68c333746862afde9cdaf181
+    m_Address: Assets/Shaders/CurvedUnlitCloud.shader
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 6336c4a6c52726d4b8aa9810b8b76ef7
+    m_Address: Assets/Textures/RubbishAlbedo.tif
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 63d49630fac087f45a20451e73dc7aad
+    m_Address: Assets/Textures/SkipAlbedo.tif
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 6707d904747d31c4eb049fc7a139eeb6
+    m_Address: Assets/Sounds/SFX/TrashCan.ogg
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 692deea899152264f8419135ceefafcb
+    m_Address: Assets/Sounds/SFX/Rat/RatLoop1.ogg
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 69829cac8b260bf41b9f2f02e4309ca8
+    m_Address: Assets/Materials/BinBag.mat
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 6a31c5f9148e2ff4ea200e2ec3b4b1dc
+    m_Address: Assets/Textures/CorrugatedMetalAlbedo.tif
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 6c5d5f4ec05e47947b43a75d2aca001d
+    m_Address: Assets/Models/Magnet.fbx
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 6f4ed16685a4be14fab2d5de621fb6ab
+    m_Address: Assets/Materials/Pipe.mat
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 713124634fbfebc43a3788c3a73c6a74
+    m_Address: Assets/Models/Daytime/BinBagClosed.fbx
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 7240c07fe5949594d986ba5a52ff74a3
+    m_Address: Assets/Materials/WheelyBin.mat
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 7914a9a713af18c40b1a5f1032318361
+    m_Address: Assets/Textures/Graffiti/Graffiti05.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 794fdbc2f5db99443a100bbb6d837640
+    m_Address: Assets/Models/Daytime/TelegraphWires.fbx
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 7a81a2da35d793c4590d34c242ca5901
+    m_Address: Assets/Models/Daytime/Warehouse02.fbx
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 7d98d8849abd5f541a329153b6b8aac7
+    m_Address: Assets/Textures/BinBagsAlbedo.tif
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 7e59919583afb9341a72173ebbac3fcd
+    m_Address: Assets/Textures/Graffiti/Graffiti11.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 7fcdbeddb841bb245933f8a3567aca75
+    m_Address: Assets/Textures/BrickWallAlbedo.tif
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 8358882a52ff2274a942a2128ae80355
+    m_Address: Assets/Models/Daytime/BackgroundBuilding02.fbx
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 849c1240a7018e340883c9a4738cabac
+    m_Address: Assets/Models/Daytime/FarBackBuilding03.fbx
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 8508a626a3eef6146867ac6890f2e865
+    m_Address: Assets/Textures/TreeBranchAlbedo.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 89db83d228927234ab3737e12e64660e
+    m_Address: Assets/Animation/ObstacleWheelyBin.fbx
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 89e6fbf81f961324680e4bf3f84b5990
+    m_Address: Assets/Models/Daytime/TelegraphPole01.fbx
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 8ae7f702ec351074699756ad9e5ccd8a
+    m_Address: Assets/Materials/Graffiti.mat
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 8f39f909c6c874a43a86c77bb5eeed5f
+    m_Address: Assets/Models/Daytime/Wire.fbx
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 90690b03aaccb6e4a96d2cdb757b3b44
+    m_Address: Assets/Sounds/SFX/Rat/RatHit.ogg
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 913d0a2c575c9bf42b172000a39bcfc0
+    m_Address: Assets/Textures/Graffiti/Graffiti07.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 93d8fc18fdc65dd4aa903210d93f3343
+    m_Address: Assets/Shaders/CurvedUnlit.shader
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 97d3d75c59ef7f544808ac9ea51905f2
+    m_Address: Assets/Animation/Rat_Death.fbx
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 98bdd2e108de67d439c390dc7cb78caa
+    m_Address: Assets/Materials/CorrugatedMetal.mat
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 9a26112fdfc12324d8fee247fbeb44e7
+    m_Address: Assets/Models/Daytime/Road01.fbx
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 9b635fbb467c2e84f9b8b0d2cc7a19fd
+    m_Address: Assets/Animation/ObstacleRoadWorksBarrierLow_Death.fbx
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 9baf6e72cc9bd7b4293830149cc335fe
+    m_Address: Assets/Textures/WashingLineClothesAlbedo.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 9eb722b0ceeb9c34fa2b2afbc8a97dd1
+    m_Address: Assets/Materials/BrickWall.mat
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 9ed08397b3fef21418662ed63130d301
+    m_Address: Assets/Sounds/SFX/WoodenBarrier.ogg
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 9f7f815499f6a9845acf83e247f57640
+    m_Address: Assets/Materials/Rat.mat
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: a1da5a75d83b2b64d9684707d810f8c7
+    m_Address: Assets/Materials/VCOL.mat
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: a31a8a627e6f7d24aa0af123ce1403c6
+    m_Address: Assets/Materials/TreeBranch.mat
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: a360c9ac9532bde44ac815403ab03c52
+    m_Address: Assets/Materials/PickupParticle.mat
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: a3a59b2bb313ed049b43ffee79f2a52b
+    m_Address: Assets/Models/Daytime/BrickWall.fbx
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: a41010c8e687cb946bd98efd6045e35b
+    m_Address: Assets/Animation/Animators/Rat.controller
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: a4d34a3bbaf4fee48a79af8df924ce78
+    m_Address: Assets/Textures/DumpsterAlbedo.tif
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: a683c76e59dd6b04a9420526560624a0
+    m_Address: Assets/Sounds/SFX/Rat/RatLoop2.ogg
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: a8c476cf0b8398b4e919eabd66d621af
+    m_Address: Assets/Models/Daytime/RoadWorksCone.fbx
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: ab2cfde409d710b47b0b502877abb479
+    m_Address: Assets/Font/LuckiestGuy.ttf
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: ad9b4d3f2df395b4fb7ad98e98d4acdf
+    m_Address: Assets/Textures/Car02Albedo.tif
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: addcf3e67d1b5a846b9eb3d056df0912
+    m_Address: Assets/Textures/Graffiti/Graffiti04.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: b468e53677ceeeb49bcda5deb95250aa
+    m_Address: Assets/Animation/Animators/CharacterAnimation.controller
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: b7e8c93fba6557646bbe79ad80e49536
+    m_Address: Assets/Materials/Car01.mat
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: ba32940091fa1bf4eb3605bc89fc4cd2
+    m_Address: Assets/Materials/Car02.mat
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: bb67dd508c3b85b46a088b3894514f6e
+    m_Address: Assets/Textures/Graffiti/Graffiti09.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: bbccc718107e16e4d9e070aa75df5218
+    m_Address: Assets/Animation/ObstacleRoadWorksBarrierHigh_Death.fbx
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: bdab1ed0d99f3854c867ed4cedd1919e
+    m_Address: Assets/Textures/PipeAlbedo.tif
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: c465382239af23b42aed17eb30f6a2b0
+    m_Address: Assets/Models/Daytime/Car01.fbx
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: c83acac26e89c0d4db877bae8451c329
+    m_Address: Assets/Textures/Car01Albedo.tif
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: c84695815df82b242ad2319af4d44725
+    m_Address: Assets/Models/Daytime/DumpsterGreen.fbx
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: c8c02decebafb7246953032df24e5c77
+    m_Address: Assets/Materials/BlobShadow.mat
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: c9414c650f62e5e409ece9f19b6fceed
+    m_Address: Assets/Textures/Particle01.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: cb4eb13401bc2e14b958f7874244c899
+    m_Address: Assets/Textures/Graffiti/Graffiti02.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: ccb1af2fc45666b4da4f5150678e4834
+    m_Address: Assets/Models/Daytime/WheelyBinRed.fbx
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: d0d7f9d969c49cd4885f97c165bdfa7b
+    m_Address: Assets/Textures/Graffiti/Graffiti03.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: d201f5c27c403d54abc81e9e70fbab99
+    m_Address: Assets/Textures/Graffiti/Graffiti08.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: d2c086d8d57305b46badb6b502a5a968
+    m_Address: Assets/Textures/Graffiti/Graffiti01.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: d6ced1c4e07951e47a0cf24db677b719
+    m_Address: Assets/Models/Daytime/Car02.fbx
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: d7581ae65f6321447a66ee3ae24fe8a1
+    m_Address: Assets/Textures/BlobShadow.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: d8f76b712098b754dafbe140ac26ece8
+    m_Address: Assets/Textures/Graffiti/Graffiti12.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: da664df448f82244e9298f1b25ecab3b
+    m_Address: Assets/Materials/WoodSlats.mat
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: dc6dac39dcb64674aab03f9e54dae6f7
+    m_Address: Assets/Materials/Skip.mat
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: de2c87941c8f76b478910c3c7d526909
+    m_Address: Assets/Textures/Graffiti/Graffiti10.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: e1a536f74c7ef384a8d7132148ace0c8
+    m_Address: Assets/UI/UISpritesheet.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: e3c6f3a775938914f92f111623346cbf
+    m_Address: Assets/Models/Daytime/Cloud03.fbx
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: e492f336a8502944cb8729237e067291
+    m_Address: Assets/Models/Daytime/BackgroundBuilding01.fbx
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: e4d05444ba14c1849b2cd7bb279e1ee6
+    m_Address: Assets/Models/NightTime/ObstacleWheelyBinNight.fbx
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: e678ec0f80695014392e78a0142dfd2f
+    m_Address: Assets/Shaders/CurvedUnlitAlpha.shader
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: e8b76d69401072b47881c8ae05bfbeae
+    m_Address: Assets/Models/Daytime/Warehouse01.fbx
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: e98075cb4974df0408eb7ee2083b60f8
+    m_Address: Assets/Models/Daytime/PlasteredWall02.fbx
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: fa5a8fc362c346548982ad762f0c9fd7
+    m_Address: Assets/Textures/SlatsAlbedo.tif
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: fa7e3ccbd9a948748b3c7e74fc803e5b
+    m_Address: Assets/Textures/WheelyBinAlbedo.tif
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: fe0496be663f7e149ab9389723ce1141
+    m_Address: Assets/Textures/BinAlbedo.tif
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  m_ReadOnly: 0
+  m_Settings: {fileID: 11400000, guid: 735e874f947d0e143a6b4e83f8a7283a, type: 2}
+  m_SchemaSet:
+    m_Schemas:
+    - {fileID: 11400000, guid: db1703389e2893a47bbfb0d1d53236e8, type: 2}

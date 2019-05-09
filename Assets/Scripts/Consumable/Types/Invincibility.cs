@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System;
+using System.Collections;
 
 public class Invincibility : Consumable
 {
@@ -30,9 +31,9 @@ public class Invincibility : Consumable
         c.characterCollider.SetInvincibleExplicit(true);
     }
 
-    public override void Started(CharacterInputController c)
+    public override IEnumerator Started(CharacterInputController c)
     {
-        base.Started(c);
+        yield return base.Started(c);
         c.characterCollider.SetInvincible(duration);
     }
 

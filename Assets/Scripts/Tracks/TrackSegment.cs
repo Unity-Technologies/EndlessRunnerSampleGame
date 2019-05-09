@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.AddressableAssets;
 #if UNITY_EDITOR
 using UnityEditor;
 #endif
@@ -15,7 +16,7 @@ public class TrackSegment : MonoBehaviour
 	public Transform objectRoot;
 	public Transform collectibleTransform;
 
-    public Obstacle[] possibleObstacles;
+    public AssetReference[] possibleObstacles; 
 
     [HideInInspector]
     public float[] obstaclePositions;
@@ -90,7 +91,7 @@ public class TrackSegment : MonoBehaviour
             Coin.coinPool.Free(t.gameObject);
 		}
 
-		Destroy(gameObject);
+	    Addressables.ReleaseInstance(gameObject);
 	}
 
 #if UNITY_EDITOR

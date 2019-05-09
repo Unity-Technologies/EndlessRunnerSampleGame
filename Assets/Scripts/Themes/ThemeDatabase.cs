@@ -29,11 +29,12 @@ public class ThemeDatabase
             themeDataList = new Dictionary<string, ThemeData>();
 
 
-            yield return Addressables.LoadAssets<ThemeData>("themeData", op =>
+            yield return Addressables.LoadAssetsAsync<ThemeData>("themeData", op =>
             {
-                if (op.Result != null)
+                if (op != null)
                 {
-                    themeDataList.Add(op.Result.themeName, op.Result);
+                    if(!themeDataList.ContainsKey(op.themeName))
+                        themeDataList.Add(op.themeName, op);
                 }
             });
 

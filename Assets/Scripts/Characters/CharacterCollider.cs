@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
+using UnityEngine.AddressableAssets;
 
 /// <summary>
 /// Handles everything related to the collider of the character. This is actually an empty game object, NOT on the character prefab
@@ -108,7 +109,7 @@ public class CharacterCollider : MonoBehaviour
 
 			if (c.GetComponent<Coin>().isPremium)
             {
-				Destroy(c.gameObject);
+				Addressables.ReleaseInstance(c.gameObject);
                 PlayerData.instance.premium += 1;
                 controller.premium += 1;
 				m_Audio.PlayOneShot(premiumSound);
@@ -138,7 +139,7 @@ public class CharacterCollider : MonoBehaviour
 			}
 			else
 			{
-				Destroy(c.gameObject);
+			    Addressables.ReleaseInstance(c.gameObject);
 			}
 
             if (TrackManager.instance.isTutorial)

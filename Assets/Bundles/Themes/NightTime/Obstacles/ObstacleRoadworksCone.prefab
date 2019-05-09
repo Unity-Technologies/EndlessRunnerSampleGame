@@ -21,8 +21,8 @@ GameObject:
   - component: {fileID: 4000010619009142}
   - component: {fileID: 114000013297908680}
   - component: {fileID: 65000011930901984}
-  - component: {fileID: 82000011141260540}
-  - component: {fileID: 114432233363251988}
+  - component: {fileID: 82000012834193994}
+  - component: {fileID: 114210978944063774}
   m_Layer: 9
   m_Name: ObstacleRoadworksCone
   m_TagString: Untagged
@@ -113,7 +113,7 @@ MeshFilter:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1000013536997040}
-  m_Mesh: {fileID: 4300000, guid: 529c51c768abc864686cb3e8ab728e7b, type: 3}
+  m_Mesh: {fileID: 4300000, guid: a8c476cf0b8398b4e919eabd66d621af, type: 3}
 --- !u!65 &65000011930901984
 BoxCollider:
   m_ObjectHideFlags: 1
@@ -126,7 +126,7 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1.2189937, y: 0.95, z: 0.29541254}
   m_Center: {x: 0.014282256, y: 0.47, z: -0.004761219}
---- !u!82 &82000011141260540
+--- !u!82 &82000012834193994
 AudioSource:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -193,7 +193,7 @@ AudioSource:
       tangentMode: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
-    m_RotationOrder: 4
+    m_RotationOrder: 0
   reverbZoneMixCustomCurve:
     serializedVersion: 2
     m_Curve:
@@ -234,7 +234,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   impactedSound: {fileID: 8300000, guid: 0d9e50755a43a614a8233233466a4e80, type: 3}
---- !u!114 &114432233363251988
+--- !u!114 &114210978944063774
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}

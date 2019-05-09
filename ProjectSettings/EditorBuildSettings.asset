@@ -15,5 +15,6 @@ EditorBuildSettings:
     path: Assets/Scenes/Shop.unity
     guid: c81bf86fb95a26446ae42f499fcbc766
   m_configObjects:
-    AddressableAssetSettings: {fileID: 11400000, guid: 8fcd12419a45c9d4fb826bc7da73686d,
+    AddressableAssetSettings: {fileID: 0}
+    com.unity.addressableassets: {fileID: 11400000, guid: b326c184dbebf6b4e8e5be689c39d470,
       type: 2}

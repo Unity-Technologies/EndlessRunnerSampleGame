@@ -1,0 +1,33 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbb281ee3bf0b054c82ac2347e9e782c, type: 3}
+  m_Name: Coin
+  m_EditorClassIdentifier: 
+  m_GroupName: Coin
+  m_Data:
+    m_SerializedData: []
+  m_GUID: 89278b1b8bdb81c4996129605154b1d9
+  m_SerializeEntries:
+  - m_GUID: 16cac8b68c4ca6448baecd0680e025f6
+    m_Address: Pickup
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: ac3c86c2382618643bfda6ab3cc81a0b
+    m_Address: PremiumCollectible
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  m_ReadOnly: 0
+  m_Settings: {fileID: 11400000, guid: 735e874f947d0e143a6b4e83f8a7283a, type: 2}
+  m_SchemaSet:
+    m_Schemas:
+    - {fileID: 11400000, guid: 319ae0878c1110f4991e668cb11210f7, type: 2}
+    - {fileID: 11400000, guid: 025fae613a04243428f577ad1ee50562, type: 2}

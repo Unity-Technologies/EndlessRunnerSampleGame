@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System;
+using System.Collections;
 
 public class ExtraLife : Consumable
 {
@@ -34,9 +35,9 @@ public class ExtraLife : Consumable
         return true;
     }
 
-    public override void Started(CharacterInputController c)
+    public override IEnumerator Started(CharacterInputController c)
     {
-        base.Started(c);
+        yield return base.Started(c);
         if (c.currentLife < k_MaxLives)
             c.currentLife += 1;
 		else

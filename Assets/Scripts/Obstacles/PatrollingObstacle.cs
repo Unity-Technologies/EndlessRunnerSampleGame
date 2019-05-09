@@ -1,4 +1,7 @@
-﻿using UnityEngine;
+﻿using System.Collections;
+using UnityEngine;
+using UnityEngine.AddressableAssets;
+using UnityEngine.ResourceManagement.AsyncOperations;
 
 public class PatrollingObstacle : Obstacle
 {
@@ -21,27 +24,38 @@ public class PatrollingObstacle : Obstacle
 	protected float m_CurrentPos;
 
 	protected AudioSource m_Audio;
-	protected bool m_Moving = true;
+    private bool m_isMoving = false;
 
     protected const float k_LaneOffsetToFullWidth = 2f;
 
-	public override void Spawn(TrackSegment segment, float t)
+	public override IEnumerator Spawn(TrackSegment segment, float t)
 	{
 		Vector3 position;
 		Quaternion rotation;
 		segment.GetPointAt(t, out position, out rotation);
-		GameObject obj = Instantiate(gameObject, position, rotation);
-		obj.transform.SetParent(segment.objectRoot, true);
+	    AsyncOperationHandle op = Addressables.InstantiateAsync(gameObject.name, position, rotation);
+	    yield return op;
+	    if (op.Result == null || !(op.Result is GameObject))
+	    {
+	        Debug.LogWarning(string.Format("Unable to load obstacle {0}.", gameObject.name));
+	        yield break;
+	    }
+        GameObject obj = op.Result as GameObject;
 
-		obj.GetComponent<PatrollingObstacle>().m_Segement = segment;
+        obj.transform.SetParent(segment.objectRoot, true);
 
-	    //TODO : remove that hack related to #issue7
-	    Vector3 oldPos = obj.transform.position;
-	    obj.transform.position += Vector3.back;
-	    obj.transform.position = oldPos;
+        PatrollingObstacle po = obj.GetComponent<PatrollingObstacle>();
+        po.m_Segement = segment;
+
+        //TODO : remove that hack related to #issue7
+        Vector3 oldPos = obj.transform.position;
+        obj.transform.position += Vector3.back;
+        obj.transform.position = oldPos;
+
+        po.Setup();
     }
 
-	void Start()
+    public override void Setup()
 	{
 		m_Audio = GetComponent<AudioSource>();
 		if(m_Audio != null && patrollingSound != null && patrollingSound.Length > 0)
@@ -52,7 +66,6 @@ public class PatrollingObstacle : Obstacle
 		}
 
 		m_OriginalPosition = transform.localPosition + transform.right * m_Segement.manager.laneOffset;
-
 		transform.localPosition = m_OriginalPosition;
 
 		float actualTime = Random.Range(minTime, maxTime);
@@ -65,11 +78,13 @@ public class PatrollingObstacle : Obstacle
 			AnimationClip clip = animator.GetCurrentAnimatorClipInfo(0)[0].clip;
             animator.SetFloat(s_SpeedRatioHash, clip.length / actualTime);
 		}
-    }
+
+	    m_isMoving = true;
+	}
 
 	public override void Impacted()
 	{
-		m_Moving = false;
+	    m_isMoving = false;
 		base.Impacted();
 
 		if (animator != null)
@@ -80,7 +95,7 @@ public class PatrollingObstacle : Obstacle
 
 	void Update()
 	{
-		if (!m_Moving)
+		if (!m_isMoving)
 			return;
 
 		m_CurrentPos += Time.deltaTime * m_MaxSpeed;

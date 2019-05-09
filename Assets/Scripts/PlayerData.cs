@@ -470,7 +470,7 @@ public class PlayerDataEditor : Editor
     static public void ClearSave()
     {
         File.Delete(Application.persistentDataPath + "/save.bin");
-    }
+    } 
 
     [MenuItem("Trash Dash Debug/Give 1000000 fishbones and 1000 premium")]
     static public void GiveCoins()

@@ -1,0 +1,37 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbb281ee3bf0b054c82ac2347e9e782c, type: 3}
+  m_Name: Night-Zones
+  m_EditorClassIdentifier: 
+  m_GroupName: Night-Zones
+  m_Data:
+    m_SerializedData: []
+  m_GUID: 42bc777f296585a479930a4d8fb16c27
+  m_SerializeEntries:
+  - m_GUID: 6e95a44ed61efbd4392399e1718efb18
+    m_Address: Assets/Bundles/Themes/NightTime/Industrial
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 9ad69e82a3b8b0544ae28ced5a8d7dfe
+    m_Address: Assets/Bundles/Themes/NightTime/Urban
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: e0111592503a61a4ca2df256d083d305
+    m_Address: Assets/Bundles/Themes/NightTime/Suburbs
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  m_ReadOnly: 0
+  m_Settings: {fileID: 11400000, guid: 735e874f947d0e143a6b4e83f8a7283a, type: 2}
+  m_SchemaSet:
+    m_Schemas:
+    - {fileID: 11400000, guid: 6813088d9f0c4ac4fb31ad5964b61c1b, type: 2}
+    - {fileID: 11400000, guid: 93056734fbbe67845a574a7521ce0142, type: 2}

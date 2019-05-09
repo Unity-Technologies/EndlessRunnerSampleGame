@@ -1,5 +1,11 @@
 ## CHANGELOG
 
+# [1.2]
+
+- Now use Addressable 0.8.1
+- Fixed Tutorial so that the 1st obstacle is always on the center lane.
+- Fixed a bug where control where disable on first run after tutorial.
+
 # [1.1]
 
 - Updated to 18.2
