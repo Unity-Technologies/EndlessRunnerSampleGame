@@ -583,6 +583,7 @@ public class GameState : AState
                 break;
             case 3:
                 finishTuto.SetActive(value);
+                trackManager.characterController.StopSliding();
                 trackManager.characterController.tutorialWaitingForValidation = value;
                 break;
             default:

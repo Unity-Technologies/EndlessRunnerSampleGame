@@ -172,7 +172,7 @@ public class CharacterInputController : MonoBehaviour
     {
         tutorialWaitingForValidation = currentTutorialLevel != tutorialLevel;
 
-        return (!TrackManager.instance.isTutorial || currentTutorialLevel == tutorialLevel);
+        return (!TrackManager.instance.isTutorial || currentTutorialLevel >= tutorialLevel);
     }
 
 	protected void Update ()

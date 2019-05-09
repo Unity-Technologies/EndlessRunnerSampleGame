@@ -7,10 +7,15 @@ code is organised.
 
 Building
 --------
+before building, you need to build the addressable assets. Open the addressable
+window (Window > Assets Management > Addressable Assets) and click on the button
+on the top toolbar Build > Build Player Content.
 
-Building should just require to hit the build button in the build windows. The
-Addressable assets system will take care of building the bundles and embed them
-into the build.
+This will build all the asset bundle for the current platform and store theme in the Library folder.
+
+You can now hit the Build (or Build and Run) button in the Build Window (File > Build Settings...).
+The Addressable system will take care of trasnfering the asset bundle in the streaming folder before
+building so it can load it at runtime. 
 
 Services
 --------

@@ -82,6 +82,8 @@ public class TrackManager : MonoBehaviour
 
     public bool isTutorial { get { return m_IsTutorial; } set { m_IsTutorial = value; } }
     public bool isLoaded { get; set; }
+    //used by the obstacle spawning code in the tutorial, as it need to spawn the 1st obstacle in the middle lane
+    public bool firstObstacle { get; set; }
 
     protected float m_TimeToStart = -1.0f;
 
@@ -174,7 +176,7 @@ public class TrackManager : MonoBehaviour
     {
         if (!m_Rerun)
         {
-
+            firstObstacle = true;
             m_CameraOriginalPos = Camera.main.transform.position;
             
             if (m_TrackSeed != -1)
@@ -284,7 +286,7 @@ public class TrackManager : MonoBehaviour
         for (int i = 0; i < parallaxRoot.childCount; ++i)
         {
             _parallaxRootChildren--;
-            Addressables.ReleaseInstance(parallaxRoot.GetChild(i).gameObject);
+            Destroy(parallaxRoot.GetChild(i).gameObject);
         }
 
         //if our consumable wasn't used, we put it back in our inventory

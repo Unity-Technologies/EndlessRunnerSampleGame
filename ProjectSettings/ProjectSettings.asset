@@ -159,7 +159,7 @@ PlayerSettings:
   androidSupportedAspectRatio: 1
   androidMaxAspectRatio: 2.1
   applicationIdentifier:
-    Android: 
+    Android: com.unity.trashdash
     Standalone: 
     Tizen: 
     iPhone: 
