@@ -27,7 +27,6 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 509be79408e794b4eb1614a087f12f42, type: 2}
   - {fileID: 11400000, guid: c4bc7133680d0814388173d245e6e7c2, type: 2}
   - {fileID: 11400000, guid: 10ae8408a953cd14e95d879ea1e28ec9, type: 2}
-  - {fileID: 11400000, guid: 6d0ac92b4f2a00540ae4a633719d68b2, type: 2}
   - {fileID: 11400000, guid: 29cf561e1871fa543adc83369c628ce2, type: 2}
   - {fileID: 11400000, guid: fab46ba20057801419f1a975233c2cbd, type: 2}
   - {fileID: 11400000, guid: 2981e407081d08d4887a5ef39df59609, type: 2}
@@ -85,7 +84,7 @@ MonoBehaviour:
     m_AssemblyName: 
     m_ClassName: 
   m_ActivePlayerDataBuilderIndex: 3
-  m_ActivePlayModeDataBuilderIndex: 1
+  m_ActivePlayModeDataBuilderIndex: 2
   m_DataBuilders:
   - {fileID: 11400000, guid: 3d84f0c55c89eba48b446fe39eec2be7, type: 2}
   - {fileID: 11400000, guid: d920bfe0779f6ae4d8ff524475b546cc, type: 2}
