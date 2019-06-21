@@ -1,6 +1,6 @@
 # Endless Runner Sample game
 
-_Current Used Unity Version : 2019.1_
+_Current Used Unity Version : 2019.3_
 
 This repository use tags for versioning. Look in the [Releases](https://github.com/Unity-Technologies/EndlessRunnerSampleGame/releases)
 section to download the source for specific other Unity version, or use git
