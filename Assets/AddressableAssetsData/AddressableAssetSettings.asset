@@ -51,9 +51,9 @@ MonoBehaviour:
       - m_Id: 48a34a86fea3bca43b73f47f4556ea17
         m_Value: '{UnityEngine.AddressableAssets.Addressables.RuntimePath}/[BuildTarget]'
       - m_Id: e2a85240a48a2184b9fe1ffd5c4ef06e
-        m_Value: HostedData/OSX
+        m_Value: HostedData/[BuildTarget]
       - m_Id: 2b8be43d6259b66479a487c5d62a5120
-        m_Value: http://10.211.55.2:61980
+        m_Value: http://[PrivateIpAddress]:[HostingServicePort]
     - m_InheritedParent: 
       m_Id: c6b2e105312934525ba08c6872d9f34a
       m_ProfileName: MacStandalone
@@ -127,7 +127,7 @@ MonoBehaviour:
         m_SerializedData:
         - m_AssemblyName: mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
           m_ClassName: System.Int32
-          m_Data: 61980
+          m_Data: 65514
           m_Key: HostingServicePort
         - m_AssemblyName: mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
           m_ClassName: System.String
