@@ -131,7 +131,7 @@ MonoBehaviour:
           m_Key: HostingServicePort
         - m_AssemblyName: mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
           m_ClassName: System.String
-          m_Data: HostedData/OSX;Library/com.unity.addressables/StreamingAssetsCopy/aa/OSX/StandaloneOSX
+          m_Data: HostedData/StandaloneOSX;Library/com.unity.addressables/StreamingAssetsCopy/aa/OSX/StandaloneOSX
           m_Key: ContentRoot
         - m_AssemblyName: mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
           m_ClassName: System.Boolean
