@@ -264,7 +264,7 @@ public class GameState : AState
 
                 Addressables.ReleaseInstance(toRemove[i].gameObject);
                 if (toRemoveIcon[i] != null)
-                    Addressables.ReleaseInstance(toRemoveIcon[i].gameObject);
+                   Destroy(toRemoveIcon[i].gameObject);
 
                 chrCtrl.consumables.Remove(toRemove[i]);
                 m_PowerupIcons.Remove(toRemoveIcon[i]);

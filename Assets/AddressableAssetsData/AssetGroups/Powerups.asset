@@ -29,6 +29,22 @@ MonoBehaviour:
     m_Address: CoinMagnet
     m_ReadOnly: 0
     m_SerializedLabels: []
+  - m_GUID: 8cede34fb26a722408198e0d27628ae9
+    m_Address: MagnetParticles
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 9e2b957157514af40870bf65c60ae63f
+    m_Address: ExtraLifeParticles
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: ba9ada52ec59a9a419f39eb32bf9a3b0
+    m_Address: InvincibilityParticles
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: cb8a481413e1e1d43aac95d00d81eea7
+    m_Address: MultiplierParticles
+    m_ReadOnly: 0
+    m_SerializedLabels: []
   - m_GUID: cccc43bc040988e488680155c25b163c
     m_Address: ExtraLife
     m_ReadOnly: 0
