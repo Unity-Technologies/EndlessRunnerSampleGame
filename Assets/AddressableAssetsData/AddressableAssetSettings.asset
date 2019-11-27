@@ -112,7 +112,6 @@ MonoBehaviour:
     m_AssemblyName: 
     m_ClassName: 
   m_ActivePlayerDataBuilderIndex: 3
-  m_ActivePlayModeDataBuilderIndex: 2
   m_DataBuilders:
   - {fileID: 11400000, guid: 3d84f0c55c89eba48b446fe39eec2be7, type: 2}
   - {fileID: 11400000, guid: d920bfe0779f6ae4d8ff524475b546cc, type: 2}
@@ -131,7 +130,7 @@ MonoBehaviour:
           m_Key: HostingServicePort
         - m_AssemblyName: mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
           m_ClassName: System.String
-          m_Data: HostedData/StandaloneOSX;Library/com.unity.addressables/StreamingAssetsCopy/aa/OSX/StandaloneOSX
+          m_Data: HostedData/Android;Library/com.unity.addressables/StreamingAssetsCopy/aa/Android/Android
           m_Key: ContentRoot
         - m_AssemblyName: mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
           m_ClassName: System.Boolean
