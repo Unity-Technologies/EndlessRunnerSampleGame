@@ -17,16 +17,44 @@ MonoBehaviour:
     m_SerializedData: []
   m_GUID: 0ee8914add8bf184eb2669a5f9b6f538
   m_SerializeEntries:
+  - m_GUID: 1c8b4e674120cad47a3fc249308e5af3
+    m_Address: Assets/Prefabs/UI/AddMissionButton.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
   - m_GUID: 2ae64d0eaec8d6f4f9436fce6117048d
     m_Address: Trash Cat
     m_ReadOnly: 0
     m_SerializedLabels:
     - characters
+  - m_GUID: 2bfa18892388236498842bbfe7a3ff83
+    m_Address: Assets/Prefabs/UI/Header.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
   - m_GUID: 473ffa016efe3724cad08daa78e3d12a
     m_Address: Rubbish Raccoon
     m_ReadOnly: 0
     m_SerializedLabels:
     - characters
+  - m_GUID: 71514012df4dcd146957cb145cec8287
+    m_Address: Assets/Prefabs/UI/MissionEntry.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 94cb557246c11d14388842cc08be79a8
+    m_Address: Assets/Prefabs/UI/PowerupIcon.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: a53fe2875371488408daf0df7d69a981
+    m_Address: Assets/Prefabs/UI/MissionPopup.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: abafe3707f9235b4ab7cdfd1333295c3
+    m_Address: Assets/Prefabs/UI/ItemEntry.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: ac361d43768a861498da8046b83b94f5
+    m_Address: Assets/Prefabs/UI/Score.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
   m_ReadOnly: 0
   m_Settings: {fileID: 11400000, guid: 735e874f947d0e143a6b4e83f8a7283a, type: 2}
   m_SchemaSet:

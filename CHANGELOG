@@ -1,4 +1,9 @@
 ## CHANGELOG
+# [1.3]
+- Updated for use with Addressables System 1.1.3 & 1.1.4.
+- Fixed compiling issues with various desktop and mobile platforms.
+- Removed unnecessary packages
+- Updated to run with 2019.3x engine
 
 # [1.2]
 
