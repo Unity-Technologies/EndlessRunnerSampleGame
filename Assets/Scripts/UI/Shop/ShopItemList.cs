@@ -27,7 +27,7 @@ public class ShopItemList : ShopList
                 {
                     if (op.Result == null || !(op.Result is GameObject))
                     {
-                        Debug.LogWarning(string.Format("Unable to load item shop list {0}.", prefabItem.Asset.name));
+                        Debug.LogWarning(string.Format("Unable to load item shop list {0}.", prefabItem.RuntimeKey));
                         return;
                     }
                     GameObject newEntry = op.Result;
@@ -113,7 +113,7 @@ public class ShopItemList : ShopList
             level,
             transactionId
         );
-        
+
         if (c.GetPrice() > 0)
         {
             AnalyticsEvent.ItemSpent(

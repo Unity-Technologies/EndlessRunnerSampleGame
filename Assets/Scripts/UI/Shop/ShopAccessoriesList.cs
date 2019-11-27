@@ -25,7 +25,7 @@ public class ShopAccessoriesList : ShopList
         foreach (KeyValuePair<string, Character> pair in CharacterDatabase.dictionary)
         {
             Character c = pair.Value;
-            
+
             if (c.accessories !=null && c.accessories.Length > 0)
                 m_CharacterList.Add(c);
         }
@@ -40,12 +40,12 @@ public class ShopAccessoriesList : ShopList
     {
         if (op.Result == null || !(op.Result is GameObject))
         {
-            Debug.LogWarning(string.Format("Unable to load header {0}.", headerPrefab.Asset.name));
+            Debug.LogWarning(string.Format("Unable to load header {0}.", headerPrefab.RuntimeKey));
         }
         else
         {
             Character c = m_CharacterList[currentIndex];
-            
+
             GameObject header = op.Result;
             header.transform.SetParent(listRoot, false);
             ShopItemListItem itmHeader = header.GetComponent<ShopItemListItem>();
@@ -101,7 +101,7 @@ public class ShopAccessoriesList : ShopList
 	    }
 
 	    accessoryIndex++;
-	    
+
 	    if (accessoryIndex == c.accessories.Length)
 	    {//we finish the current character accessory, load the next character
 
@@ -179,7 +179,7 @@ public class ShopAccessoriesList : ShopList
             level,
             transactionId
         );
-        
+
         if (cost > 0)
         {
             AnalyticsEvent.ItemSpent(
