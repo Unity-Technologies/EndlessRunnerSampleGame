@@ -7,9 +7,13 @@ code is organised.
 
 Building
 --------
-before building, you need to build the addressable assets. Open the addressable
-window (Window > Assets Management > Addressable) and click on the button
-on the top toolbar Build > Build Player Content.
+before building, you need to build the addressable assets. 
+
+- Open the addressable window:
+    - Window > Assets Management > Addressable on older ddressable package 
+    - Windows > Assets Management > Addressable > Group on newer package (1.8 >)
+- On the top toolbar on the window :
+	- click on 
 
 This will build all the asset bundle for the current platform and store theme in the Library folder.
 

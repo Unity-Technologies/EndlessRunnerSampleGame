@@ -16,35 +16,7 @@ MonoBehaviour:
   m_Data:
     m_SerializedData: []
   m_GUID: 6da73523aa5283d4582ef072976f7b42
-  m_SerializeEntries:
-  - m_GUID: 1c8b4e674120cad47a3fc249308e5af3
-    m_Address: AddMissionButton
-    m_ReadOnly: 0
-    m_SerializedLabels: []
-  - m_GUID: 2bfa18892388236498842bbfe7a3ff83
-    m_Address: Header
-    m_ReadOnly: 0
-    m_SerializedLabels: []
-  - m_GUID: 71514012df4dcd146957cb145cec8287
-    m_Address: MissionEntry
-    m_ReadOnly: 0
-    m_SerializedLabels: []
-  - m_GUID: 94cb557246c11d14388842cc08be79a8
-    m_Address: PowerupIcon
-    m_ReadOnly: 0
-    m_SerializedLabels: []
-  - m_GUID: a53fe2875371488408daf0df7d69a981
-    m_Address: MissionPopup
-    m_ReadOnly: 0
-    m_SerializedLabels: []
-  - m_GUID: abafe3707f9235b4ab7cdfd1333295c3
-    m_Address: ItemEntry
-    m_ReadOnly: 0
-    m_SerializedLabels: []
-  - m_GUID: ac361d43768a861498da8046b83b94f5
-    m_Address: Score
-    m_ReadOnly: 0
-    m_SerializedLabels: []
+  m_SerializeEntries: []
   m_ReadOnly: 0
   m_Settings: {fileID: 11400000, guid: 735e874f947d0e143a6b4e83f8a7283a, type: 2}
   m_SchemaSet:
