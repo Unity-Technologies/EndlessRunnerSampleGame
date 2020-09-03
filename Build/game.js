@@ -71,7 +71,7 @@ var gameInstance = {
     buildDownloadProgress: {},
 
     resolveBuildUrl: function (buildUrl) { return buildUrl.match(/(http|https|ftp|file):\/\//) ? buildUrl : url.substring(0, url.lastIndexOf("/") + 1) + buildUrl; },
-    streamingAssetsUrl: function () { return "StreamingAssets"  },////resolveURL(this.resolveBuildUrl("../StreamingAssets"))
+    streamingAssetsUrl: function () { return GameGlobal.cdn + "StreamingAssets"  },////resolveURL(this.resolveBuildUrl("../StreamingAssets"))
     pthreadMainPrefixURL: "Build/",
     webglContextAttributes: 
     {
