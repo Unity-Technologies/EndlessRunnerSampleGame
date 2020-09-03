@@ -2630,9 +2630,9 @@ var UnityModule = (function () {
           if (buffer) stringToUTF8(document.URL, buffer, bufferSize);
           return lengthBytesUTF8(document.URL)
         }else{
-          return 0;
+          if (buffer) stringToUTF8(GameGlobal.cdn, buffer, bufferSize);
+          return lengthBytesUTF8(GameGlobal.cdn)
         }
-        
       }
 
       function _JS_SystemInfo_GetGPUInfo(buffer, bufferSize) {
