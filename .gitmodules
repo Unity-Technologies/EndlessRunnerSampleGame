@@ -1,0 +1,3 @@
+[submodule "AutoBuild"]
+	path = AutoBuild
+	url = https://github.com/PlinChen/try_wasm_empty.git
