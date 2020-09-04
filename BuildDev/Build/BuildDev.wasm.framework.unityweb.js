@@ -1,4 +1,6 @@
-
+function  alert(msg) {
+  console.error(msg);
+}
 var UnityModule = (function() {
   var _scriptDir = typeof document !== 'undefined' && document.currentScript ? document.currentScript.src : undefined;
   return (
@@ -227,11 +229,38 @@ if (typeof ENVIRONMENT_IS_PTHREAD === "undefined" || !ENVIRONMENT_IS_PTHREAD) {
    }
    FS.mkdir("/idbfs");
    FS.mount(IDBFS, {}, "/idbfs");
-   Module.addRunDependency("JS_FileSystem_Mount");
-   FS.syncfs(true, (function(err) {
-    Module.removeRunDependency("JS_FileSystem_Mount");
-   }));
-  });
+   var rawdata ='';
+   if(Module["rawData"]){
+       rawdata = Module["rawData"];
+   }else{
+       console.log("--------------------------readFileSync-----------------------");
+       rawdata = wx.getFileSystemManager().readFileSync(Module["preLoaDataPath"]);
+   }
+   var data = new Uint8Array(rawdata);
+   console.log("data", data);
+   var view = new DataView(rawdata);
+   var pos = 0;
+   var prefix = "UnityWebData1.0 ";
+   console.log("prefix", data.subarray(pos, pos + prefix.length), String.fromCharCode.apply(null, data.subarray(pos, pos + prefix.length)), "end...");
+   if (!String.fromCharCode.apply(null, data.subarray(pos, pos + prefix.length)) == prefix) throw "unknown data format";
+   pos += prefix.length;
+   var headerSize = view.getUint32(pos, true);
+   pos += 4;
+   while (pos < headerSize) {
+       var offset = view.getUint32(pos, true);
+       pos += 4;
+       var size = view.getUint32(pos, true);
+       pos += 4;
+       var pathLength = view.getUint32(pos, true);
+       pos += 4;
+       var path = String.fromCharCode.apply(null, data.subarray(pos, pos + pathLength));
+       pos += pathLength;
+       for (var folder = 0, folderNext = path.indexOf("/", folder) + 1; folderNext > 0; folder = folderNext, folderNext = path.indexOf("/", folder) + 1) {
+           Module["FS_createPath"](path.substring(0, folder), path.substring(folder, folderNext - 1), true, true)
+       }
+       Module["FS_createDataFile"](path, null, data.slice(offset, offset + size), true, true, true)
+   }
+ });
   unityFileSystemInit();
  }));
 }
@@ -1315,7 +1344,12 @@ function integrateWasmJS() {
    if (Module["readBinary"]) {
     return Module["readBinary"](wasmBinaryFile);
    } else {
-    throw "both async and sync fetching of the wasm failed";
+    if(!Module.IsWxGame){
+      throw "both async and sync fetching of the wasm failed";
+    }
+    else{
+      return;
+    }
    }
   } catch (err) {
    abort(err);
@@ -1344,7 +1378,7 @@ function integrateWasmJS() {
    err("no native wasm support detected");
    return false;
   }
-  if (!(Module["wasmMemory"] instanceof WebAssembly.Memory)) {
+  if (!Module.IsWxGame && !(Module["wasmMemory"] instanceof WebAssembly.Memory)) {
    err("no native wasm Memory in use");
    return false;
   }
@@ -1379,7 +1413,10 @@ function integrateWasmJS() {
   }
   function instantiateArrayBuffer(receiver) {
    getBinaryPromise().then((function(binary) {
-    return WebAssembly.instantiate(binary, info);
+    if(Module["wasmBin"]){
+      WebAssembly.instantiate(Module["wasmBin"], info);
+    }
+    return WebAssembly.instantiate(Module["wasmPath"], info);
    })).then(receiver).catch((function(reason) {
     err("failed to asynchronously prepare wasm: " + reason);
     abort(reason);
@@ -3656,12 +3693,17 @@ function _JS_Sound_Stop(channelInstance, delay) {
 function _JS_SystemInfo_GetCanvasClientSize(domElementSelector, outWidth, outHeight) {
  var selector = UTF8ToString(domElementSelector);
  var canvas = selector == "#canvas" ? Module["canvas"] : document.querySelector(selector);
- HEAPF64[outWidth >> 3] = canvas ? canvas.clientWidth : 0;
- HEAPF64[outHeight >> 3] = canvas ? canvas.clientHeight : 0;
+ HEAPF64[outWidth >> 3] = canvas ? canvas.width  : 0;
+ HEAPF64[outHeight >> 3] = canvas ? canvas.height  : 0;
 }
 function _JS_SystemInfo_GetDocumentURL(buffer, bufferSize) {
- if (buffer) stringToUTF8(document.URL, buffer, bufferSize);
- return lengthBytesUTF8(document.URL);
+  if(!Module.IsWxGame){
+    if (buffer) stringToUTF8(document.URL, buffer, bufferSize);
+    return lengthBytesUTF8(document.URL)
+  }else{
+    if (buffer) stringToUTF8(GameGlobal.cdn, buffer, bufferSize);
+    return lengthBytesUTF8(GameGlobal.cdn)
+  }
 }
 function _JS_SystemInfo_GetGPUInfo(buffer, bufferSize) {
  var gpuinfo = UnityLoader.SystemInfo.gpu;
@@ -9645,9 +9687,12 @@ var Browser = {
   }));
  }),
  setCanvasSize: (function(width, height, noUpdates) {
+  if(typeof Module.IsWxGame != "undefined"){
+    return;
+  }
   var canvas = Module["canvas"];
   Browser.updateCanvasDimensions(canvas, width, height);
-  if (!noUpdates) Browser.updateResizeListeners();
+  if (!noUpdates) Browser.updateResizeListeners()
  }),
  windowedWidth: 0,
  windowedHeight: 0,
@@ -9725,28 +9770,7 @@ function _emscripten_cancel_main_loop() {
  Browser.mainLoop.func = null;
 }
 function _emscripten_set_canvas_element_size_calling_thread(target, width, height) {
- var canvas = JSEvents.findCanvasEventTarget(target);
- if (!canvas) return -4;
- if (canvas.canvasSharedPtr) {
-  HEAP32[canvas.canvasSharedPtr >> 2] = width;
-  HEAP32[canvas.canvasSharedPtr + 4 >> 2] = height;
- }
- if (canvas.offscreenCanvas || !canvas.controlTransferredOffscreen) {
-  if (canvas.offscreenCanvas) canvas = canvas.offscreenCanvas;
-  var autoResizeViewport = false;
-  if (canvas.GLctxObject && canvas.GLctxObject.GLctx) {
-   var prevViewport = canvas.GLctxObject.GLctx.getParameter(canvas.GLctxObject.GLctx.VIEWPORT);
-   autoResizeViewport = prevViewport[0] === 0 && prevViewport[1] === 0 && prevViewport[2] === canvas.width && prevViewport[3] === canvas.height;
-  }
-  canvas.width = width;
-  canvas.height = height;
-  if (autoResizeViewport) {
-   canvas.GLctxObject.GLctx.viewport(0, 0, width, height);
-  }
- } else {
-  return -4;
- }
- return 0;
+ return -4;
 }
 function _emscripten_set_canvas_element_size_main_thread(target, width, height) {
  return _emscripten_set_canvas_element_size_calling_thread(target, width, height);
@@ -10111,8 +10135,8 @@ var JSEvents = {
    var scrollPos = JSEvents.pageScrollPos();
    var uiEvent = JSEvents.uiEvent;
    HEAP32[uiEvent >> 2] = e.detail;
-   HEAP32[uiEvent + 4 >> 2] = document.body.clientWidth;
-   HEAP32[uiEvent + 8 >> 2] = document.body.clientHeight;
+   HEAP32[uiEvent + 4 >> 2] = document.body.width;
+   HEAP32[uiEvent + 8 >> 2] = document.body.height;
    HEAP32[uiEvent + 12 >> 2] = window.innerWidth;
    HEAP32[uiEvent + 16 >> 2] = window.innerHeight;
    HEAP32[uiEvent + 20 >> 2] = window.outerWidth;
@@ -10268,8 +10292,8 @@ var JSEvents = {
   var id = reportedElement && reportedElement.id ? reportedElement.id : "";
   stringToUTF8(nodeName, eventStruct + 8, 128);
   stringToUTF8(id, eventStruct + 136, 128);
-  HEAP32[eventStruct + 264 >> 2] = reportedElement ? reportedElement.clientWidth : 0;
-  HEAP32[eventStruct + 268 >> 2] = reportedElement ? reportedElement.clientHeight : 0;
+  HEAP32[eventStruct + 264 >> 2] = reportedElement ? reportedElement.width  : 0;
+  HEAP32[eventStruct + 268 >> 2] = reportedElement ? reportedElement.height  : 0;
   HEAP32[eventStruct + 272 >> 2] = screen.width;
   HEAP32[eventStruct + 276 >> 2] = screen.height;
   if (isFullscreen) {
