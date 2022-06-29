@@ -165,7 +165,7 @@ TextureImporter:
       213: 21300106
     second: StartButtonPressed
   externalObjects: {}
-  serializedVersion: 10
+  serializedVersion: 11
   mipmaps:
     mipMapMode: 0
     enableMipMap: 0
@@ -185,6 +185,8 @@ TextureImporter:
   isReadable: 0
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMasterTextureLimit: 0
   grayScaleToAlpha: 0
   generateCubemap: 6
   cubemapConvolution: 0
@@ -194,8 +196,8 @@ TextureImporter:
   textureSettings:
     serializedVersion: 2
     filterMode: 1
-    aniso: -1
-    mipBias: -100
+    aniso: 1
+    mipBias: 0
     wrapU: 1
     wrapV: 1
     wrapW: 1
@@ -216,9 +218,13 @@ TextureImporter:
   textureType: 8
   textureShape: 1
   singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
   maxTextureSizeSet: 0
   compressionQualitySet: 0
   textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 1
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
@@ -1298,6 +1304,56 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
+    nameFileIdTable:
+      WorkerHat: 21300026
+      PartyHat: 21300014
+      SliderBG: 21300074
+      MagnetPowerup: 21300028
+      ArrowButtonShadow: 21300080
+      ArrowButtonDefault: 21300078
+      RacoonIcone: 21300056
+      UIButtonBG: 21300096
+      UIBorderLightGrey: 21300104
+      LifePowerup: 21300034
+      FishboneIcone: 21300062
+      MultiplierPowerup: 21300030
+      PauseResume: 21300068
+      MissionsIcon: 21300002
+      Shop: 21300044
+      Background: 21300040
+      CatIcone: 21300054
+      UIButtonNoShadow: 21300094
+      Settings: 21300006
+      StartButton: 21300000
+      Leaderboard: 21300042
+      LifeHeart: 21300050
+      NoItem: 21300070
+      HandleSlider: 21300072
+      UISliderBG: 21300088
+      PauseMenu: 21300066
+      InvicibilityPowerup: 21300032
+      UISliderFill: 21300090
+      PremiumIcone: 21300060
+      TimeBar: 21300052
+      UIButtonOrangeNoShadow: 21300100
+      ActivePowerUpBackground: 21300058
+      UIBorderFilled01: 21300084
+      CloseButton: 21300024
+      ArrowButtonGrey: 21300082
+      PauseButton: 21300048
+      DayPreview: 21300036
+      StoreIcon: 21300004
+      UIBorderFilledRed: 21300086
+      UIButtonOrange: 21300092
+      SettingIcone: 21300076
+      Missions: 21300046
+      UIBorderFilledOrange: 21300102
+      NightPreview: 21300038
+      UIButton: 21300098
+      GameUIBackground: 21300064
+      FancyHat: 21300012
+      LeaderboardIcon: 21300008
+      StartButtonPressed: 21300106
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
