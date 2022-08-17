@@ -10,7 +10,7 @@ Building
 before building, you need to build the addressable assets. 
 
 - Open the addressable window:
-    - Window > Assets Management > Addressable on older ddressable package 
+    - Window > Assets Management > Addressable on older addressable package 
     - Windows > Assets Management > Addressable > Group on newer package (1.8 >)
 - On the top toolbar on the window :
 	- click on 
@@ -18,18 +18,18 @@ before building, you need to build the addressable assets.
 This will build all the asset bundle for the current platform and store theme in the Library folder.
 
 You can now hit the Build (or Build and Run) button in the Build Window (File > Build Settings...).
-The Addressable system will take care of trasnfering the asset bundle in the streaming folder before
+The Addressable system will take care of transferring the asset bundle in the streaming folder before
 building so it can load it at runtime. 
 
 Services
 --------
 
-By default all the services are disabled. When you enable all services, switch to a mobile
+By default, all the services are disabled. When you enable all services, switch to a mobile
 platform as some services (e.g. Ads) only works on mobile platforms.
 
-There is a special case for Unity In App Purchase : once you enable in app purchase
+There is a special case for Unity In App Purchase : once you enable In App Purchase
 in the service windows, it will import a package into your project. Check in
-'Plugins/UnityPurchasing' folder and you should see a UnityIAP and UnityChannel package.
+'Plugins/UnityPurchasing folder and you should see a UnityIAP and UnityChannel package.
 Double click on UnityIAP first, import its content, then on UnityChannel. IAP should now
 work in your project.
 
@@ -45,18 +45,18 @@ If you look at the ads script (e.g. AdsForMission and GameState) you'll see it h
 (those value are set in editor to different value that the default rewardVideo)
 
 Now if you log into your Ads Dashboard in a browser and navigate to your project, click on a platform,
-you will have a list of Ad Placement. There you can add new placement. By default Trash Dash use 2 in addition
+you will have a list of Ad Placement. There you can add new placement. By default, Trash Dash use 2 in addition
 to the default "rewardVideo" and "Video" :
 
 - reviveVideo, used to have a second chance after game over
-- missionVideo, used to get a thrid possible missions.
+- missionVideo, used to get a third possible missions.
 
 
 Game States
 -----------
 
 The whole game is using a state machine to handle the different states of the
-game : Loadout, Game and Gameover.
+game : Loadout, Game and GameOver.
 The State Machine, called GameManager (Scripts/GameManager) is manually updating
 the state on the top of its states list. When pushing a new state on top, you
 can decide to pop the previous one or leave it and place the new one on top.
