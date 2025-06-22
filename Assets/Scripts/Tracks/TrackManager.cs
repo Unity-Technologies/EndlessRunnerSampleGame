@@ -128,7 +128,7 @@ public class TrackManager : MonoBehaviour
     protected const int k_DesiredSegmentCount = 10;
     protected const float k_SegmentRemovalDistance = -30f;
     protected const float k_Acceleration = 0.2f;
-
+    
     protected void Awake()
     {
         m_ScoreAccum = 0.0f;
@@ -562,7 +562,7 @@ public class TrackManager : MonoBehaviour
 
     private IEnumerator SpawnFromAssetReference(AssetReference reference, TrackSegment segment, int posIndex)
     {
-        AsyncOperationHandle op = reference.LoadAssetAsync<GameObject>();
+        AsyncOperationHandle op = Addressables.LoadAssetAsync<GameObject>(reference);
         yield return op; 
         GameObject obj = op.Result as GameObject;
         if (obj != null)
