@@ -68,7 +68,7 @@ public abstract class Consumable : MonoBehaviour
             yield return op;
             m_ParticleSpawned = op.Result.GetComponent<ParticleSystem>();
             if (!m_ParticleSpawned.main.loop)
-                StartCoroutine(TimedRelease(m_ParticleSpawned.gameObject, m_ParticleSpawned.main.duration));
+                c.StartCoroutine(TimedRelease(m_ParticleSpawned.gameObject, m_ParticleSpawned.main.duration));
 
             m_ParticleSpawned.transform.SetParent(c.characterCollider.transform);
             m_ParticleSpawned.transform.localPosition = op.Result.transform.position;
