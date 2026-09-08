@@ -40,9 +40,9 @@ public class SettingPopup : MonoBehaviour
         mixer.GetFloat(k_MusicVolumeFloatName, out m_MusicVolume);
         mixer.GetFloat(k_MasterSFXVolumeFloatName, out m_MasterSFXVolume);
 
-        masterSlider.value = 1.0f - (m_MasterVolume / k_MinVolume);
-        musicSlider.value = 1.0f - (m_MusicVolume / k_MinVolume);
-        masterSFXSlider.value = 1.0f - (m_MasterSFXVolume / k_MinVolume);
+        masterSlider.value = Mathf.Pow(10f, m_MasterVolume / 20f);
+        musicSlider.value = Mathf.Pow(10f, m_MusicVolume / 20f);
+        masterSFXSlider.value = Mathf.Pow(10f, m_MasterSFXVolume / 20f);
     }
 
     public void DeleteData()
@@ -53,21 +53,21 @@ public class SettingPopup : MonoBehaviour
 
     public void MasterVolumeChangeValue(float value)
     {
-        m_MasterVolume = k_MinVolume * (1.0f - value);
+        m_MasterVolume = value > 0.0001f ? Mathf.Log10(value) * 20f : k_MinVolume;
         mixer.SetFloat(k_MasterVolumeFloatName, m_MasterVolume);
 		PlayerData.instance.masterVolume = m_MasterVolume;
     }
 
     public void MusicVolumeChangeValue(float value)
     {
-        m_MusicVolume = k_MinVolume * (1.0f - value);
+        m_MusicVolume = value > 0.0001f ? Mathf.Log10(value) * 20f : k_MinVolume;
         mixer.SetFloat(k_MusicVolumeFloatName, m_MusicVolume);
 		PlayerData.instance.musicVolume = m_MusicVolume;
     }
 
     public void MasterSFXVolumeChangeValue(float value)
     {
-        m_MasterSFXVolume = k_MinVolume * (1.0f - value);
+        m_MasterSFXVolume = value > 0.0001f ? Mathf.Log10(value) * 20f : k_MinVolume;
         mixer.SetFloat(k_MasterSFXVolumeFloatName, m_MasterSFXVolume);
 		PlayerData.instance.masterSFXVolume = m_MasterSFXVolume;
     }
