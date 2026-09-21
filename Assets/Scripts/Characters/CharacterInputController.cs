@@ -1,6 +1,9 @@
 ﻿using UnityEngine;
 using System.Collections.Generic;
 using UnityEngine.AddressableAssets;
+using UnityEngine.InputSystem;
+// Aliased because UnityEngine.Touch and UnityEngine.InputSystem.EnhancedTouch.Touch would otherwise be ambiguous.
+using ETouch = UnityEngine.InputSystem.EnhancedTouch.Touch;
 
 /// <summary>
 /// Handle everything related to controlling the character. Interact with both the Character (visual, animation) and CharacterCollider
@@ -83,6 +86,11 @@ public class CharacterInputController : MonoBehaviour
         m_Sliding = false;
         m_SlideStart = 0.0f;
 	    m_IsRunning = false;
+
+#if !UNITY_EDITOR && !UNITY_STANDALONE
+        // ETouch.activeTouches only reports touches once the enhanced touch support is enabled.
+        UnityEngine.InputSystem.EnhancedTouch.EnhancedTouchSupport.Enable();
+#endif
     }
 
 #if !UNITY_STANDALONE
@@ -181,30 +189,39 @@ public class CharacterInputController : MonoBehaviour
         // Use key input in editor or standalone
         // disabled if it's tutorial and not thecurrent right tutorial level (see func TutorialMoveCheck)
 
-        if (Input.GetKeyDown(KeyCode.LeftArrow) && TutorialMoveCheck(0))
+        // Keyboard.current is null when no keyboard device is connected, so it has to be checked every frame.
+        Keyboard keyboard = Keyboard.current;
+        if (keyboard != null)
         {
-            ChangeLane(-1);
+            if (keyboard.leftArrowKey.wasPressedThisFrame && TutorialMoveCheck(0))
+            {
+                ChangeLane(-1);
+            }
+            else if (keyboard.rightArrowKey.wasPressedThisFrame && TutorialMoveCheck(0))
+            {
+                ChangeLane(1);
+            }
+            else if (keyboard.upArrowKey.wasPressedThisFrame && TutorialMoveCheck(1))
+            {
+                Jump();
+            }
+            else if (keyboard.downArrowKey.wasPressedThisFrame && TutorialMoveCheck(2))
+            {
+                if (!m_Sliding)
+                {
+                    Slide();
+                }
+            }
         }
-        else if(Input.GetKeyDown(KeyCode.RightArrow) && TutorialMoveCheck(0))
-        {
-            ChangeLane(1);
-        }
-        else if(Input.GetKeyDown(KeyCode.UpArrow) && TutorialMoveCheck(1))
-        {
-            Jump();
-        }
-		else if (Input.GetKeyDown(KeyCode.DownArrow) && TutorialMoveCheck(2))
-		{
-			if(!m_Sliding)
-				Slide();
-		}
 #else
         // Use touch input on mobile
-        if (Input.touchCount == 1)
+        if (ETouch.activeTouches.Count == 1)
         {
+			ETouch touch = ETouch.activeTouches[0];
+
 			if(m_IsSwiping)
 			{
-				Vector2 diff = Input.GetTouch(0).position - m_StartingTouch;
+				Vector2 diff = touch.screenPosition - m_StartingTouch;
 
 				// Put difference in Screen ratio, but using only width, so the ratio is the same on both
                 // axes (otherwise we would have to swipe more vertically...)
@@ -241,12 +258,12 @@ public class CharacterInputController : MonoBehaviour
 
         	// Input check is AFTER the swip test, that way if TouchPhase.Ended happen a single frame after the Began Phase
 			// a swipe can still be registered (otherwise, m_IsSwiping will be set to false and the test wouldn't happen for that began-Ended pair)
-			if(Input.GetTouch(0).phase == TouchPhase.Began)
+			if(touch.phase == UnityEngine.InputSystem.TouchPhase.Began)
 			{
-				m_StartingTouch = Input.GetTouch(0).position;
+				m_StartingTouch = touch.screenPosition;
 				m_IsSwiping = true;
 			}
-			else if(Input.GetTouch(0).phase == TouchPhase.Ended)
+			else if(touch.phase == UnityEngine.InputSystem.TouchPhase.Ended)
 			{
 				m_IsSwiping = false;
 			}
